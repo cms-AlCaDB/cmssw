@@ -57,7 +57,7 @@ process.TrackerDigiGeometryESModule.applyAlignment = True
 # fast standalone reco output: an sql file
 import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service( "PoolDBOutputService",
-  CondCore.CondDB.CondDB_cfi.CondDBSetup,
+  CondCore.CondDB.CondDB_cfi.CondDB,
   timetype = cms.untracked.string( 'runnumber' ),
   connect = cms.string( 'sqlite_file:Alignments.db' ),
   toPut = cms.VPSet(

@@ -181,11 +181,11 @@ process.Path = cms.Path(process.offlineBeamSpot * process.CSCOverlapsTrackPrepar
 
 import CondCore.CondDB.CondDB_cfi
 process.inertGlobalPositionRcd = cms.ESSource("PoolDBESSource",
-                                              CondCore.CondDB.CondDB_cfi.CondDBSetup,
+                                              CondCore.CondDB.CondDB_cfi.CondDB,
                                               connect = cms.string("sqlite_file:inertGlobalPositionRcd.db"),
                                               toGet = cms.VPSet(cms.PSet(record = cms.string("GlobalPositionRcd"), tag = cms.string("inertGlobalPositionRcd"))))
 process.muonAlignment = cms.ESSource("PoolDBESSource",
-                                     CondCore.CondDB.CondDB_cfi.CondDBSetup,
+                                     CondCore.CondDB.CondDB_cfi.CondDB,
                                      connect = cms.string("sqlite_file:geometry.db"),   # ideal.db, Photogrammetry.db
                                      toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"),       tag = cms.string("DTAlignmentRcd")),
                                                        cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"),  tag = cms.string("DTAlignmentErrorExtendedRcd")),

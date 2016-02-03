@@ -132,7 +132,7 @@ process.filter_wrong_pattern = hlt.hltHighLevel.clone(
 #import CondCore.CondDB.CondDB_cfi
 #process.dbInput = cms.ESSource(
 #    "PoolDBESSource",
-#    CondCore.CondDB.CondDB_cfi.CondDBSetup,
+#    CondCore.CondDB.CondDB_cfi.CondDB,
 #    connect = cms.string('sqlite_file:AlCaRecoTriggerBits.db'),
 #    toGet = cms.VPSet(cms.PSet(
 #        record = cms.string('AlCaRecoTriggerBitsRcd'),

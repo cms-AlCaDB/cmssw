@@ -129,7 +129,7 @@ process.CondDBSetup.DBParameters.messageLevel = 2
 #import CondCore.CondDB.CondDB_cfi
 #process.muonAlignment = cms.ESSource("PoolDBESSource",
 #connect = cms.string('sqlite_file:/afs/cern.ch/user/s/scodella/public/Databases/Barrel_1125_PG_20100313_LINKFIT_NOOMRON_BOTH_PG_Err.db'),
-#DBParameters = CondCore.CondDB.CondDB_cfi.CondDBSetup.DBParameters,
+#DBParameters = CondCore.CondDB.CondDB_cfi.CondDB.DBParameters,
 #toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"),       tag = cms.string("DTAlignmentRcd")),
 #                  cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"),  tag = cms.string("DTAlignmentErrorExtendedRcd")),
 #                  cms.PSet(record = cms.string("CSCAlignmentRcd"),      tag = cms.string("CSCAlignmentRcd")),
@@ -140,7 +140,7 @@ process.CondDBSetup.DBParameters.messageLevel = 2
 ### read TrackerGeometry ### Publo cff
 #process.trackerAlignment = cms.ESSource("PoolDBESSource",
 #connect = cms.string("sqlite_file:/afs/cern.ch/cms/CAF/CMSALCA/ALCA_TRACKERALIGN/PayLoads/CRAFT09/TrackerAlignment_2009_v1_prompt/131020-infty/TrackerAlignment_2009_v1_prompt.db"),
-#DBParameters = CondCore.CondDB.CondDB_cfi.CondDBSetup.DBParameters,
+#DBParameters = CondCore.CondDB.CondDB_cfi.CondDB.DBParameters,
 #toGet = cms.VPSet(cms.PSet(record = cms.string("TrackerAlignmentRcd"), tag = cms.string("Alignments")),
 #                  cms.PSet(record = cms.string("TrackerAlignmentErrorExtendedRcd"), tag = cms.string("AlignmentErrorsExtended"))
 #      ))

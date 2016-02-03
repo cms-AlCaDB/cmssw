@@ -26,19 +26,19 @@ Path = cms.Path(offlineBeamSpot * CSCOverlapsTrackPreparationTrackRefitter)
 
 import CondCore.CondDB.CondDB_cfi
 inertGlobalPositionRcd = cms.ESSource("PoolDBESSource",
-                                      CondCore.CondDB.CondDB_cfi.CondDBSetup,
+                                      CondCore.CondDB.CondDB_cfi.CondDB,
                                       connect = cms.string("sqlite_file:inertGlobalPositionRcd.db"),
                                       toGet = cms.VPSet(cms.PSet(record = cms.string("GlobalPositionRcd"), tag = cms.string("inertGlobalPositionRcd"))))
 es_prefer_inertGlobalPositionRcd = cms.ESPrefer("PoolDBESSource", "inertGlobalPositionRcd")
 muonAlignment = cms.ESSource("PoolDBESSource",
-                             CondCore.CondDB.CondDB_cfi.CondDBSetup,
+                             CondCore.CondDB.CondDB_cfi.CondDB,
                              connect = cms.string("sqlite_file:inputdb.db"),
                              toGet = cms.VPSet(cms.PSet(record = cms.string("CSCAlignmentRcd"),      tag = cms.string("CSCAlignmentRcd"))))
 es_prefer_muonAlignment = cms.ESPrefer("PoolDBESSource", "muonAlignment")
 looper.applyDbAlignment = True
 
 PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                  CondCore.CondDB.CondDB_cfi.CondDBSetup,
+                                  CondCore.CondDB.CondDB_cfi.CondDB,
                                   connect = cms.string("sqlite_file:outputdb.db"),
                                   toPut = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"), tag = cms.string("DTAlignmentRcd")),
                                                     cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"), tag = cms.string("DTAlignmentErrorExtendedRcd")),

@@ -36,7 +36,7 @@ process.GlobalTag.globaltag = autoCond['run2_data'] #choose your tag
 #import CondCore.CondDB.CondDB_cfi
 #process.dbInput = cms.ESSource(
 #    "PoolDBESSource",
-#    CondCore.CondDB.CondDB_cfi.CondDBSetup,
+#    CondCore.CondDB.CondDB_cfi.CondDB,
 ##    connect = cms.string('sqlite_file:AlCaRecoTriggerBits.db'),
 #    connect = cms.string('frontier://FrontierProd/CMS_COND_31X_HLT'),
 #    toGet = cms.VPSet(cms.PSet(

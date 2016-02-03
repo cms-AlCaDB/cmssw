@@ -67,7 +67,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1) )
 import CondCore.CondDB.CondDB_cfi
 process.dbInput = cms.ESSource(
     "PoolDBESSource",
-    CondCore.CondDB.CondDB_cfi.CondDBSetup,
+    CondCore.CondDB.CondDB_cfi.CondDB,
 #    connect = cms.string('sqlite_file:AlCaRecoTriggerBits.db'),
     connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
     toGet = cms.VPSet(cms.PSet(
@@ -82,7 +82,7 @@ process.dbInput = cms.ESSource(
 import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service(
     "PoolDBOutputService",
-    CondCore.CondDB.CondDB_cfi.CondDBSetup,
+    CondCore.CondDB.CondDB_cfi.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:AlCaRecoTriggerBits.db'),
 #    connect = cms.string('sqlite_file:AlCaRecoTriggerBitsUpdate.db'),

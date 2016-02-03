@@ -22,7 +22,7 @@ process.maxEvents = cms.untracked.PSet(
 
 import CondCore.CondDB.CondDB_cfi
 process.dbInput = cms.ESSource( "PoolDBESSource"
-, CondCore.CondDB.CondDB_cfi.CondDBSetup
+, CondCore.CondDB.CondDB_cfi.CondDB
 , connect = cms.string( 'sqlite_file:GenericTriggerEventFlag_AlCaRecoTriggerBits.db' )
 , toGet   = cms.VPSet(
     cms.PSet(
