@@ -9,7 +9,7 @@ import FWCore.ParameterSet.Config as cms
 from CondCore.CondDB.CondDB_cfi import *
 #include "CondCore/DBCommon/data/CondDBSetup.cfi"
 sipixelcalib_essource = cms.ESSource("PoolDBESSource",
-    CondDBCommon,
+    CondDB,
     #    using CondDBSetup
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('SiPixelCalibConfigurationRcd'),

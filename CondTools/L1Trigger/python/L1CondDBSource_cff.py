@@ -30,7 +30,7 @@ def initCondDBSource( process,
             tagBaseVec = initL1O2OTags.tagBaseVec
                                 
     process.l1conddb = cms.ESSource("PoolDBESSource",
-                            CondDBSetup,
+                            CondDB,
                             connect = cms.string(inputDBConnect),
                             toGet = cms.VPSet(cms.PSet(
         record = cms.string('L1TriggerKeyListRcd'),

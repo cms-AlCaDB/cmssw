@@ -41,7 +41,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.calibDB = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('DTTtrigRcd'),

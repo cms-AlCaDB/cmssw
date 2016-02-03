@@ -17,7 +17,7 @@ process.CondDBCommon.connect = 'sqlite_file:QGL_'+qgDatabaseVersion+'.db'
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 process.source = cms.Source('EmptySource')
 process.PoolDBOutputService = cms.Service('PoolDBOutputService',
-   process.CondDBCommon,
+   process.CondDB,
    toPut = cms.VPSet(
       cms.PSet(
          record = cms.string('QGL_AK4PF'),

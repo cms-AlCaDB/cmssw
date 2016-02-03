@@ -25,7 +25,7 @@ process.source = cms.Source("EmptyIOVSource",
                             )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:logecalcovariances_popcon_'+suffix+'.db'),
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(cms.PSet(

@@ -27,7 +27,7 @@ process.GlobalTag.globaltag ='START37_V4::All'
 
 #from CondCore.CondDB.CondDB_cfi import *
 #process.myProcess = cms.ESSource("PoolDBESSource",
-#                                  CondDBSetup,
+#                                  CondDB,
 #                                  connect = cms.string("sqlite_file:mySqliteFile.db"),
 #                                  toGet = cms.VPSet(cms.PSet(record = cms.string("CSCDBGainsRcd"),
 #                                                             tag = cms.string("CSCDBGains_2010_mc")

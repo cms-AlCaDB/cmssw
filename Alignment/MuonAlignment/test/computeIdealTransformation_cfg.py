@@ -20,13 +20,13 @@ process.load("Geometry.CSCGeometry.cscGeometry_cfi")
 
 process.load("CondCore.CondDB.CondDB_cfi")
 process.ideal31Xfrom21X = cms.ESSource("PoolDBESSource",
-                                       process.CondDBSetup,
+                                       process.CondDB,
                                        connect = cms.string("frontier://FrontierProd/CMS_COND_31X_FROM21X"),
                                        toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"), tag = cms.string("DTIdealGeometry200_mc")),
                                                          cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"), tag = cms.string("DTIdealGeometryErrors200_mc")),
                                                          cms.PSet(record = cms.string("GlobalPositionRcd"), tag = cms.string("IdealGeometry"))))
 process.ideal31X = cms.ESSource("PoolDBESSource",
-                                process.CondDBSetup,
+                                process.CondDB,
                                 connect = cms.string("frontier://FrontierProd/CMS_COND_31X_ALIGNMENT"),
                                 toGet = cms.VPSet(cms.PSet(record = cms.string("CSCAlignmentRcd"), tag = cms.string("CSCIdealGeometry310me42_mc")),
                                                   cms.PSet(record = cms.string("CSCAlignmentErrorExtendedRcd"), tag = cms.string("CSCIdealGeometryErrors310me42_mc"))))

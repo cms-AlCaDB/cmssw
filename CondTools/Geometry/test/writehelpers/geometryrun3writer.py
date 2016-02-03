@@ -47,7 +47,7 @@ process.CondDBCommon.BlobStreamerName = cms.untracked.string('TBufferBlobStreami
 process.CondDBCommon.timetype = cms.untracked.string('runnumber')
 process.CondDBCommon.connect = cms.string('sqlite_file:myfile.db')
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           toPut = cms.VPSet(cms.PSet(record = cms.string('GeometryFileRcd'),tag = cms.string('XMLFILE_Geometry_TagXX_Extended2023_mc')),
                                                             cms.PSet(record = cms.string('IdealGeometryRecord'),tag = cms.string('TKRECO_Geometry2023_TagXX')),
                                                             cms.PSet(record = cms.string('PGeometricDetExtraRcd'),tag = cms.string('TKExtra_Geometry2023_TagXX')),

@@ -14,7 +14,7 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 process.calibDB = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     authenticationMethod = cms.untracked.uint32(0),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('DTTtrigRcd'),
@@ -43,7 +43,7 @@ process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService
 )
  
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:ttrig_112281-75.db'),
     authenticationMethod = cms.untracked.uint32(0),

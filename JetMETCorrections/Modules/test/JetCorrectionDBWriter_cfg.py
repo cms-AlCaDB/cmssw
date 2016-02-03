@@ -5,7 +5,7 @@ process.CondDBCommon.connect = 'sqlite_file:Jec11_V10.db'
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1)) 
 process.source = cms.Source('EmptySource') 
 process.PoolDBOutputService = cms.Service('PoolDBOutputService', 
-   process.CondDBCommon, 
+   process.CondDB, 
    toPut = cms.VPSet( 
       cms.PSet(
          record = cms.string('AK5Calo'), 

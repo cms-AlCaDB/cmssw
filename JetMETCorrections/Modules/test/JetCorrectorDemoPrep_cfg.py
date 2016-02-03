@@ -13,7 +13,7 @@ process.load('JetMETCorrections.Configuration.DefaultJEC_cff')
 
 
 from CondCore.CondDB.CondDB_cfi import *
-process.jec = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.jec = cms.ESSource("PoolDBESSource",CondDB,
                            connect = cms.string("frontier://FrontierPrep/CMS_COND_PHYSICSTOOLS"),                                    
                    toGet =  cms.VPSet(
                        cms.PSet(record = cms.string("JetCorrectionsRecord"),

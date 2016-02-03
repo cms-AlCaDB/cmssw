@@ -18,7 +18,7 @@ process.source = cms.Source("EmptyIOVSource",
                             )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('EcalSRSettingsRcd'),
         tag = cms.string('EcalSRSettings_beam2015_option1_v00_mc')

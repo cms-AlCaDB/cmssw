@@ -108,7 +108,7 @@ if 'COSMICS' !='<FLAG>':
 ##     process.OutOfTime.TOBlateBP=0.071
 ##     process.OutOfTime.TIBlateBP=0.036
  
-##     process.stripLorentzAngle = cms.ESSource("PoolDBESSource",CondDBSetup,
+##     process.stripLorentzAngle = cms.ESSource("PoolDBESSource",CondDB,
 ##                                              connect = cms.string('sqlite_file:/afs/cern.ch/user/b/benhoob/public/LorentzAngle/SiStripLorentzAngle_Deco.db'),
 ##                                              toGet = cms.VPSet(cms.PSet(record = cms.string('SiStripLorentzAngleRcd'),tag =cms.string('SiStripLorentzAngle_Deco') ))
 ##                                              )

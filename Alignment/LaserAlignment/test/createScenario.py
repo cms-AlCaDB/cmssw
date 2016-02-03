@@ -16,7 +16,7 @@ process.CondDBCommon.connect = 'sqlite_file:Alignments_S.db'
 
 
 process.PoolDBOutputService = cms.Service( "PoolDBOutputService",
-  process.CondDBCommon,
+  process.CondDB,
   toPut = cms.VPSet(
     cms.PSet(
       record = cms.string( 'TrackerAlignmentRcd' ),

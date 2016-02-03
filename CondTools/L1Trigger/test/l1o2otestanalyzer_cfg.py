@@ -60,7 +60,7 @@ initCondDBSource( process,
 
 from CondCore.CondDB.CondDB_cfi import CondDBSetup
 outputDB = cms.Service("PoolDBOutputService",
-                       CondDBSetup,
+                       CondDB,
                        # BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
                        connect = cms.string(options.inputDBConnect),
                        toPut = cms.VPSet(cms.PSet(

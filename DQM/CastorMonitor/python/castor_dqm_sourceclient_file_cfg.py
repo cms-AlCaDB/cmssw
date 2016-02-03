@@ -82,7 +82,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 
 #process.es_pool = cms.ESSource(
 #   "PoolDBESSource",
-#   process.CondDBSetup,
+#   process.CondDB,
 #   timetype = cms.string('runnumber'),
    # connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierPrep/CMS_COND_30X_HCAL'),
 #   connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierProd/CMS_COND_31X_HCAL'),

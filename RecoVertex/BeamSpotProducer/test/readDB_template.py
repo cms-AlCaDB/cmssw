@@ -10,7 +10,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 
 
 process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
-                                        process.CondDBSetup,
+                                        process.CondDB,
                                         toGet = cms.VPSet(cms.PSet(
     record = cms.string('BeamSpotObjectsRcd'),
     tag = cms.string('TAGNAME')

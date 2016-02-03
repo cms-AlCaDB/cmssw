@@ -46,7 +46,7 @@ for payload in payloads:
     ))
 
 process.PoolDBOutputService = cms.Service('PoolDBOutputService', 
-    process.CondDBCommon, 
+    process.CondDB, 
     toPut = cms.VPSet(PoolDBOutputService_toPut)
 ) 
 

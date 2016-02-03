@@ -36,7 +36,7 @@ process.GlobalTag.globaltag = "GTAG"
 CALIBfrom CondCore.CondDB.CondDB_cfi import *
 #                                              
 CALIBprocess.siPixelCalibGlobalTag =  cms.ESSource("PoolDBESSource",
-CALIB                                              CondDBCommon,
+CALIB                                              CondDB,
 CALIB                                              connect = cms.string("oracle://cms_orcoff_prep/CMS_COND_PIXEL_COMM_21X"),
 CALIB                                              globaltag = cms.string("PIXELCALIB_01::TypeGLOBALCALIB"),
 CALIB                                              BlobStreamerName = cms.untracked.string("TBufferBlobStreamingService")

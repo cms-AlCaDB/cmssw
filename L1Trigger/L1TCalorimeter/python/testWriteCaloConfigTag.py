@@ -30,7 +30,7 @@ process.p = cms.Path(
 
 from CondCore.CondDB.CondDB_cfi import CondDBSetup
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    CondDBSetup,
+    CondDB,
     connect = cms.string('sqlite_file:l1config.db'),
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(

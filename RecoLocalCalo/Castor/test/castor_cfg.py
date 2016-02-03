@@ -9,7 +9,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CastorDbProducer = cms.ESProducer("CastorDbProducer")
 process.es_pool = cms.ESSource(
    "PoolDBESSource",
-   process.CondDBSetup,
+   process.CondDB,
    timetype = cms.string('runnumber'),
    connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierProd/CMS_COND_31X_HCAL'),
    authenticationMethod = cms.untracked.uint32(0),

@@ -21,7 +21,7 @@ process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
 #from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBESSource = cms.ESSource(
 #    "PoolDBESSource",
-#    CondDBSetup,
+#    CondDB,
 #    #connect = cms.string('frontier://FrontierProd/CMS_COND_31X_ALIGNMENT'),
 #    connect = cms.string('sqlite_file:Alignments.db'),
 #    toGet = cms.VPSet(cms.PSet(record = cms.string('DTAlignmentRcd'),

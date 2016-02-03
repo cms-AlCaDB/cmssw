@@ -48,7 +48,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.noiseRef = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     connect = cms.string('oracle://cms_orcoff_prod/CMS_COND_31X_DT'),
     toGet = cms.VPSet(
     cms.PSet(

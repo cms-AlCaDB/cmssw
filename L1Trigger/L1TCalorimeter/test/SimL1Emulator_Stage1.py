@@ -63,7 +63,7 @@ process.simGtDigis.TechnicalTriggersInputTags = cms.VInputTag( )
 ### Need new GCT jet calibrations to go with it
 #from CondCore.CondDB.CondDB_cfi import CondDBSetup
 #process.rctSFDB = cms.ESSource("PoolDBESSource",
-#    CondDBSetup,
+#    CondDB,
 #    connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
 #    DumpStat=cms.untracked.bool(True),
 #    toGet = cms.VPSet(

@@ -29,7 +29,7 @@ process.CondDBCommon.BlobStreamerName = cms.untracked.string('TBufferBlobStreami
 process.CondDBCommon.timetype = cms.untracked.string('runnumber')
 process.CondDBCommon.connect = cms.string('sqlite_file:myfile.db')
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           toPut = cms.VPSet(cms.PSet(record = cms.string('GeometryFileRcd'),tag = cms.string('XMLFILE_MagneticFieldGeometry_TagXX')))
                                           )
 

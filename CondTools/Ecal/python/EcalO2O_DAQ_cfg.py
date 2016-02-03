@@ -22,7 +22,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toGet = cms.VPSet(
         cms.PSet(
@@ -33,7 +33,7 @@ process.PoolDBESSource = cms.ESSource("PoolDBESSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     #logconnect = cms.untracked.string('oracle://cms_orcon_prod/CMS_COND_31X_POPCONLOG'),
     logconnect = cms.untracked.string('sqlite_file:/tmp/EcalDAQDBlog.db'),
     timetype = cms.untracked.string('runnumber'),

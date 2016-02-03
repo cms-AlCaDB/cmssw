@@ -6,7 +6,7 @@ process.XMLFromDBSource.label=''
 process.load("CondCore.CondDB.CondDB_cfi")
 
 process.PoolDBESSourceGeometry = cms.ESSource("PoolDBESSource",
-                               process.CondDBSetup,
+                               process.CondDB,
                                timetype = cms.string('runnumber'),
                                toGet = cms.VPSet(cms.PSet(record = cms.string('GeometryFileRcd'),tag = cms.string('XMLFILE_Geometry_75YV4_Extended_mc')),
                                                  cms.PSet(record = cms.string('IdealGeometryRecord'),tag = cms.string('TKRECO_Geometry_75YV4'))

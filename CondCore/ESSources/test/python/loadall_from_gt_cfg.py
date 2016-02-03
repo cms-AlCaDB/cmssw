@@ -28,7 +28,7 @@ CondDBSetup = cms.PSet( DBParameters = cms.PSet(
                         )
 
 process.GlobalTag = cms.ESSource("PoolDBESSource",
-                                 CondDBSetup,
+                                 CondDB,
                                  #connect = cms.string('oracle://cms_orcon_adg/CMS_CONDITIONS'),
                                  connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
                                  #    connect = cms.string('sqlite_fip:CondCore/TagCollection/data/GlobalTag.db'), #For use during release integration

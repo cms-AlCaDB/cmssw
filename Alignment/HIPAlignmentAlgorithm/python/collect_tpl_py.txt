@@ -27,7 +27,7 @@ process.AlignmentProducer.algoConfig.outfile2 = '/HIPAlignmentAlignables.root'
 # this part only needed for survey constraint
 """
 process.survey = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TrackerSurveyRcd'),

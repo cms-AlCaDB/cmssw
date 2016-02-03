@@ -47,7 +47,7 @@ process.GlobalTag.toGet.extend([
 
 #process.CondDBCommon.connect = "sqlite_file:HeavyIonRPRcd_Hydjet_74x_v02_mc.db"
 #process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-#                                       process.CondDBCommon,
+#                                       process.CondDB,
 #                                       toGet = cms.VPSet(cms.PSet(record = cms.string('HeavyIonRPRcd'),
 #                                                                  tag = cms.string('HeavyIonRPRcd_Hydjet_74x_v02_mc')
 #                                                                  )

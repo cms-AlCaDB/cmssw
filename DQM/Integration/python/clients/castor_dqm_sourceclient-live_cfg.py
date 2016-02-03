@@ -34,7 +34,7 @@ process.CastorDbProducer = cms.ESProducer("CastorDbProducer")
 
 ###process.es_pool = cms.ESSource(
 ###   "PoolDBESSource",
-###   process.CondDBSetup,
+###   process.CondDB,
 ###   timetype = cms.string('runnumber'),
 ###   connect = cms.string('frontier://(proxyurl=http://localhost:3128)(serverurl=http://localhost:8000/FrontierOnProd)(serverurl=http://localhost:8000/FrontierOn Prod)(retrieve-ziplevel=0)(failovertoserver=no)/CMS_COND_31X_HCAL'),
 ###   authenticationMethod = cms.untracked.uint32(0),
@@ -72,7 +72,7 @@ process.CastorDbProducer = cms.ESProducer("CastorDbProducer")
 
 process.es_pool0 = cms.ESSource(
    "PoolDBESSource",
-   process.CondDBSetup,
+   process.CondDB,
    timetype = cms.string('runnumber'),
    ###connect = cms.string('frontier://FrontierProd/CMS_COND_31X_HCAL'),
    connect = cms.string('frontier://(proxyurl=http://localhost:3128)(serverurl=http://localhost:8000/FrontierOnProd)(serverurl=http://localhost:8000/FrontierOn Prod)(retrieve-ziplevel=0)(failovertoserver=no)/CMS_COND_31X_HCAL'),
@@ -87,7 +87,7 @@ process.es_pool0 = cms.ESSource(
 
 process.es_pool = cms.ESSource(
    "PoolDBESSource",
-   process.CondDBSetup,
+   process.CondDB,
    timetype = cms.string('runnumber'),
    #connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierPrep/CMS_COND_30X_HCAL'),
    #connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierProd/CMS_COND_31X_HCAL'),

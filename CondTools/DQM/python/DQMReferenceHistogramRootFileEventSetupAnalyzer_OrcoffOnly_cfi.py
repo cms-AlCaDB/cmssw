@@ -6,7 +6,7 @@ from CondCore.CondDB.CondDB_cfi import *
 CondDBSetup.DBParameters.authenticationPath = cms.untracked.string('/build/diguida/conddb')
 
 ReferenceRetrieval = cms.ESSource("PoolDBESSource",
-                                  CondDBSetup,
+                                  CondDB,
                                   connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_TEMP'),
                                   BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
                                   messageLevel = cms.untracked.int32(1), #3 for high verbosity

@@ -26,7 +26,7 @@ process.maxEvents = cms.untracked.PSet(	input = cms.untracked.int32(1) )
 from CondCore.CondDB.CondDB_cfi import CondDBSetup
 process.load = cms.ESSource(
     "PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TauTagMVAComputerRcd'),

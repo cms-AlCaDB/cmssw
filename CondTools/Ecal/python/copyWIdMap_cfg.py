@@ -26,7 +26,7 @@ process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/cond
 print 'avant PoolDBOutputService' 
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon, 
+    process.CondDB, 
     logconnect = cms.untracked.string('sqlite_file:log.db'),   
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('EcalTPGWeightIdMapRcd'),

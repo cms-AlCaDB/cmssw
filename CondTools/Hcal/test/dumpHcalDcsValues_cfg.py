@@ -43,7 +43,7 @@ process.source = cms.Source("EmptySource",
 
 
 process.es_pool = cms.ESSource("PoolDBESSource",
-     process.CondDBSetup,
+     process.CondDB,
      timetype = cms.string('runnumber'),
      connect = cms.string('sqlite_file:testExample.db'),
      authenticationMethod = cms.untracked.uint32(0),
@@ -104,7 +104,7 @@ process.es_pool = cms.ESSource("PoolDBESSource",
 ## you can mix different es_sources as long as it's unique for each object
 # process.es_pool = cms.ESSource(
 #     "PoolDBESSource",
-#     process.CondDBSetup,
+#     process.CondDB,
 #     timetype = cms.string('runnumber'),
 #     connect = cms.string('frontier://FrontierDev/CMS_COND_HCAL'),
 #     authenticationMethod = cms.untracked.uint32(0),

@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 def addPoolDBESSource(process,moduleName,record,tag,label='',connect='sqlite_file:'):
     from CondCore.CondDB.CondDB_cfi import CondDBSetup 
     calibDB = cms.ESSource("PoolDBESSource",
-                           CondDBSetup,
+                           CondDB,
                            timetype = cms.string('runnumber'),
                            toGet = cms.VPSet(cms.PSet(
                                record = cms.string(record),

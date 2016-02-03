@@ -36,7 +36,7 @@ process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck",
 )
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('SiPixelGainCalibrationOfflineRcd'),

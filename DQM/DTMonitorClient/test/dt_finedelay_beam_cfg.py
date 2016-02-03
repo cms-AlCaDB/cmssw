@@ -64,7 +64,7 @@ process.dtFineDelayCorr.minEntries = cms.untracked.int32(100)
 # Read worstPhases from DB
 from CondCore.CondDB.CondDB_cfi import *
 process.ttrigsource = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(record = cms.string('DTTPGParametersRcd'),
                                tag = cms.string('worstPhase')

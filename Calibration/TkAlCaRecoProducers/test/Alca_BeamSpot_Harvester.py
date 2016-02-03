@@ -88,7 +88,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = "sqlite_file:testbs.db"
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           toPut = cms.VPSet(cms.PSet(
     record = cms.string('BeamSpotObjectsRcd'),
     tag = cms.string('TestLSBasedBS') )),

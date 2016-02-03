@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 from CondCore.CondDB.CondDB_cfi import *
 ecalTPConditions = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     loadAll = cms.bool(True),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('EcalTPGPedestalsRcd'),

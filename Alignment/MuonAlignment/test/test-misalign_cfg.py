@@ -33,7 +33,7 @@ process.source = cms.Source("EmptySource")
 # Database output service if you want to store soemthing in MisalignedMuon
 from CondCore.CondDB.CondDB_cfi import CondDBSetup
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    CondDBSetup,
+    CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('DTAlignmentRcd'),
         tag = cms.string('DT100InversepbScenario')

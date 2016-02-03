@@ -51,7 +51,7 @@ process.GlobalTag.globaltag = 'CRAFT09_R_V10::All' # take your favourite
 #from CondCore.CondDB.CondDB_cfi import *
 #process.trackerAlignment = cms.ESSource(
 #    "PoolDBESSource",
-#    CondDBSetup,
+#    CondDB,
 #    connect = cms.string("frontier://FrontierProd/CMS_COND_31X_ALIGNMENT"),
 ##    connect = cms.string("frontier://FrontierPrep/CMS_COND_ALIGNMENT"),
 #    toGet = cms.VPSet(cms.PSet(record = cms.string("TrackerAlignmentRcd"),
@@ -244,7 +244,7 @@ process.p = cms.Path(process.offlineBeamSpot*process.AlignmentTrackSelector*proc
 #from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBOutputService = cms.Service(
 #    "PoolDBOutputService",
-#    CondDBSetup,
+#    CondDB,
 #    timetype = cms.untracked.string('runnumber'),
 #    connect = cms.string('sqlite_file:TkAlignment.db'),
 #    toPut = cms.VPSet(cms.PSet(

@@ -26,7 +26,7 @@ process.PoolDBOutputService = cms.Service("PoolDBOutputService",
     ),
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string("sqlite_file:cabling.db"),
-    #process.CondDBCommon,
+    #process.CondDB,
     toPut = cms.VPSet(cms.PSet(
         record =  cms.string('SiPixelFedCablingMapRcd'),
         tag = cms.string('SiPixelFedCablingMap_phase1_v1')

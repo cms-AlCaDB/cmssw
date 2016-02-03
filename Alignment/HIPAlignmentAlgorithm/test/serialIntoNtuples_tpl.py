@@ -17,7 +17,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 )
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentRcd'),

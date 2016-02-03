@@ -7,7 +7,7 @@ hcal_db_producer = cms.ESProducer("HcalDbProducer",
 )
 
 es_pool = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     timetype = cms.string('runnumber'),
     connect = cms.string('frontier://FrontierDev/CMS_COND_HCAL'), ##FrontierDev/CMS_COND_HCAL"
     authenticationMethod = cms.untracked.uint32(0),

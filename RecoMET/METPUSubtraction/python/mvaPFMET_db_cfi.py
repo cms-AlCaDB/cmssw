@@ -1,7 +1,7 @@
 from CondCore.CondDB.CondDB_cfi import *
  
 ## mvaPFMEtGBRForestsFromDB = cms.ESSource("PoolDBESSource",
-##     CondDBSetup,
+##     CondDB,
 ##     DumpStat = cms.untracked.bool(True),
 ##     toGet = cms.VPSet(
 ##         cms.PSet(

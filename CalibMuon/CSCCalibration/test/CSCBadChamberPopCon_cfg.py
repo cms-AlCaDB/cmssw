@@ -32,7 +32,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:CSCBadChamberslog_15April2011.db'),
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('CSCBadChambersRcd'),

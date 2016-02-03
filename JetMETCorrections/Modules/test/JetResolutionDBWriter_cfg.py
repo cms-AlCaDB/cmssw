@@ -6,7 +6,7 @@ process.CondDBCommon.connect = 'sqlite_file:Summer15_V0_MC_JER.db'
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 process.source = cms.Source('EmptySource')
 process.PoolDBOutputService = cms.Service('PoolDBOutputService',
-        process.CondDBCommon,
+        process.CondDB,
         toPut = cms.VPSet(
             cms.PSet(
                 record = cms.string('Summer15_V0_MC_JER_AK4PFchs'),

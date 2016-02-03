@@ -6,7 +6,7 @@ process.CondDBCommon.connect = 'sqlite_file:pop_test.db'
 process.CondDBCommon.DBParameters.messageLevel = cms.untracked.int32(3)
 
 process.eff = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     RefreshEachRun=cms.untracked.bool(True),
     DumpStat=cms.untracked.bool(True),
     toGet = cms.VPSet(

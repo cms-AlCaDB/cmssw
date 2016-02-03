@@ -118,7 +118,7 @@ def customiseL1Menu(process):
         if useSqlFile != '' :
             from CondCore.CondDB.CondDB_cfi import CondDBSetup
             process.l1conddb = cms.ESSource("PoolDBESSource",
-                                    CondDBSetup,
+                                    CondDB,
                                     connect = cms.string('sqlite_file:' + useSqlFile),
                                     toGet = cms.VPSet(cms.PSet(
                                                 record = cms.string('L1GtTriggerMenuRcd'),

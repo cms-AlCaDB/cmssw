@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 #used for real DB conditions
 from CondCore.CondDB.CondDB_cfi import *
 cscConditions = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('CSCGainsRcd'),

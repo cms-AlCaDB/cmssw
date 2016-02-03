@@ -83,7 +83,7 @@ def configure_fftjetlut_esproducer(sequenceTag):
 def configure_fftjetlut_pooldbessource(process, sequenceTag):
     config = cms.ESSource(
         "PoolDBESSource",
-        process.CondDBCommon,
+        process.CondDB,
         toGet = cms.VPSet(cms.PSet(
             record = cms.string(fftjet_lut_types[sequenceTag].dbRecord),
             tag = cms.string(fftjet_lut_types[sequenceTag].dbTag),

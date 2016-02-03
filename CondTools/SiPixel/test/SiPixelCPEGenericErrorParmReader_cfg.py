@@ -15,7 +15,7 @@ process.maxEvents = cms.untracked.PSet(
 #process.GlobalTag.globaltag = 'IDEAL_30X::All'
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-                                      process.CondDBSetup,
+                                      process.CondDB,
                                       loadAll = cms.bool(True),
                                       toGet = cms.VPSet(cms.PSet(
     record = cms.string('SiPixelCPEGenericErrorParmRcd'),

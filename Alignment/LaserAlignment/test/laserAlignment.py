@@ -37,7 +37,7 @@ process.GlobalTag.globaltag = cms.string('GR_R_37X_V6::All')
 
 ## get the tracker alignment records from this file
 process.trackerAlignment = cms.ESSource( "PoolDBESSource",
-  process.CondDBSetup,
+  process.CondDB,
   timetype = cms.string( 'runnumber' ),
   toGet = cms.VPSet(
     cms.PSet(

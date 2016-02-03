@@ -102,7 +102,7 @@ $replaceBlock = "";
 # replace "save to DB" directives
 $saveAlignmentConstants = "from CondCore.CondDB.CondDB_cfi import *\n"
                         . "process.PoolDBOutputService = cms.Service(\"PoolDBOutputService\",\n"
-                        . "    CondDBSetup,\n"
+                        . "    CondDB,\n"
                         . "    timetype = cms.untracked.string('runnumber'),\n"
                         . "    connect = cms.string('sqlite_file:alignments_MP.db'),\n"
                         . "    toPut = cms.VPSet(cms.PSet(\n"

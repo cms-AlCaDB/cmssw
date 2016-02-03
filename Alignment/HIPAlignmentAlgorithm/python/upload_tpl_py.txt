@@ -10,7 +10,7 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:<PATH>/alignments.db'),
     toPut = cms.VPSet(cms.PSet(

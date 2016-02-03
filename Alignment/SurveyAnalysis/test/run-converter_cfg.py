@@ -38,7 +38,7 @@ process.source = cms.Source("EmptySource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentRcd'),
         tag = cms.string('TibTidTecAllSurvey_v2')

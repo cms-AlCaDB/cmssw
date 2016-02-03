@@ -15,7 +15,7 @@ process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
 process.load("CondCore.CondDB.CondDB_cfi")
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentErrorExtendedRcd'),
         tag = cms.string('TrackerNoErrors150')

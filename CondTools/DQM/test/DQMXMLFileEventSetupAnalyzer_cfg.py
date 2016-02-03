@@ -26,7 +26,7 @@ process.source = cms.Source("EmptyIOVSource",
                             )
                                       
 #process.XmlRetrieval_2 = cms.ESSource("PoolDBESSource",
-#                                      CondDBSetup,
+#                                      CondDB,
 #                                      connect = cms.string('sqlite_file:./testXML.db'),
 #                                      BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
 #                                      messageLevel = cms.untracked.int32(1),
@@ -39,7 +39,7 @@ process.source = cms.Source("EmptyIOVSource",
 #                                      )
 
 #process.XmlRetrieval_1 = cms.ESSource("PoolDBESSource",
-#                                      CondDBSetup,
+#                                      CondDB,
 #                                      connect = cms.string('sqlite_file:./testXML.db'),
 #                                      BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
 #                                      messageLevel = cms.untracked.int32(1),

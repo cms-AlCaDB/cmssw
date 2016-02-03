@@ -54,7 +54,7 @@ else:
 
 from CondCore.CondDB.CondDB_cfi import CondDBSetup
 inputDB = cms.Service("PoolDBOutputService",
-                      CondDBSetup,
+                      CondDB,
                       connect = cms.string(connectStr),
                       toPut = cms.VPSet(cms.PSet(
     record = cms.string("L1TriggerKeyRcd"),

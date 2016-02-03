@@ -6,7 +6,7 @@ import FWCore.ParameterSet.Config as cms
 #
 from CondCore.CondDB.CondDB_cfi import *
 muonAlignment = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('DTAlignmentRcd'),
         tag = cms.string('DTIdealGeometry200_mc')

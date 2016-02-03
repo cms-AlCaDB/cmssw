@@ -86,7 +86,7 @@ process.GlobalTag.globaltag = "CRAFT_V3P::All"
 
 from CondCore.CondDB.CondDB_cfi import *
 process.siPixelCalibGlobalTag =  cms.ESSource("PoolDBESSource",
-                                              CondDBCommon,
+                                              CondDB,
                                               connect = cms.string("frontier://FrontierProd/CMS_COND_21X_PIXEL"),
                                               
                                               toGet = cms.VPSet(

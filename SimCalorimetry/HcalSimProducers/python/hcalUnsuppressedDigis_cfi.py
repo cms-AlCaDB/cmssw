@@ -52,7 +52,7 @@ if eras.fastSim.isChosen():
     hcalSimBlock.hitsProducer = cms.string('famosSimHits')
     
 #es_cholesky = cms.ESSource("PoolDBESSource",
-#    CondDBSetup,
+#    CondDB,
 #    timetype = cms.string('runnumber'),
 #    toGet = cms.VPSet(
 #        cms.PSet(

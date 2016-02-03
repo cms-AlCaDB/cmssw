@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 #used for chamber DB conditions
 from CondCore.CondDB.CondDB_cfi import *
 cscConditions = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     #    string connect = "frontier://FrontierDev/CMS_COND_ALIGNMENT"
     siteLocalConfig = cms.untracked.bool(True),
     toGet = cms.VPSet(cms.PSet(

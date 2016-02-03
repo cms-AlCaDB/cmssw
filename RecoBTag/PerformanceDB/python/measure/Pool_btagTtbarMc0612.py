@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from CondCore.CondDB.CondDB_cfi import *
 
 PoolDBESSourcebtagTtbarMc0612 = cms.ESSource("PoolDBESSource",
-                              CondDBCommon,
+                              CondDB,
                               toGet = cms.VPSet(
     #
     # working points

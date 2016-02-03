@@ -22,7 +22,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:EcalIntercalibConstants_test.db'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-  process.CondDBCommon, 
+  process.CondDB, 
   logconnect = cms.untracked.string('sqlite_file:log.db'),   
   toPut = cms.VPSet(
     cms.PSet(

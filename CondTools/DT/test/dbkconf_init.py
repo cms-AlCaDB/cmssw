@@ -13,7 +13,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:log.db'),
     timetype = cms.untracked.string('runnumber'),
     withWrapper = cms.untracked.bool(False),

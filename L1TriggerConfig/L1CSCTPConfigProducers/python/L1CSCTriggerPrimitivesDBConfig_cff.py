@@ -6,7 +6,7 @@ from CondCore.CondDB.CondDB_cfi import *
 
 # Read constants from DB.
 l1csctpdbconfsrc = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     timetype = cms.string('runnumber'),
     #connect = cms.string('frontier://FrontierDev/CMS_COND_CSC'),
     #connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierProd/CMS_COND_21X_CSC'),

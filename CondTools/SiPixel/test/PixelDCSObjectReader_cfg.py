@@ -16,7 +16,7 @@ process.TFileService = cms.Service("TFileService",
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
 
-  process.CondDBSetup,
+  process.CondDB,
 
   connect = cms.string('sqlite_file:pixelPVSSCond.db'),
   timetype = cms.untracked.string('runnumber'),

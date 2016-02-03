@@ -26,7 +26,7 @@ process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/cond
 # process.GlobalTag.connect =cms.string('frontier://(proxyurl=http://localhost:3128)(serverurl=http://localhost:8000/FrontierOnProd)(serverurl=http://localhost:8000/FrontierOnProd)(retrieve-ziplevel=0)/CMS_COND_31X_GLOBALTAG')
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           timetype = cms.untracked.string('runnumber'),
                                           toGet = cms.VPSet(
          cms.PSet(

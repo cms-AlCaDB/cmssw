@@ -20,7 +20,7 @@ process.source = cms.Source("EmptyIOVSource",
 
 
 process.rn = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.string('timestamp'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('FillInfoRcd'),

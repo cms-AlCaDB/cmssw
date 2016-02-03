@@ -18,7 +18,7 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('SiPixelCalibConfigurationRcd'),
         tag = cms.string('PIXELTAG')

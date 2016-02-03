@@ -12,7 +12,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1) )
 process.load("CondCore.CondDB.CondDB_cfi")
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:emulator_phase_map_fromfile.db'),
     authenticationMethod = cms.untracked.uint32(0),

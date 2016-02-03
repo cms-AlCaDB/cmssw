@@ -34,7 +34,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:RecoTauTag_MVAs_%s.db' % today_string
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet()
 )                                          

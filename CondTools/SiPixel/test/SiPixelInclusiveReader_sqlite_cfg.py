@@ -49,7 +49,7 @@ process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck",
 
 ###### TAGS TO READ ######
 process.PoolDBESSourceForReader = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
     toGet = cms.VPSet(cms.PSet(
             record = cms.string('SiPixelFedCablingMapRcd'),

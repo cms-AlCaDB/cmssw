@@ -16,7 +16,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.PoolDBESSourceGeometry = cms.ESSource("PoolDBESSource",
-                                              process.CondDBSetup,
+                                              process.CondDB,
                                               timetype = cms.string('runnumber'),
                                               toGet = cms.VPSet(
     #cms.PSet(record = cms.string('GeometryFileRcd'),         tag = cms.string('XMLFILE_Geometry_Extended_TagXX_mc')),

@@ -10,7 +10,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 #process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-#    process.CondDBSetup,
+#    process.CondDB,
 #    toGet = cms.VPSet(cms.PSet(
 #        record = cms.string('L1RPCHwConfigRcd'),
 #        tag = cms.string('L1RPCHwConfig_STARTUP')

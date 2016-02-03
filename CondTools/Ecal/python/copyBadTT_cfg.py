@@ -23,7 +23,7 @@ process.CondDBCommon.connect = 'sqlite_file:DB.db'
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon, 
+    process.CondDB, 
     logconnect = cms.untracked.string('sqlite_file:log.db'),   
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('EcalTPGTowerStatusRcd'),

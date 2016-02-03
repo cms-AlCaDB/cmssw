@@ -49,7 +49,7 @@ process.GlobalTag.connect = "frontier://(proxyurl=http://localhost:3128)(serveru
 from CondCore.CondDB.CondDB_cfi import CondDBSetup
  
 process.l1conddb = cms.ESSource("PoolDBESSource",
-                                CondDBSetup,
+                                CondDB,
                                 connect = cms.string("sqlite_file:csctf.db"),
                                 toGet = cms.VPSet(cms.PSet(record = cms.string('L1MuCSCTFConfigurationRcd'),
                                                            tag = cms.string('L1MuCSCTFConfiguration_IDEAL')

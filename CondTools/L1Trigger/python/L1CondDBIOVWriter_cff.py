@@ -16,7 +16,7 @@ def initIOVWriter( process,
 
     from CondCore.CondDB.CondDB_cfi import CondDBSetup
     initIOVWriter.outputDB = cms.Service("PoolDBOutputService",
-                                         CondDBSetup,
+                                         CondDB,
                                          connect = cms.string(outputDBConnect),
                                          toPut = cms.VPSet(cms.PSet(
         record = cms.string("L1TriggerKeyRcd"),

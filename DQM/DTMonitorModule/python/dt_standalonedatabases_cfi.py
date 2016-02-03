@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from CondCore.CondDB.CondDB_cfi import *
 
 geometryESSource = cms.ESSource("PoolDBESSource",
-                                 CondDBSetup,
+                                 CondDB,
                                     toGet = cms.VPSet(cms.PSet(record = cms.string('GlobalPositionRcd'),
                                                                tag = cms.string('IdealGeometry')
                                                                ),
@@ -30,7 +30,7 @@ geometryESSource = cms.ESSource("PoolDBESSource",
                                     )
 
 beamSpotESSource = cms.ESSource("PoolDBESSource",
-                              CondDBSetup,
+                              CondDB,
                               timetype = cms.string('runnumber'),
                               toGet = cms.VPSet(cms.PSet(record = cms.string('BeamSpotObjectsRcd'),
                                                          tag = cms.string('Early10TeVCollision_3p8cm_v2_mc')
@@ -41,7 +41,7 @@ beamSpotESSource = cms.ESSource("PoolDBESSource",
                               )
 
 dtConditionsESSource = cms.ESSource("PoolDBESSource",
-                         CondDBSetup,
+                         CondDB,
                          timetype = cms.string('runnumber'),
                          toGet = cms.VPSet(cms.PSet(record = cms.string('DTReadOutMappingRcd'),
                                                     tag = cms.string('DT_map10ddu21X_V01')
@@ -62,7 +62,7 @@ dtConditionsESSource = cms.ESSource("PoolDBESSource",
 
 # process.es_prefer_roMapping = cms.ESPrefer('PoolDBESSource','roMapping')
 ttrigsource = cms.ESSource("PoolDBESSource",
-                           CondDBSetup,
+                           CondDB,
                            timetype = cms.string('runnumber'),
                            toGet = cms.VPSet(cms.PSet(record = cms.string('DTTtrigRcd'),
                                                       tag = cms.string('tTrig_CRAFT_081021_1614_offline')

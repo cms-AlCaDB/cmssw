@@ -38,7 +38,7 @@ process.GlobalTag.globaltag = ".oO[GlobalTag]Oo."
 #import CalibTracker.Configuration.Common.PoolDBESSource_cfi
 from CondCore.CondDB.CondDB_cfi import *
 #load the Global Position Rcd
-process.globalPosition = cms.ESSource("PoolDBESSource", CondDBSetup,
+process.globalPosition = cms.ESSource("PoolDBESSource", CondDB,
                                   toGet = cms.VPSet(cms.PSet(
                                           record =cms.string('GlobalPositionRcd'),
                                           tag= cms.string('IdealGeometry')

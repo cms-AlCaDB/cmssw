@@ -12,7 +12,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('pippo1'),
         tag = cms.string('TEST_TF_1'),

@@ -14,7 +14,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.calibDB = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     authenticationMethod = cms.untracked.uint32(0),
     toGet = cms.VPSet(cms.PSet(
     	# Noise

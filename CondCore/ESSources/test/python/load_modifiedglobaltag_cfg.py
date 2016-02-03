@@ -6,7 +6,7 @@ process.CondDBCommon.connect = cms.string("sqlite_file:tagDB.db")
 process.CondDBCommon.DBParameters.messageLevel = 0
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     globaltag = cms.string('MYTREE1::All'),
     toGet = cms.VPSet(cms.PSet(
             connect=cms.untracked.string('sqlite_file:extradata.db'),

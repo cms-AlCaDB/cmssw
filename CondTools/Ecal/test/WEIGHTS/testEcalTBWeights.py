@@ -34,7 +34,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('EcalTBWeightsRcd'),

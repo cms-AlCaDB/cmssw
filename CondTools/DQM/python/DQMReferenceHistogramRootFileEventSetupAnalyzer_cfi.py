@@ -6,7 +6,7 @@ from CondCore.CondDB.CondDB_cfi import *
 dqmRefHistoRootFileGetter=cms.EDAnalyzer("DQMReferenceHistogramRootFileEventSetupAnalyzer") 
 
 ## ReferenceRetrieval = cms.ESSource("PoolDBESSource",
-##                                   CondDBSetup,
+##                                   CondDB,
 ##                                   connect = cms.string('sqlite_file:DQMReferenceHistogramTest.db'),
 ##                                   BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
 ##                                   messageLevel = cms.untracked.int32(1), #3 for high verbosity

@@ -7,7 +7,7 @@ process.CondDBCommon.connect = 'sqlite_file:testconf.db'
 process.CondDBCommon.DBParameters.authenticationPath = '.'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:log.db'),
     toPut = cms.VPSet(
     cms.PSet(
@@ -40,7 +40,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.essource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     DumpStat=cms.untracked.bool(True),                           
     toGet = cms.VPSet(
     cms.PSet(

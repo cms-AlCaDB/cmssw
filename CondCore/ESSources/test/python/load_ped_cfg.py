@@ -6,7 +6,7 @@ process.CondDBCommon.connect = cms.string("sqlite_file:test.db")
 process.CondDBCommon.DBParameters.messageLevel = 0
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('PedestalsRcd'),
         tag = cms.string('mytest')

@@ -16,7 +16,7 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 from CondCore.CondDB.CondDB_cfi import *
 process.ecalConditions = cms.ESSource("PoolDBESSource",
-                                      CondDBSetup,
+                                      CondDB,
                                       siteLocalConfig = cms.untracked.bool(True),
                                       toGet = cms.VPSet(cms.PSet(
     record = cms.string('EcalChannelStatusRcd'),

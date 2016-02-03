@@ -10,7 +10,7 @@ process.CondDBCommon.DBParameters.authenticationPath = '.'
 process.DTHVCheckWithHysteresis = cms.Service("DTHVCheckWithHysteresis")
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:log.db'),
     timetype = cms.untracked.string('timestamp'),
     toPut = cms.VPSet(cms.PSet(

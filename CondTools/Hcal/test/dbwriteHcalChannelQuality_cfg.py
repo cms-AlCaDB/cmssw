@@ -29,7 +29,7 @@ process.es_ascii = cms.ESSource("HcalTextCalibrations",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     logconnect= cms.untracked.string('sqlite_file:log.db'),
     toPut = cms.VPSet(cms.PSet(

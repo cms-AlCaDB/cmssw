@@ -27,7 +27,7 @@ process.source = cms.Source("EmptyIOVSource",
 #    timetype = cms.untracked.string('timestamp'),
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('timestamp'),
     toPut = cms.VPSet(
         cms.PSet(

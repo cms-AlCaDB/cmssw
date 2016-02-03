@@ -39,7 +39,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = "sqlite_file:" + ivars.outputFile
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           timetype = cms.untracked.string("runnumber"),
                                           toPut = cms.VPSet(cms.PSet(record = cms.string('HeavyIonRcd'),
                                                                      tag = cms.string(ivars.outputTag)

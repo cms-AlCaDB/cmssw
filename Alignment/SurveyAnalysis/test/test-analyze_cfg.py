@@ -20,7 +20,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentRcd'),
         tag = cms.string('TibTidTecAllSurvey_v2')

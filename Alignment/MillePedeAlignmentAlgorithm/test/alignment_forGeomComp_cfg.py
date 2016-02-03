@@ -52,7 +52,7 @@ from CondCore.CondDB.CondDB_cfi import *
 # CondDBSetup.DBParameters.authenticationPath = '...' # needed to access cms_orcoff_prod
 process.trackerAlignment = cms.ESSource(
     "PoolDBESSource",
-    CondDBSetup,
+    CondDB,
 #    connect = cms.string("sqlite_file:TrackerAlignment_GR10v6_offline_append.db"),
     connect = cms.string("frontier://FrontierProd/CMS_COND_31X_ALIGNMENT"),
 #    connect = cms.string("oracle://cms_orcoff_prod/CMS_COND_31X_ALIGNMENT"),
@@ -107,7 +107,7 @@ process.AlignmentProducer.saveToDB = True # should not be needed, but is:
 #                     otherwise AlignmentProducer does not  call relevant algorithm part
 process.PoolDBOutputService = cms.Service(
     "PoolDBOutputService",
-    CondDBSetup,
+    CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:remove_me.db'),
     toPut = cms.VPSet(cms.PSet(

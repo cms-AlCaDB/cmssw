@@ -4,7 +4,7 @@ process = cms.Process("TEST")
 process.load("CondCore.CondDB.CondDB_cfi")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('PedestalsRcd'),
         tag = cms.string('mytest')

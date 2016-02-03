@@ -8,7 +8,7 @@ dqmXMLFileGetter=cms.EDAnalyzer("DQMXMLFileEventSetupAnalyzer",
                                 ) 
 
 ## ReferenceRetrieval = cms.ESSource("PoolDBESSource",
-##                                   CondDBSetup,
+##                                   CondDB,
 ##                                   connect = cms.string('sqlite_file:DQMReferenceHistogramTest.db'),
 ##                                   BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
 ##                                   messageLevel = cms.untracked.int32(1), #3 for high verbosity

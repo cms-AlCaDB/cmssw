@@ -10,7 +10,7 @@ from CondCore.CondDB.CondDB_cfi import *
 
 CondDBCommon.connect = "sqlite_file:PromptCalibConditions.db"
 PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                  CondDBCommon,
+                                  CondDB,
                                   toPut = cms.VPSet(cms.PSet(
                                       record = cms.string('BeamSpotObjectsRcd'),
                                       tag = cms.string('TestLSBasedBS') )),

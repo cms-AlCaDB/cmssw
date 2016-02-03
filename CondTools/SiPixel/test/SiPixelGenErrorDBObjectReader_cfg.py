@@ -38,7 +38,7 @@ if testGlobalTag :
 # for local sqlite files
 else:
     process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-        process.CondDBSetup,
+        process.CondDB,
         toGet = cms.VPSet(
           cms.PSet(
             record = cms.string('SiPixelGenErrorDBObjectRcd'),

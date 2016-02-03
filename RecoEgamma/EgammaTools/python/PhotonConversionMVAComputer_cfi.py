@@ -1,7 +1,7 @@
 from CondCore.CondDB.CondDB_cfi import *
 
 PhotonConversionMVAComputerRcd = cms.ESSource("PoolDBESSource",
-        CondDBSetup,
+        CondDB,
         timetype = cms.untracked.string('runnumber'),
         toGet = cms.VPSet(cms.PSet(
             record = cms.string('PhotonConversionMVAComputerRcd'),

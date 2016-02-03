@@ -9,7 +9,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     # Writing to oracle needs the following shell variable setting (in zsh):
     # export CORAL_AUTH_PATH=/afs/cern.ch/cms/DB/conddb
     # string connect = "oracle://cms_orcoff_int2r/CMS_COND_ALIGNMENT"

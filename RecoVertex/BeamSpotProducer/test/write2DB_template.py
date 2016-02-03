@@ -13,7 +13,7 @@ process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/cond
 #################################
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           toPut = cms.VPSet(cms.PSet(
     record = cms.string('BeamSpotObjectsRcd'),
     tag = cms.string('TAGNAME') )),

@@ -47,7 +47,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:../data/mvaPFMEt_53_Dec2012.db'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(
         cms.PSet(

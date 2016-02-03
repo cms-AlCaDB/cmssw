@@ -5,7 +5,7 @@ CondDBCommon.connect = cms.string('sqlite_file:JEC_Spring10.db')
 
 
 PoolDBESSource = cms.ESSource("PoolDBESSource",
-  CondDBCommon,
+  CondDB,
   toGet = cms.VPSet( 
       cms.PSet( 
          record = cms.string('JetCorrectionsRecord'), 
@@ -15,7 +15,7 @@ PoolDBESSource = cms.ESSource("PoolDBESSource",
   )
 )
 PoolDBESSource = cms.ESSource("PoolDBESSource",
-  CondDBCommon,
+  CondDB,
   toGet = cms.VPSet( 
       cms.PSet( 
          record = cms.string('JetCorrectionsRecord'), 
@@ -25,7 +25,7 @@ PoolDBESSource = cms.ESSource("PoolDBESSource",
   )
 )
 PoolDBESSource = cms.ESSource("PoolDBESSource",
-  CondDBCommon,
+  CondDB,
   toGet = cms.VPSet( 
       cms.PSet( 
          record = cms.string('JetCorrectionsRecord'), 

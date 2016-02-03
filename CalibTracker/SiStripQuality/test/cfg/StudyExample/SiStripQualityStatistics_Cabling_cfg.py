@@ -53,7 +53,7 @@ process.load("Configuration.Geometry.GeometryIdeal_cff")   # needed because the 
 process.load("CondCore.CondDB.CondDB_cfi")   # needed because the GlobalTag is NOT used
 process.CondDBCommon.connect='frontier://FrontierProd/CMS_CONDITIONS'
 process.poolDBESSource=cms.ESSource("PoolDBESSource",
-                                    process.CondDBCommon,
+                                    process.CondDB,
                                     BlobStreamerName=cms.untracked.string('TBufferBlobStreamingService'),
                                     toGet           =cms.VPSet(
     cms.PSet(

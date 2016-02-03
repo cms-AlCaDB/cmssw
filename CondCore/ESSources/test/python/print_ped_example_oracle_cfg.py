@@ -6,7 +6,7 @@ process.CondDBCommon.connect = cms.string('oracle://cms_orcoff_int2r/CMS_COND_PR
 process.CondDBCommon.DBParameters.authenticationPath=cms.untracked.string('/afs/cern.ch/cms/DB/conddb')
 process.CondDBCommon.DBParameters.messageLevel = 1
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('PedestalsRcd'),
         tag = cms.string('mytest')

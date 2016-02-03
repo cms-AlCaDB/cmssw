@@ -135,7 +135,7 @@ process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = 'MC_36Y_V7A::All'
 
 #process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
-                                        #process.CondDBSetup,
+                                        #process.CondDB,
                                         #toGet = cms.VPSet(cms.PSet(
     #record = cms.string('BeamSpotObjectsRcd'),
     #tag = cms.string('Early10TeVCollision_3p8cm_v3_mc_IDEAL')

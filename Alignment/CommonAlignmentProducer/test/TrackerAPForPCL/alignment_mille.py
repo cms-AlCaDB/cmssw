@@ -218,7 +218,7 @@ process.AlignmentProducer.saveToDB = True
 from CondCore.CondDB.CondDB_cfi import *
 process.PoolDBOutputService = cms.Service(
         "PoolDBOutputService",
-            CondDBSetup,
+            CondDB,
             connect = cms.string('sqlite_file:TkAlignment.db'),
             toPut = cms.VPSet(cms.PSet(
                 record = cms.string('TrackerAlignmentRcd'),

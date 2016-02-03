@@ -22,7 +22,7 @@ process.source = cms.Source("EmptyIOVSource", #needed to EvSetup in order to loa
                             )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           timetype = cms.untracked.string('runnumber'),
                                           toPut = cms.VPSet(cms.PSet(record = cms.string('FileBlob'),
                                                                      tag = cms.string('XML_pixels_1')

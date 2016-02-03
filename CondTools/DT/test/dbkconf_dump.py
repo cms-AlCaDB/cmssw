@@ -13,7 +13,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.essource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     DumpStat=cms.untracked.bool(True),                           
     toGet = cms.VPSet(
     cms.PSet(

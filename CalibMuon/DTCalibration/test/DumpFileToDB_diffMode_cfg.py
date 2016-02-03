@@ -20,7 +20,7 @@ process.GlobalTag.globaltag = "GR10_P_V5::All"
 
 
 # process.calibDB = cms.ESSource("PoolDBESSource",
-#      process.CondDBSetup,
+#      process.CondDB,
 #      authenticationMethod = cms.untracked.uint32(0),
 #      toGet = cms.VPSet(cms.PSet(
 #          # VDrift
@@ -38,7 +38,7 @@ process.GlobalTag.globaltag = "GR10_P_V5::All"
 
 # VDrift, TTrig, TZero, Noise or channels Map into DB
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBSetup,
+                                          process.CondDB,
                                           connect = cms.string("sqlite_file:ttrignew.db"),
                                           toPut = cms.VPSet(cms.PSet(record = cms.string("DTTtrigRcd"),
                                                                      tag = cms.string("ttrig"))))

@@ -18,7 +18,7 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentRcd'),
         tag = cms.string('Tracker10pbScenario210_mc')

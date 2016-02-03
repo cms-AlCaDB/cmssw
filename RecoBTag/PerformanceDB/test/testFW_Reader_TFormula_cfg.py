@@ -17,7 +17,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-                                      process.CondDBCommon,
+                                      process.CondDB,
                                       toGet = cms.VPSet(
 
         cms.PSet(

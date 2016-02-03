@@ -55,7 +55,7 @@ if testGlobalTag :
 #Uncomment these two lines to get from the global tag
 else:
     process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-                                          process.CondDBSetup,
+                                          process.CondDB,
                                           toGet = cms.VPSet(cms.PSet(
         record = cms.string('SiPixelTemplateDBObjectRcd'),
         tag = cms.string('SiPixelTemplateDBObject' + magfieldString + version)

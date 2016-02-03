@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from CondCore.CondDB.CondDB_cfi import *
 # To be used on SQLite files.  AFS access not required.
 DTCabling = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     timetype = cms.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('DTReadOutMappingRcd'),

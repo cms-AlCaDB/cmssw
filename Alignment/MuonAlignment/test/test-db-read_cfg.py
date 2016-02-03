@@ -20,7 +20,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('DTAlignmentRcd'),
         tag = cms.string('DT1InversepbScenario200_mc')

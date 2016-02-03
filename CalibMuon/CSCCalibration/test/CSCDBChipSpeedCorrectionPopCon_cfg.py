@@ -30,7 +30,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:gainslog.db'),
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('CSCDBChipSpeedCorrectionRcd'),

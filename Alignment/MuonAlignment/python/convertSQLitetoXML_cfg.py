@@ -9,7 +9,7 @@ process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
 
 process.load("CondCore.CondDB.CondDB_cfi")
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     connect = cms.string("sqlite_file:NEW.db"),
     toGet = cms.VPSet(
         cms.PSet(record = cms.string("DTAlignmentRcd"), tag = cms.string("DTAlignmentRcd")),
@@ -18,7 +18,7 @@ process.PoolDBESSource = cms.ESSource("PoolDBESSource",
         cms.PSet(record = cms.string("CSCAlignmentErrorExtendedRcd"), tag = cms.string("CSCAlignmentErrorExtendedRcd"))))
 
 process.inertGlobalPositionRcd = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     connect = cms.string("sqlite_file:inertGlobalPositionRcd.db"),
     toGet = cms.VPSet(cms.PSet(record = cms.string("GlobalPositionRcd"), tag = cms.string("inertGlobalPositionRcd"))))
 

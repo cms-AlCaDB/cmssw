@@ -120,7 +120,7 @@ process.L1TriggerKeyDummy.objectKeys = cms.VPSet(cms.PSet(
 # Get L1TriggerKeyList from DB
 process.load("CondCore.CondDB.CondDB_cfi")
 process.outputDB = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('L1TriggerKeyListRcd'),
         tag = cms.string('L1TriggerKeyList_' + tagBaseVec[ L1CondEnum.L1TriggerKeyList ])

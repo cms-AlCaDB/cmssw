@@ -46,7 +46,7 @@ process.maxEvents = cms.untracked.PSet(
 process.load("Configuration.Generator.QCD_Pt_15_20_cfi")
 
 process.es_pool = cms.ESSource( "PoolDBESSource",
-     process.CondDBSetup,
+     process.CondDB,
      timetype = cms.string('runnumber'),
 #   connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierPrep/CMS_COND_30X_HCAL'),
     connect = cms.string('sqlite_file:testExample.db'),

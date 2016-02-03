@@ -152,7 +152,7 @@ if CMSSW4_2:
 
    from CondCore.CondDB.CondDB_cfi import CondDBSetup 
    process.tTrigDB = cms.ESSource("PoolDBESSource",
-                                   CondDBSetup,
+                                   CondDB,
                                    timetype = cms.string('runnumber'),
                                    toGet = cms.VPSet(cms.PSet(
                                        record = cms.string('DTTtrigRcd'),
@@ -166,7 +166,7 @@ if CMSSW4_2:
    process.es_prefer_tTrigDB = cms.ESPrefer('PoolDBESSource','tTrigDB')
 
    process.vDriftDB = cms.ESSource("PoolDBESSource",
-                                   CondDBSetup,
+                                   CondDB,
                                    timetype = cms.string('runnumber'),
                                    toGet = cms.VPSet(cms.PSet(
                                        record = cms.string('DTMtimeRcd'),

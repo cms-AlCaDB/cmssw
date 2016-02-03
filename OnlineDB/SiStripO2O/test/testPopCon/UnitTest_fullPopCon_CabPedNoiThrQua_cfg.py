@@ -51,7 +51,7 @@ process.CondDBCommon.connect = 'sqlite_file:dbfile.db'
 process.CondDBCommon.DBParameters.messageLevel = 4
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb'
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
     logconnect = cms.untracked.string('sqlite_file:log.db'),
     timetype = cms.untracked.string('runnumber'),

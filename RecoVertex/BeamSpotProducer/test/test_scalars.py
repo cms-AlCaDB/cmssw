@@ -74,7 +74,7 @@ process.maxEvents = cms.untracked.PSet(
 process.load("CondCore.CondDB.CondDB_cfi")
  
 process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
-                                        process.CondDBSetup,
+                                        process.CondDB,
                                         toGet = cms.VPSet(cms.PSet(
     record = cms.string('BeamSpotObjectsRcd'),
     tag = cms.string('BeamSpotObjects_2009_v11_offline'))),

@@ -91,7 +91,7 @@ from CondCore.CondDB.CondDB_cfi import CondDBCommon
 CondDBCommon.connect = "sqlite_file:PFCalibration.db"
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                  CondDBCommon,
+                                  CondDB,
                                   toPut = cms.VPSet(cms.PSet(record = cms.string('PFCalibrationRcd'),
                                                              tag = cms.string('PFCalibration'),
                                                              timetype   = cms.untracked.string('runnumber')

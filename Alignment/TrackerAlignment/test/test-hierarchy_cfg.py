@@ -15,7 +15,7 @@ process.load("CalibTracker.Configuration.TrackerAlignment.TrackerAlignment_Fake_
 #
 #from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-#             CondDBSetup,
+#             CondDB,
 #             #connect = cms.string('frontier://FrontierProd/CMS_COND_21X_ALIGNMENT'),
 #             connect = cms.string('sqlite:Alignments.db'),
 #             toGet = cms.VPSet(cms.PSet(

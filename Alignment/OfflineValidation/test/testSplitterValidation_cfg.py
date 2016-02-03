@@ -56,7 +56,7 @@ from CondCore.CondDB.CondDB_cfi import *
 
 # CRAFT REPRO geom
 process.trackerAlignment = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentRcd'),
         tag = cms.string('Alignments')
@@ -66,7 +66,7 @@ process.trackerAlignment = cms.ESSource("PoolDBESSource",
 
 # APEs from sqlite
 process.ZeroAPE = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('TrackerAlignmentErrorExtendedRcd'),
         tag = cms.string('TrackerSurveyLASOnlyErrors_def_210_mc')

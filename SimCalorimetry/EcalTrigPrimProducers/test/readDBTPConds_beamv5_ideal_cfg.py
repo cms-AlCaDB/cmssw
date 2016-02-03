@@ -21,7 +21,7 @@ process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/nf
 #-----------
 
 process.ecalTPConditions = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     loadAll = cms.bool(True),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('EcalTPGPedestalsRcd'),

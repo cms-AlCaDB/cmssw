@@ -13,7 +13,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = database
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string(fftjet_corr_types[sequenceTag].dbRecord),
         tag = cms.string(fftjet_corr_types[sequenceTag].dbTag)

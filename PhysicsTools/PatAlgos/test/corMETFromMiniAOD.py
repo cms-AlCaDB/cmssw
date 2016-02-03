@@ -57,7 +57,7 @@ if usePrivateSQlite:
     else:
       era="Summer15_50nsV5_MC"
       
-    process.jec = cms.ESSource("PoolDBESSource",CondDBSetup,
+    process.jec = cms.ESSource("PoolDBESSource",CondDB,
                                connect = cms.string( "frontier://FrontierPrep/CMS_COND_PHYSICSTOOLS"),
                                toGet =  cms.VPSet(
             cms.PSet(

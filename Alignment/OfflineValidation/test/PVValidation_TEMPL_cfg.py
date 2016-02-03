@@ -28,7 +28,7 @@ process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
  ##
  ## Load Global Position Record
  ##
-# process.globalPosition = cms.ESSource("PoolDBESSource",CondDBSetup,
+# process.globalPosition = cms.ESSource("PoolDBESSource",CondDB,
 #                       toGet = cms.VPSet(cms.PSet(
 #                       record = cms.string('GlobalPositionRcd'),
 #                       tag= cms.string('IdealGeometry')
@@ -41,7 +41,7 @@ process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
  ##
  ## Load Beamspot
  ##
-# process.beamspot = cms.ESSource("PoolDBESSource",CondDBSetup,
+# process.beamspot = cms.ESSource("PoolDBESSource",CondDB,
 #                                 toGet = cms.VPSet(cms.PSet( record = cms.string('BeamSpotObjectsRcd'),
 #                                                             tag= cms.string('Realistic7TeVCollisions2011_START311_V2_v2_mc')
 #                                                             )),
@@ -64,7 +64,7 @@ process.GlobalTag.globaltag = "GLOBALTAGTEMPLATE"  # take your favourite
  ## Get Alignment constants
  ##
 from CondCore.CondDB.CondDB_cfi import *
-process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDB,
                                         connect = cms.string('ALIGNOBJTEMPLATE'),
                                         timetype = cms.string("runnumber"),
                                         toGet = cms.VPSet(cms.PSet(record = cms.string('TrackerAlignmentRcd'),
@@ -76,7 +76,7 @@ process.es_prefer_trackerAlignment = cms.ESPrefer("PoolDBESSource", "trackerAlig
  ##
  ## Get APE
  ##
-process.setAPE = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.setAPE = cms.ESSource("PoolDBESSource",CondDB,
                                         connect = cms.string('APEOBJTEMPLATE'),
                                         timetype = cms.string("runnumber"),
                                         toGet = cms.VPSet(cms.PSet(record = cms.string('TrackerAlignmentErrorExtendedRcd'),
@@ -89,7 +89,7 @@ process.es_prefer_setAPE = cms.ESPrefer("PoolDBESSource", "setAPE")
  ## Kinks and Bows (optional)
  ##
 if applyBows:
-     process.trackerBows = cms.ESSource("PoolDBESSource",CondDBSetup,
+     process.trackerBows = cms.ESSource("PoolDBESSource",CondDB,
                                         connect = cms.string('BOWSOBJECTTEMPLATE'),
                                         toGet = cms.VPSet(cms.PSet(record = cms.string('TrackerSurfaceDeformationRcd'),
                                                                    tag = cms.string('BOWSTAGTEMPLATE')

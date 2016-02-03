@@ -33,7 +33,7 @@ process.source = cms.Source("EmptySource",
 
 process.es_pool = cms.ESSource(
    "PoolDBESSource",
-   process.CondDBSetup,
+   process.CondDB,
    timetype = cms.string('runnumber'),
     connect = cms.string('sqlite_fle:CastorSaturationCorrs.db'),
 authenticationMethod = cms.untracked.uint32(0),
@@ -81,7 +81,7 @@ authenticationMethod = cms.untracked.uint32(0),
 
 #process.es_pool = cms.ESSource(
 #   "PoolDBESSource",
-#   process.CondDBSetup,
+#   process.CondDB,
 #   timetype = cms.string('runnumber'),
 #   connect = cms.string('frontier://cmsfrontier.cern.ch:8000/FrontierProd/CMS_COND_31X_HCAL'),
 #   authenticationMethod = cms.untracked.uint32(0),

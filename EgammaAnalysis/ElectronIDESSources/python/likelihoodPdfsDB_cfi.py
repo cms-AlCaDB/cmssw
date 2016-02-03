@@ -5,7 +5,7 @@ from CondCore.CondDB.CondDB_cfi import *
 #replace CondDBCommon.connect = "sqlite_file:/afs/cern.ch/user/e/emanuele/public/4Likelihood/PDFsSQLite/CMSSW_1_6_8/electronIdLikelihoodTkIsolated.db"    
 #replace CondDBCommon.catalog = "file:/afs/cern.ch/user/e/emanuele/public/4Likelihood/PDFsSQLite/CMSSW_1_6_8/electronIdLikelihoodTkIsolated.xml"
 PoolDBESSource = cms.ESSource("PoolDBESSource",
-    CondDBCommon,
+    CondDB,
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('ElectronLikelihoodPdfsRcd'),
         tag = cms.string('ElectronLikelihoodPdfsRcd_tag')

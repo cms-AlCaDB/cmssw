@@ -25,7 +25,7 @@ process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_31X_ECAL'
 process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/conddb'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon, 
+    process.CondDB, 
     logconnect = cms.untracked.string('sqlite_file:log.db'),   
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('EcalIntercalibConstantsRcd'),

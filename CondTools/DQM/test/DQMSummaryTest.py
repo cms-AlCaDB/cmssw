@@ -23,7 +23,7 @@ process.source = cms.Source("EmptyIOVSource", #needed to EvSetup in order to loa
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'), #IOV: 'runnumber'-> number of the run, 'timestamp'-> microseconds starting from 1/1/1970
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('DQMSummary'),

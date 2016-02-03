@@ -17,7 +17,7 @@ process.tracker = cms.EDFilter("SurveyInputTrackerFromDB",
 
 from CondCore.CondDB.CondDB_cfi import *
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    CondDBSetup,
+    CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:FPixBPix_Survey.db'),
     toPut = cms.VPSet(cms.PSet(

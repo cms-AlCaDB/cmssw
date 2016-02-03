@@ -12,7 +12,7 @@ process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 process.source = cms.Source("EmptySource")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-        CondDBSetup,
+        CondDB,
         toGet = cms.VPSet(
             # Resolution
             cms.PSet(

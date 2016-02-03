@@ -37,7 +37,7 @@ process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/nf
 #process.CondDBCommon.connect = 'sqlite_file:DB_beamv4_128_sim2011_ideal_mc.db'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     messagelevel = cms.untracked.uint32(3),
 #    catalog = cms.untracked.string('file:PoolFileCatalog_DB.xml'),
     toPut = cms.VPSet(cms.PSet(

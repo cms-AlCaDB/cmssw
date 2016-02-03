@@ -84,7 +84,7 @@ process.TrackerSystematicMisalignments.sagittaDelta      = sagittaDelta
 
 # output
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBSetup,
+                                          process.CondDB,
                                           toPut = cms.VPSet(
                                                             cms.PSet(
                                                                      record = cms.string('TrackerAlignmentRcd'),

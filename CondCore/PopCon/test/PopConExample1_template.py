@@ -58,7 +58,7 @@ process.source = cms.Source("EmptyIOVSource",
 
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           closeIOV =  cms.untracked.bool(bool(options.closeIOV)),
                                           outOfOrder = cms.untracked.bool(bool(options.outOfOrder)),
                                           timetype = cms.untracked.string('runnumber'),

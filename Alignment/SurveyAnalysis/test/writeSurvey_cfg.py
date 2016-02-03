@@ -31,7 +31,7 @@ process.uploader = cms.EDFilter("SurveyDBUploader",
 # need a POOLORA input geometry if the input geom is "sqlite"
 # otherwise not needed
 process.trackerAlignment = cms.ESSource("PoolDBESSource",
-					 CondDBSetup,
+					 CondDB,
 					 timetype = cms.string('runnumber'),
 					 toGet = cms.VPSet(cms.PSet(
 												record = cms.string('TrackerAlignmentRcd'),
@@ -48,7 +48,7 @@ process.trackerAlignment = cms.ESSource("PoolDBESSource",
 
 # output
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    CondDBSetup,
+    CondDB,
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('TrackerSurveyRcd'),
         tag = cms.string('valueTag')

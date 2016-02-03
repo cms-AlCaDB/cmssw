@@ -10,7 +10,7 @@ def customise(process):
     process.source.firstRun = cms.untracked.uint32(132599)
 
     process.ecalConditions1 = cms.ESSource("PoolDBESSource",                                          
-         process.CondDBSetup,                                                                         
+         process.CondDB,                                                                         
          timetype = cms.string('runnumber'),                                                          
          toGet = cms.VPSet(                                                                           
              cms.PSet(                                                                                
@@ -64,7 +64,7 @@ def customise(process):
                                                                                                       
 
     process.ecalConditions2 = cms.ESSource("PoolDBESSource",
-                                           process.CondDBSetup,
+                                           process.CondDB,
                                            timetype = cms.string('runnumber'),
                                            toGet = cms.VPSet(
         cms.PSet(
@@ -133,7 +133,7 @@ def customise(process):
 
                                                                                                       
     process.hcalConditions = cms.ESSource("PoolDBESSource",                                           
-                                          process.CondDBSetup,                          
+                                          process.CondDB,                          
                                           timetype = cms.string('runnumber'),                         
                                           toGet = cms.VPSet(                                          
         cms.PSet(                                                                                     

@@ -13,7 +13,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.rimon = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.string('timestamp'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('RPCObImonRcd'),
@@ -22,7 +22,7 @@ process.rimon = cms.ESSource("PoolDBESSource",
 )
 
 process.rvmon = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.string('timestamp'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('RPCObVmonRcd'),
@@ -31,7 +31,7 @@ process.rvmon = cms.ESSource("PoolDBESSource",
 )
 
 process.rtemp = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.string('timestamp'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('RPCObTempRcd'),
@@ -41,7 +41,7 @@ process.rtemp = cms.ESSource("PoolDBESSource",
 
 
 process.rpvss = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.string('timestamp'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('RPCObPVSSmapRcd'),

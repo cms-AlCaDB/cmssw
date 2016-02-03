@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 from CondCore.CondDB.CondDB_cfi import *
 
 PoolDBESSourceCalo35 = cms.ESSource("PoolDBESSource",
-                              CondDBCommon,                            
+                              CondDB,                            
                               toGet = cms.VPSet(
     #
     # working points

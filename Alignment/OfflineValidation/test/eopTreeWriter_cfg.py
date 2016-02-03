@@ -67,7 +67,7 @@ from TrackingTools.TrackAssociator.default_cfi import *
 
 # choose geometry
 from CondCore.CondDB.CondDB_cfi import *
-process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDB,
                                         #connect = cms.string("frontier://FrontierArc/CMS_COND_31X_ALIGNMENT_AK25"),
                                         connect = cms.string("frontier://FrontierArc/CMS_COND_31X_ALIGNMENT_BD19"),
                                         toGet = cms.VPSet(cms.PSet(record = cms.string("TrackerAlignmentRcd"),

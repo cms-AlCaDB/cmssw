@@ -100,7 +100,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 #process.AlcaBeamMonitor.BeamFitter.TrackCollection = 'ALCARECOTkAlMinBias'
 
 process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
-                                        process.CondDBSetup,
+                                        process.CondDB,
                                         toGet = cms.VPSet(cms.PSet(
     								   record = cms.string('BeamSpotObjectsRcd'),			        
 #    								   tag = cms.string('BeamSpotObjects_2009_LumiBased_SigmaZ_v19_offline') 

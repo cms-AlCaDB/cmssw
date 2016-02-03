@@ -38,7 +38,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 
 
 process.ecalTPConditions = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     loadAll = cms.bool(True),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('EcalTPGPedestalsRcd'),

@@ -53,7 +53,7 @@ process.siStripQualityESProducer.ListOfRecordToMerge = cms.VPSet(
 process.load( "CondCore.CondDB.CondDB_cfi" )
 process.CondDBCommon.connect = 'frontier://FrontierProd/CMS_COND_21X_STRIP'
 process.poolDBESSource = cms.ESSource("PoolDBESSource",
-   process.CondDBCommon,
+   process.CondDB,
    BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
    toGet            = cms.VPSet(
        cms.PSet(

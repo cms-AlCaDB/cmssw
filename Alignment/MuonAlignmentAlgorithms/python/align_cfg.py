@@ -107,7 +107,7 @@ process.MuonAlignmentFromReferenceInputDB.toGet = cms.VPSet(cms.PSet(record = cm
 if trackerconnect != "":
     from CondCore.CondDB.CondDB_cfi import *
     process.TrackerAlignmentInputDB = cms.ESSource("PoolDBESSource",
-                                                   CondDBSetup,
+                                                   CondDB,
                                                    connect = cms.string(trackerconnect),
                                                    toGet = cms.VPSet(cms.PSet(record = cms.string("TrackerAlignmentRcd"), tag = cms.string(trackeralignment))))
     process.es_prefer_TrackerAlignmentInputDB = cms.ESPrefer("PoolDBESSource", "TrackerAlignmentInputDB")
@@ -115,7 +115,7 @@ if trackerconnect != "":
 if trackerAPEconnect != "":
     from CondCore.CondDB.CondDB_cfi import *
     process.TrackerAlignmentErrorInputDB = cms.ESSource("PoolDBESSource",
-                                                   CondDBSetup,
+                                                   CondDB,
                                                    connect = cms.string(trackerAPEconnect),
                                                    toGet = cms.VPSet(cms.PSet(cms.PSet(record = cms.string("TrackerAlignmentErrorExtendedRcd"), tag = cms.string(trackerAPE)))))
     process.es_prefer_TrackerAlignmentErrorInputDB = cms.ESPrefer("PoolDBESSource", "TrackerAlignmentErrorInputDB")
@@ -123,7 +123,7 @@ if trackerAPEconnect != "":
 if trackerBowsconnect != "":
     from CondCore.CondDB.CondDB_cfi import *
     process.TrackerSurfaceDeformationInputDB = cms.ESSource("PoolDBESSource",
-                                                   CondDBSetup,
+                                                   CondDB,
                                                    connect = cms.string(trackerBowsconnect),
                                                    toGet = cms.VPSet(cms.PSet(cms.PSet(record = cms.string("TrackerSurfaceDeformationRcd"), tag = cms.string(trackerBows)))))
     process.es_prefer_TrackerSurfaceDeformationInputDB = cms.ESPrefer("PoolDBESSource", "TrackerSurfaceDeformationInputDB")
@@ -131,7 +131,7 @@ if trackerBowsconnect != "":
 if gprcdconnect != "":
     from CondCore.CondDB.CondDB_cfi import *
     process.GlobalPositionInputDB = cms.ESSource("PoolDBESSource",
-                                                   CondDBSetup,
+                                                   CondDB,
                                                    connect = cms.string(gprcdconnect),
                                                    toGet = cms.VPSet(cms.PSet(record = cms.string("GlobalPositionRcd"), tag = cms.string(gprcd))))
     process.es_prefer_GlobalPositionInputDB = cms.ESPrefer("PoolDBESSource", "GlobalPositionInputDB")

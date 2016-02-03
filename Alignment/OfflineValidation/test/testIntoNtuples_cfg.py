@@ -22,7 +22,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 
 from CondCore.CondDB.CondDB_cfi import *
 
-process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDB,
 		connect = cms.string('sqlite_file:/afs/cern.ch/cms/CAF/CMSALCA/ALCA_TRACKERALIGN/MP/MPproduction/mp1260/jobData/jobm2/alignments_MP.db'), 
 		timetype = cms.string("runnumber"),
 		toGet = cms.VPSet(
@@ -32,7 +32,7 @@ process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDBSetup,
 			), 
 		)
 							
-process.ZeroAPE = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.ZeroAPE = cms.ESSource("PoolDBESSource",CondDB,
 		connect = cms.string('frontier://FrontierProd/CMS_COND_31X_FROM21X'),
 		timetype = cms.string("runnumber"),
 		toGet = cms.VPSet(
@@ -43,7 +43,7 @@ process.ZeroAPE = cms.ESSource("PoolDBESSource",CondDBSetup,
 			)		
 		)
 
-process.trackerBowedSensors = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.trackerBowedSensors = cms.ESSource("PoolDBESSource",CondDB,
 		connect = cms.string('sqlite_file:/afs/cern.ch/cms/CAF/CMSALCA/ALCA_TRACKERALIGN/MP/MPproduction/mp1260/jobData/jobm2/alignments_MP.db'),
 		toGet = cms.VPSet(
 			cms.PSet(record = cms.string('TrackerSurfaceDeformationRcd'),

@@ -4708,7 +4708,7 @@ class CMSHarvester(object):
         # Build up the code snippet.
         code_lines = []
         code_lines.append("from CondCore.CondDB.CondDB_cfi import *")
-        code_lines.append("process.ref_hist_source = cms.ESSource(\"PoolDBESSource\", CondDBSetup,")
+        code_lines.append("process.ref_hist_source = cms.ESSource(\"PoolDBESSource\", CondDB,")
         code_lines.append("                                       connect = cms.string(\"%s\")," % connect_name)
         code_lines.append("                                       toGet = cms.VPSet(cms.PSet(record = cms.string(\"%s\")," % record_name)
         code_lines.append("                                                                  tag = cms.string(\"%s\"))," % ref_hist_tag_name)

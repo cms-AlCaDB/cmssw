@@ -126,7 +126,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Suppress warnings, not actually used, except for copyNonO2OPayloads
 process.outputDB = cms.ESSource("PoolDBESSource",
-                                process.CondDBCommon,
+                                process.CondDB,
                                 toGet = cms.VPSet(cms.PSet(
     record = cms.string('L1TriggerKeyListRcd'),
     tag = cms.string( "L1TriggerKeyList_" + initL1O2OTags.tagBaseVec[ L1CondEnum.L1TriggerKeyList ] )

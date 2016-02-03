@@ -35,7 +35,7 @@ for i in range (len(records)) :
         filename   = 'sqlite_file:test' + records[i] + '.db'
 
         source.append(cms.ESSource("PoolDBESSource",
-                                   CondDBSetup,
+                                   CondDB,
                                    toGet = cms.VPSet(cms.PSet(
                                    record = cms.string(recordname),
                                    tag = cms.string('mytest'))), 

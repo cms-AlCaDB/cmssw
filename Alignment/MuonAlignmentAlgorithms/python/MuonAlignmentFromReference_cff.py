@@ -55,7 +55,7 @@ MuonAlignmentFromReferenceTFileService = cms.Service("TFileService", fileName = 
 looper.applyDbAlignment = cms.untracked.bool(True)
 from CondCore.CondDB.CondDB_cfi import *
 MuonAlignmentFromReferenceInputDB = cms.ESSource("PoolDBESSource",
-                                                  CondDBSetup,
+                                                  CondDB,
                                                   connect = cms.string("sqlite_file:MuonAlignmentFromReference_inputdb.db"),
                                                   toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"), tag = cms.string("DTAlignmentRcd")),
                                                                     cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"), tag = cms.string("DTAlignmentErrorExtendedRcd")),
@@ -67,7 +67,7 @@ es_prefer_MuonAlignmentFromReferenceInputDB = cms.ESPrefer("PoolDBESSource", "Mu
 looper.saveToDB = cms.bool(True)
 from CondCore.CondDB.CondDB_cfi import *
 PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                  CondDBSetup,
+                                  CondDB,
                                   connect = cms.string("sqlite_file:MuonAlignmentFromReference_outputdb.db"),
                                   toPut = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"), tag = cms.string("DTAlignmentRcd")),
                                                     cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"), tag = cms.string("DTAlignmentErrorExtendedRcd")),

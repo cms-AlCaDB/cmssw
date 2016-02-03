@@ -72,7 +72,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(0) )
 from CondCore.CondDB.CondDB_cfi import *
 process.PoolDBOutputService = cms.Service(
     "PoolDBOutputService",
-    CondDBSetup,
+    CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:TkAlignmentApe.db'),
     toPut = cms.VPSet(cms.PSet(record = cms.string('TrackerAlignmentErrorRcd'),

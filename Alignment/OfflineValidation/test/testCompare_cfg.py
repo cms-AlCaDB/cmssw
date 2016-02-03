@@ -55,7 +55,7 @@ process.TrackerGeometryCompare.levels = ['DetUnit']
 process.TrackerGeometryCompare.writeToDB = True
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-   process.CondDBSetup,
+   process.CondDB,
    timetype = cms.untracked.string('runnumber'),
    connect = cms.string('sqlite_file:yourNewTrackerCenteredObject.db'),
    toPut = cms.VPSet(cms.PSet(

@@ -18,7 +18,7 @@ process.source = cms.Source("EmptySource")
 
 qgDatabaseVersion = 'v0-test'
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-      CondDBSetup,
+      CondDB,
       toGet = cms.VPSet(
         cms.PSet(
             record = cms.string('QGLikelihoodRcd'),

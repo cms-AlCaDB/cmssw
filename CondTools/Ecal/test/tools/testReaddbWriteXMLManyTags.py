@@ -37,7 +37,7 @@ for i in range (len(records)) :
         filename   = 'frontier://FrontierPrep/CMS_COND_31X_ALL'
 
         source.append(cms.ESSource("PoolDBESSource",
-                                   CondDBSetup,
+                                   CondDB,
                                    toGet = cms.VPSet(cms.PSet(
                                    record = cms.string(recordname),
                                    tag = cms.string(tag )) ), 

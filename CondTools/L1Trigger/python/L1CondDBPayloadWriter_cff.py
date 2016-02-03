@@ -14,7 +14,7 @@ def initPayloadWriter( process,
     
     from CondCore.CondDB.CondDB_cfi import CondDBSetup
     initPayloadWriter.outputDB = cms.Service("PoolDBOutputService",
-                                             CondDBSetup,
+                                             CondDB,
                                              connect = cms.string(outputDBConnect),
                                              toPut = cms.VPSet(cms.PSet(
         record = cms.string("L1TriggerKeyListRcd"),

@@ -28,7 +28,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:t0.db'),
     authenticationMethod = cms.untracked.uint32(0),

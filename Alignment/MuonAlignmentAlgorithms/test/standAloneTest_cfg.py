@@ -46,7 +46,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 
 ### for assigning a custom muon alignment
 # process.MuonAlignment = cms.ESSource("PoolDBESSource",
-#                                      process.CondDBSetup,
+#                                      process.CondDB,
 #                                      connect = cms.string("sqlite_file:customMuonAlignment.db"),
 #                                      toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"), tag = cms.string("DTAlignmentRcd")),
 #                                                        cms.PSet(record = cms.string("CSCAlignmentRcd"), tag = cms.string("CSCAlignmentRcd"))))
@@ -54,7 +54,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 
 ### it is important to refit with zero weights ("infinite" APEs)
 process.MuonAlignmentErrorsExtended = cms.ESSource("PoolDBESSource",
-                                     process.CondDBSetup,
+                                     process.CondDB,
                                      connect = cms.string("sqlite_file:APE1000cm.db"),
                                      toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"), tag = cms.string("DTAlignmentErrorExtendedRcd")),
                                                        cms.PSet(record = cms.string("CSCAlignmentErrorExtendedRcd"), tag = cms.string("CSCAlignmentErrorExtendedRcd"))))

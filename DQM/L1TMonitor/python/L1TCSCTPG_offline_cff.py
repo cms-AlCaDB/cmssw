@@ -4,7 +4,7 @@ from CondCore.CondDB.CondDB_cfi import *
 from EventFilter.CSCRawToDigi.cscUnpacker_cfi import *
 from DQM.L1TMonitor.L1TCSCTPG_cfi import *
 cscConditions = cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     siteLocalConfig = cms.untracked.bool(False),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('CSCDBGainsRcd'),

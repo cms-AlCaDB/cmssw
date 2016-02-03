@@ -39,7 +39,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:GBRWrapper.db'
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     DumpStat=cms.untracked.bool(True),
     toGet = cms.VPSet(
       cms.PSet(

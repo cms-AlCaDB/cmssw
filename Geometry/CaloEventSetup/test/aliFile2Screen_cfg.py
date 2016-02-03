@@ -10,7 +10,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     connect = cms.string('sqlite_file:myfile.db'),
     toGet = cms.VPSet(
       cms.PSet(

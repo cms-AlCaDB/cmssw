@@ -38,7 +38,7 @@ process.es_ascii = cms.ESSource("CastorTextCalibrations",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
 #    logconnect= cms.untracked.string('sqlite_file:log.db'),
     logconnect= cms.untracked.string('oracle://cms_orcon_prod/CMS_COND_31X_POPCONLOG'),
@@ -104,7 +104,7 @@ process.es_ascii = cms.ESSource("CastorTextCalibrations",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
 #    logconnect= cms.untracked.string('sqlite_file:log.db'),
     logconnect= cms.untracked.string('oracle://cms_orcon_prod/CMS_COND_31X_POPCONLOG'),

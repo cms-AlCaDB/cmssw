@@ -95,7 +95,7 @@ process.CondDBCommon.connect = cms.string(options.db)
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/afs/cern.ch/cms/DB/conddb')
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(cms.PSet(
         record = cms.string(options.record+'Rcd'),

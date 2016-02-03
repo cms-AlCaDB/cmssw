@@ -7,7 +7,7 @@ process.load('Configuration.Geometry.GeometryExtended2023Reco_cff')
 
 process.load("CondCore.CondDB.CondDB_cfi")
 process.PoolDBESSourceGeometry = cms.ESSource("PoolDBESSource",
-                               process.CondDBSetup,
+                               process.CondDB,
                                timetype = cms.string('runnumber'),
                                toGet = cms.VPSet(cms.PSet(record = cms.string('PTrackerParametersRcd'),tag = cms.string('TK_Parameters_Run3_Test02'))
                                                  ),

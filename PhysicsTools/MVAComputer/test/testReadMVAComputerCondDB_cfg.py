@@ -10,7 +10,7 @@ process.maxEvents = cms.untracked.PSet(	input = cms.untracked.int32(1) )
 from CondCore.CondDB.CondDB_cfi import *
 
 process.BTauGenericMVAJetTagComputerRcd = cms.ESSource("PoolDBESSource",
-	CondDBSetup,
+	CondDB,
 	timetype = cms.untracked.string('runnumber'),
 	toGet = cms.VPSet(cms.PSet(
 		record = cms.string('BTauGenericMVAJetTagComputerRcd'),

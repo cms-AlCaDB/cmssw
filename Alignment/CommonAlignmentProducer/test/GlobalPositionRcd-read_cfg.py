@@ -9,7 +9,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.GlobalPositionSource = cms.ESSource("PoolDBESSource",
-    process.CondDBSetup,
+    process.CondDB,
     # Reading from oracle (instead of Frontier) needs the following shell variable setting (in zsh):
     # export CORAL_AUTH_PATH=/afs/cern.ch/cms/DB/conddb
     # string connect = "oracle://cms_orcoff_int2r/CMS_COND_ALIGNMENT"

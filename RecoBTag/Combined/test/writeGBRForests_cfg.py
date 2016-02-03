@@ -28,7 +28,7 @@ process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:btag_CombinedMVAv2_BDT_TMVAv420_GBRForest_74X_v1.db'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(
         cms.PSet(

@@ -52,7 +52,7 @@ except OSError:
 
 # VDrift, TTrig, TZero, Noise or channels Map into DB
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBSetup,
+                                          process.CondDB,
                                           connect = cms.string("sqlite_file:"+FILE),
                                           toPut = cms.VPSet(cms.PSet(record = cms.string("MagFieldConfigRcd"),
                                                                      tag = cms.string("MagFieldConfig"))))

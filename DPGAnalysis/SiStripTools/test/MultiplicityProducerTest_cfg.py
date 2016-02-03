@@ -473,7 +473,7 @@ process.GlobalTag = GlobalTag(process.GlobalTag, options.globalTag, '')
 if options.testTag==1:
     process.stripConditions = cms.ESSource(
         "PoolDBESSource",
-        process.CondDBSetup,
+        process.CondDB,
         connect = cms.string('frontier://FrontierProd/CMS_COND_31X_STRIP'),
         toGet = cms.VPSet(
         cms.PSet(

@@ -17,7 +17,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 
 from CondCore.CondDB.CondDB_cfi import *
 
-process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDB,
 #								connect = cms.string('frontier://FrontierProd/CMS_COND_31X_FROM21X'),
 #								timetype = cms.string("runnumber"),
 #								toGet = cms.VPSet(
@@ -34,7 +34,7 @@ process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDBSetup,
 								))                                                                                                
 							)
 							
-process.ZeroAPE = cms.ESSource("PoolDBESSource",CondDBSetup,
+process.ZeroAPE = cms.ESSource("PoolDBESSource",CondDB,
 								connect = cms.string('frontier://FrontierProd/CMS_COND_31X_FROM21X'),
 								timetype = cms.string("runnumber"),
 								toGet = cms.VPSet(
@@ -72,7 +72,7 @@ process.TrackerGeometryCompare.writeToDB = True
 
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-   process.CondDBSetup,
+   process.CondDB,
    timetype = cms.untracked.string('runnumber'),
    connect = cms.string('sqlite_file:CRAFT11fromEoY_TopCentred.db'),
    toPut = cms.VPSet(cms.PSet(

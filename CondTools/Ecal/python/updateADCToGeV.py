@@ -27,7 +27,7 @@ process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_31X_ECAL'
 
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon, 
+    process.CondDB, 
     logconnect = cms.untracked.string('oracle://cms_orcon_prod/CMS_COND_31X_POPCONLOG'),
 # logconnect = cms.untracked.string('sqlite_file:log.db'),   
         toPut = cms.VPSet(cms.PSet(

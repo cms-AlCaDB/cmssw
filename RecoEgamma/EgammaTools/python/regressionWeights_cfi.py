@@ -1,7 +1,7 @@
 from CondCore.CondDB.CondDB_cfi import *
 
 GBRWrapperRcd  =  cms.ESSource("PoolDBESSource",
-    CondDBSetup,
+    CondDB,
     DumpStat=cms.untracked.bool(True),
     toGet = cms.VPSet(
       cms.PSet(

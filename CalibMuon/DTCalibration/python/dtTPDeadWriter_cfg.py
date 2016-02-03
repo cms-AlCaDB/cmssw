@@ -24,7 +24,7 @@ process.source = cms.Source("EmptySource",
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1) )
 
 #process.t0DB = cms.ESSource("PoolDBESSource",
-#    process.CondDBSetup,
+#    process.CondDB,
 #    authenticationMethod = cms.untracked.uint32(0),
 #    toGet = cms.VPSet(cms.PSet(
 #        record = cms.string('DTT0Rcd'),
@@ -35,7 +35,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1) )
 #process.es_prefer_t0DB = cms.ESPrefer('PoolDBESSource','t0DB')
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:tpDead.db'),
     authenticationMethod = cms.untracked.uint32(0),

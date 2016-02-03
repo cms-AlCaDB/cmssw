@@ -17,7 +17,7 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.source = cms.Source("EmptySource")
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:testESAlignments.db'),
     toPut = cms.VPSet(

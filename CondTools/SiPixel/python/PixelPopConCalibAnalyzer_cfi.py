@@ -44,7 +44,7 @@ CondDBCommon.connect = cms.string('sqlite_file:testExample.db')
 # path to the database authentication.xml file
 CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/afs/cern.ch/cms/DB/conddb')
 PoolDBOutputService = cms.Service("PoolDBOutputService",
-    CondDBCommon,
+    CondDB,
     # connection string for the log database
     logconnect = cms.untracked.string('sqlite_file:log.db'),
     # records to put into the database

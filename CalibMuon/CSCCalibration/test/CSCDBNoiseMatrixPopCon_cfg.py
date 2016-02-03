@@ -31,7 +31,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:matrixlog.db'),
     toPut = cms.VPSet(cms.PSet(
         record = cms.string('CSCDBNoiseMatrixRcd'),

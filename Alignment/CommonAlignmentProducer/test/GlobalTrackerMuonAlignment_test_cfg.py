@@ -99,7 +99,7 @@ process.GlobalTag.globaltag = "GR10_P_V5::All"
 
 ### write global Rcd to DB
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBSetup,
+    process.CondDB,
     ### Writing to oracle needs the following shell variable setting (in zsh):
     ### export CORAL_AUTH_PATH=/afs/cern.ch/cms/DB/conddb
     ### string connect = "oracle://cms_orcoff_int2r/CMS_COND_ALIGNMENT"

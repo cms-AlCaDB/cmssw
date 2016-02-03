@@ -21,7 +21,7 @@ process.source = cms.Source("EmptyIOVSource",
                             )
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-    process.CondDBCommon,
+    process.CondDB,
     timetype = cms.untracked.string('runnumber'),
     toGet = cms.VPSet(cms.PSet(
         record = cms.string('EcalPedestalsRcd'),
@@ -30,7 +30,7 @@ process.PoolDBESSource = cms.ESSource("PoolDBESSource",
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    process.CondDBCommon,
+    process.CondDB,
     logconnect = cms.untracked.string('sqlite_file:DBLog.db'),
     timetype = cms.untracked.string('runnumber'),
     toPut = cms.VPSet(cms.PSet(

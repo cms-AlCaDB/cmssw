@@ -18,7 +18,7 @@ process.source = cms.Source("EmptyIOVSource",
                             )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-                                          process.CondDBCommon,
+                                          process.CondDB,
                                           BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
 
                                           timetype = cms.untracked.string('runnumber'),

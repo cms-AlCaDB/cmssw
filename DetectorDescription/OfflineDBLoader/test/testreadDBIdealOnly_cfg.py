@@ -8,7 +8,7 @@ process.maxEvents = cms.untracked.PSet(
 process.source = cms.Source("EmptySource")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-                                         process.CondDBSetup,
+                                         process.CondDB,
                                          loadAll = cms.bool(True),
                                          toGet = cms.VPSet(cms.PSet(
                                             record = cms.string('IdealGeometryRecord'),

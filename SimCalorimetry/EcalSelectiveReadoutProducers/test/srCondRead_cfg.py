@@ -50,7 +50,7 @@ if sr_tag != '' :
 
 
 ## process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-##                                       process.CondDBCommon,
+##                                       process.CondDB,
 ##                                       toGet = cms.VPSet(cms.PSet(
 ##     record = cms.string('EcalSRSettingsRcd'),
 ##     tag = cms.string(sr_tag)

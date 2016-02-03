@@ -38,7 +38,7 @@ process.prefer("GlobalTag")
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prod/CMS_COND_21X_RUN_INFO'
 #process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb/'
 #process.rn = cms.ESSource("PoolDBESSource",
-#    process.CondDBCommon,
+#    process.CondDB,
 #    timetype = cms.string('runnumber'),
 #    toGet = cms.VPSet(cms.PSet(
 #	record = cms.string('RunInfoRcd'),
