@@ -26,7 +26,7 @@ process.tpparams12 = cms.ESSource("EmptyESSource",
 
 process.EcalTrigPrimESProducer.DatabaseFile = 'TPG_beamv4_128_MC_startup.txt.gz'
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 ## to write in offline DB:
 #process.CondDBCommon.connect = cms.string('oracle://cms_orcon_prod/CMS_COND_34X_ECAL')

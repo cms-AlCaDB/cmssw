@@ -60,7 +60,7 @@ process.source = cms.Source("EmptyIOVSource",
                             interval = cms.uint64(1)
                             )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = "sqlite_file:" + ivars.outputFile
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",

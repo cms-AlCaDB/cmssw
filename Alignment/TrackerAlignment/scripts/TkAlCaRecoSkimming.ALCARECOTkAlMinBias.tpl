@@ -31,7 +31,7 @@ process.source = cms.Source("PoolSource",
     )
 
 ##_________________________________Includes____________________________________________
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.load('Configuration.EventContent.EventContent_cff')
 process.load("Configuration.StandardSequences.Geometry_cff")

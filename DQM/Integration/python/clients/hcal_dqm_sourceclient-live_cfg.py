@@ -237,7 +237,7 @@ process.hcalClient.CoarsePedestal_BadChannelStatusMask=cms.untracked.int32((1<<5
 # ----------------------
 # Trigger Unpacker Stuff
 # ----------------------
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("L1Trigger.Configuration.L1DummyConfig_cff")
 process.load("EventFilter.L1GlobalTriggerRawToDigi.l1GtUnpack_cfi")
 process.load('Configuration/StandardSequences/RawToDigi_Data_cff') #to unpack l1gtEvm

@@ -10,7 +10,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = cms.string('sqlite_file:testExample.db')
 #process.CondDBCommon.connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_30X_HCAL')
 process.CondDBCommon.connect = cms.string('oracle://cms_orcon_prod/CMS_COND_31X_HCAL')
@@ -76,7 +76,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = cms.string('sqlite_file:testExample.db')
 #process.CondDBCommon.connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_30X_HCAL')
 process.CondDBCommon.connect = cms.string('oracle://cms_orcon_prod/CMS_COND_31X_HCAL')

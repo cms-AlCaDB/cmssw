@@ -35,7 +35,7 @@ process.load('Configuration.StandardSequences.EDMtoMEAtRunEnd_cff')
 #process.load('Configuration.EventContent.EventContent_cff')
 
 process.load("DQM.BeamMonitor.AlcaBeamMonitorClient_cff")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.DQMStore.verbose = 0
 process.DQM.collectorHost = 'cmslpc08.fnal.gov'

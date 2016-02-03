@@ -5,7 +5,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("TEST")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
     DBParameters = cms.PSet(

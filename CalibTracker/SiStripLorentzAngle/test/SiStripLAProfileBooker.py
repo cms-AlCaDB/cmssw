@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 import CalibTracker.Configuration.Common.PoolDBESSource_cfi
 
@@ -24,7 +24,7 @@ process.DQM.collectorHost = ''
 
 process.Timing = cms.Service("Timing")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
     
 #process.SiStripLorentzAngle = cms.ESSource("PoolDBESSource",
 #    BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),

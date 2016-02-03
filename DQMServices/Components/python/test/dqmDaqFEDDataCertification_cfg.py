@@ -34,7 +34,7 @@ process.GlobalTag.connect = "sqlite_file:/afs/cern.ch/user/m/malgeri/public/glob
 process.GlobalTag.globaltag = "DQMTEST::All"
 process.prefer("GlobalTag")
 
-#process.load("CondCore.DBCommon.CondDBCommon_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prod/CMS_COND_21X_RUN_INFO'
 #process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb/'
 #process.rn = cms.ESSource("PoolDBESSource",

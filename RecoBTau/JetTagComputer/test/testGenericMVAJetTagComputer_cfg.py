@@ -15,7 +15,7 @@ process.load("RecoJets.JetAssociationProducers.ak5JTA_cff")
 process.load("RecoBTau.JetTagComputer.jetTagRecord_cfi")
 process.load("RecoBTag.ImpactParameter.impactParameter_cff")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.source = cms.Source("PoolSource",
 	fileNames = cms.untracked.vstring('file:ttbar.root')

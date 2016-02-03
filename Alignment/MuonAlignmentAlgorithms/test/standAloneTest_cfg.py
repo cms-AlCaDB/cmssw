@@ -42,7 +42,7 @@ process.StandAloneTest.Tracks = cms.InputTag("globalCosmicMuons")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = cms.string("CRAFT0831X_V1::All")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 ### for assigning a custom muon alignment
 # process.MuonAlignment = cms.ESSource("PoolDBESSource",

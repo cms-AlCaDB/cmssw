@@ -33,7 +33,7 @@ process.dqmXmlFileTest = cms.EDAnalyzer( "DQMXMLFilePopConAnalyzer"
 )
 print "Used XML file: " + process.dqmXmlFileTest.Source.XMLFile.pythonValue()
 
-process.load( "CondCore.DBCommon.CondDBCommon_cfi" )
+process.load( "CondCore.CondDB.CondDB_cfi" )
 process.CondDBCommon.connect          = cms.string( 'sqlite_file:DQMXMLFile_SiPixelDQM.db' )
 process.CondDBCommon.BlobStreamerName = cms.untracked.string( 'TBufferBlobStreamingService' )
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string( '' )

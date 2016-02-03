@@ -16,8 +16,8 @@ process.MessageLogger.categories.append('L1GtTrigReport')
 process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
 
 # -- Database configuration
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # -- Conditions
 ###process.load("Configuration.StandardSequences.MagneticField_38T_cff")

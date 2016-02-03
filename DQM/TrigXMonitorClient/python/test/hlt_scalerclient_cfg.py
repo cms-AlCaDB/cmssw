@@ -25,7 +25,7 @@ l1tgtpath = cms.Path(l1GtUnpack*l1GtEvmUnpack*cms.SequencePlaceholder("l1tgt"))
 #  DQM SOURCES
 #-----------------------------
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 

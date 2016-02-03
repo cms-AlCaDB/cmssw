@@ -9,7 +9,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("DUMP")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 ## specify which conditions you would like to dump to a text file in the "dump" vstring
 process.prod = cms.EDFilter("HcalDumpConditions",

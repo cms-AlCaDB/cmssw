@@ -150,7 +150,7 @@ process.Out = cms.OutputModule("PoolOutputModule",
 if CMSSW4_2:
    process.Out.outputCommands.extend(["keep recoPFJets_ak5PFJets__*"])
 
-   from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup 
+   from CondCore.CondDB.CondDB_cfi import CondDBSetup 
    process.tTrigDB = cms.ESSource("PoolDBESSource",
                                    CondDBSetup,
                                    timetype = cms.string('runnumber'),

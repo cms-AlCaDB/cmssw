@@ -7,8 +7,8 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 #process.load("DQMServices.Core.DQM_cfg")
 
 # Database configuration
-#process.load("CondCore.DBCommon.CondDBCommon_cfi")
-#process.load("CondCore.DBCommon.CondDBSetup_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
 
 # conditions
 process.load("Configuration.StandardSequences.Geometry_cff")

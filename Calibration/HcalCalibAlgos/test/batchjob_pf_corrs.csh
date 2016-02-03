@@ -49,7 +49,7 @@ process.load("Calibration.HcalCalibAlgos.pfCorrs_cfi")
 process.hcalRecoAnalyzer.outputFile = cms.untracked.string("HcalCorrPF_${1}.root")
 process.hcalRecoAnalyzer.ConeRadiusCm = cms.untracked.double(26.3)
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = cms.string('MC_31X_V5::All')
 process.prefer("GlobalTag")

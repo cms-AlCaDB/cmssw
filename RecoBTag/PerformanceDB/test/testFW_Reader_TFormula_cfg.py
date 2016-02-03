@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("myprocess")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 #process.CondDBCommon.connect = 'sqlite_file:PhysicsPerformance.db'
 #process.CondDBCommon.connect = 'frontier://FrontierProd/CMS_COND_PAT_000'

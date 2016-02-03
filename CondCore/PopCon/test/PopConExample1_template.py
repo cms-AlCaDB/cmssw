@@ -44,7 +44,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                                                           )
                                   )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string(options.connect)
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/afs/cern.ch/cms/DB/conddb')
 process.CondDBCommon.DBParameters.messageLevel = cms.untracked.int32(3)

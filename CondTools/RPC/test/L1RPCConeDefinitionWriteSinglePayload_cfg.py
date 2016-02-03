@@ -20,7 +20,7 @@ process.L1TriggerKeyDummy.objectKeys = cms.VPSet(cms.PSet(
 ))
 
 # Get L1TriggerKeyList from DB
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.orcon = cms.ESSource("PoolDBESSource",
     process.CondDBCommon,
     toGet = cms.VPSet(cms.PSet(

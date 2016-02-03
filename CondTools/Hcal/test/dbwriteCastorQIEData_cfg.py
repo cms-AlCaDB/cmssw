@@ -9,7 +9,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = cms.string('sqlite_file:testExample.db')
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/afs/cern.ch/cms/DB/conddb')

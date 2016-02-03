@@ -52,7 +52,7 @@ else:
     connectStr = 'oracle://cms_orcon_prod/CMS_COND_31X_L1T'
     authPath = '/nfshome0/popcondev/conddb_taskWriters/L1T'
 
-from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+from CondCore.CondDB.CondDB_cfi import CondDBSetup
 inputDB = cms.Service("PoolDBOutputService",
                       CondDBSetup,
                       connect = cms.string(connectStr),

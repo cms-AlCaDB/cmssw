@@ -24,7 +24,7 @@ process.GlobalTag.globaltag = 'GR10_P_V12::All'
 # or Get DB parameters 
 # process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
 # process.GlobalTag.globaltag = "GR09_31X_V2H::All"
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_31X_ECAL' ##P5 stuff
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prod/CMS_COND_31X_ECAL' ##lxplus
 process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/conddb' ###P5 stuff

@@ -14,9 +14,9 @@ process.load("HLTrigger.HLTcore.hltPrescaleRecorder_cfi")
 process.hltPrescaleRecorder.src=4
 process.hltPrescaleRecorder.condDB=cms.bool(False)
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBESSource = cms.ESSource("PoolDBESSource",
-   CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+   CondCore.CondDB.CondDB_cfi.CondDBSetup,
    connect = cms.string('sqlite_file:HLTPrescaleTable.db'),
    toGet = cms.VPSet(
     cms.PSet(
@@ -26,9 +26,9 @@ process.PoolDBESSource = cms.ESSource("PoolDBESSource",
    )
 )
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-   CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+   CondCore.CondDB.CondDB_cfi.CondDBSetup,
    connect = cms.string('sqlite_file:HLTPrescaleTable.db'),
    timetype = cms.untracked.string("timestamp"),
    toPut = cms.VPSet(

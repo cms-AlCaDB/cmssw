@@ -23,7 +23,7 @@ process.GlobalTag.connect = "frontier://FrontierProd/CMS_COND_21X_GLOBALTAG"
 process.GlobalTag.globaltag = "CRAFT_V3P::All"
 process.es_prefer_GlobalTag = cms.ESPrefer('PoolDBESSource','GlobalTag')
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect='frontier://FrontierProd/CMS_COND_21X_STRIP'
 process.poolDBESSource=cms.ESSource("PoolDBESSource",
                                     process.CondDBCommon,

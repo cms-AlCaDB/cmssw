@@ -8,7 +8,7 @@ process.load("DQM.BeamMonitor.BeamMonitorBx_cff")
 process.load("DQM.BeamMonitor.BeamConditionsMonitor_cff")
 process.load("Configuration.StandardSequences.MagneticField_38T_cff")
 process.load("DQMServices.Components.DQMEnvironment_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1)

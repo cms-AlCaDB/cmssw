@@ -10,7 +10,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 process.load('Configuration.StandardSequences.Services_cff')
 process.load("JetMETCorrections.Modules.qglESProducer_cfi")
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 

@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 process = cms.Process("TEST")
 process.load("CalibCalorimetry.EcalTrivialCondModules.ESTrivialCondRetriever_cfi")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_31X_PRESHOWER'
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb/'
 process.CondDBCommon.connect = 'sqlite_file:DB_DataHG.db'

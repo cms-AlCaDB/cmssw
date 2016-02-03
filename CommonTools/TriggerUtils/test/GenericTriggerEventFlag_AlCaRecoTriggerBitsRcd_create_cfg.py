@@ -47,9 +47,9 @@ process.AlCaRecoTriggerBitsRcdCreate = cms.EDAnalyzer( "AlCaRecoTriggerBitsRcdUp
   )
 )
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service( "PoolDBOutputService"
-, CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup
+, CondCore.CondDB.CondDB_cfi.CondDBSetup
 , timetype = cms.untracked.string( 'runnumber' )
 , connect  = cms.string( 'sqlite_file:GenericTriggerEventFlag_AlCaRecoTriggerBits.db' )
 , toPut    = cms.VPSet(

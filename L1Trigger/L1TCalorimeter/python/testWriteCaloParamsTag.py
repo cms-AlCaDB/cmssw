@@ -28,7 +28,7 @@ process.p = cms.Path(
     process.caloParamsWriter
 )
 
-from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+from CondCore.CondDB.CondDB_cfi import CondDBSetup
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
     CondDBSetup,
     connect = cms.string('sqlite_file:l1config.db'),

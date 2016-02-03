@@ -3,7 +3,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("test")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 #
 # DQM

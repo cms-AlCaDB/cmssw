@@ -14,7 +14,7 @@ process.load("Geometry.CaloEventSetup.EcalTrigTowerConstituents_cfi")
 
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.ecalConditions = cms.ESSource("PoolDBESSource",
                                       CondDBSetup,
                                       siteLocalConfig = cms.untracked.bool(True),

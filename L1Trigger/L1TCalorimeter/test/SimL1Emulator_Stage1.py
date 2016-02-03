@@ -61,7 +61,7 @@ process.simGtDigis.TechnicalTriggersInputTags = cms.VInputTag( )
 ### Get new RCT calibrations from CondDB until new GlobalTag is ready
 ### Goes with tauL1Calib_LUT.txt
 ### Need new GCT jet calibrations to go with it
-#from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+#from CondCore.CondDB.CondDB_cfi import CondDBSetup
 #process.rctSFDB = cms.ESSource("PoolDBESSource",
 #    CondDBSetup,
 #    connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),

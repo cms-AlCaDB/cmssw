@@ -26,7 +26,7 @@ process.maxEvents = cms.untracked.PSet(
 from RecoMuon.TrackingTools.MuonServiceProxy_cff import * 
 from RecoMuon.TrackingTools.MuonTrackLoader_cff import *
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # Conditions (Global Tag is used here):
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
@@ -46,7 +46,7 @@ process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 # reconstruction sequence for Cosmics
 process.load("Configuration.StandardSequences.ReconstructionCosmics_cff")
 #process.load("RecoLocalMuon.Configuration.RecoLocalMuonCosmics_cff")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # offline DQM
 process.load("DQM.DTMonitorModule.dtDQMOfflineSources_cff")

@@ -34,7 +34,7 @@ process.egenergyanalyzer = cms.EDAnalyzer('EGEnergyAnalyzer'
 process.GlobalTag.globaltag = 'START50_V7::All'    
 
             
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 # input database (in this case local sqlite file)
 process.CondDBCommon.connect = 'sqlite_file:GBRWrapper.db'
 

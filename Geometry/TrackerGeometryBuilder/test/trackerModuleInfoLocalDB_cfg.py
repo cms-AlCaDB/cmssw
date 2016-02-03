@@ -4,7 +4,7 @@ process = cms.Process("GeometryTest")
 # empty input service, fire 10 events
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.load('Configuration/StandardSequences/GeometryDB_cff')
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
 
 process.source = cms.Source("EmptySource")

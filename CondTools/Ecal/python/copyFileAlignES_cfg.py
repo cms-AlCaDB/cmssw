@@ -4,7 +4,7 @@ process = cms.Process("TEST")
 
 process.load("EcalTrivialAlignment_cfi")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prep/CMS_COND_ECAL'
 #process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb/'
 process.CondDBCommon.connect = 'sqlite_file:ESAlign_2010.db'

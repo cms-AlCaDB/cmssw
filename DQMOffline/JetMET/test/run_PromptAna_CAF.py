@@ -23,7 +23,7 @@ print 'trigger set name (default=HLT) = '+str(trigger_set)
 
 #-----
 process = cms.Process("test")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 process.load("Configuration.StandardSequences.MagneticField_cff")

@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("MapWriter")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 #process.load("Configuration.StandardSequences.GeometryDB_cff")
 process.load("Configuration.Geometry.GeometryExtended2017Reco_cff")

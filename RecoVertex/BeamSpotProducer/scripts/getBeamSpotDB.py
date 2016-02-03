@@ -158,7 +158,7 @@ import FWCore.ParameterSet.Config as cms
 process = cms.Process("readDB")
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
                                         process.CondDBSetup,

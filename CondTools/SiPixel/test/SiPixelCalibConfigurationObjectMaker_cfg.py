@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("SiPixelCalibConfTest")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = 'sqlite_file:siPixelCalibConfiguration.db'
 process.CondDBCommon.DBParameters.authenticationPath = '.'

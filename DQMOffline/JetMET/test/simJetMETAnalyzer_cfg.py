@@ -16,7 +16,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("Reco")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 process.load("Configuration.StandardSequences.MagneticField_cff")
 

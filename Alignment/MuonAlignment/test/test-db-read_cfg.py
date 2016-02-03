@@ -12,7 +12,7 @@ process.load("Geometry.DTGeometry.dtGeometry_cfi")
 process.load("Geometry.CSCGeometry.cscGeometry_cfi")
 
 # Reading misalignments from DB
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)

@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 from DQMServices.Core.DQMStore_cfg import *
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 dqmRefHistoRootFileGetter=cms.EDAnalyzer("DQMReferenceHistogramRootFileEventSetupAnalyzer") 
 

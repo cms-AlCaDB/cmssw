@@ -11,7 +11,7 @@ process.load("Alignment.CommonAlignmentProducer.GlobalPosition_Frontier_cff")
 
 process.load("Alignment.OfflineValidation.TrackerGeometryCompare_cfi")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.MessageLogger = cms.Service("MessageLogger",
     destinations = cms.untracked.vstring('detailedInfo', 

@@ -6,7 +6,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("ProcessOne")
 #PopCon config
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string("sqlite_file:DBChipSpeedCorrection_data_test.db")
 #process.CondDBCommon.connect = cms.string("sqlite_file:CSC_chip_and_chamber_time_corr_MC.db")
 #process.CondDBCommon.connect = cms.string("oracle://cms_orcoff_prep/CMS_COND_CSC")

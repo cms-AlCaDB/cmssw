@@ -11,7 +11,7 @@ process.maxEvents = cms.untracked.PSet(
 
 
 # db output
-process.load( "CondCore.DBCommon.CondDBCommon_cfi" )
+process.load( "CondCore.CondDB.CondDB_cfi" )
 process.CondDBCommon.connect = 'sqlite_file:Alignments_S.db'
 
 

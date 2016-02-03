@@ -94,7 +94,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.EventContent.EventContent_cff')
 
 process.load("DQM.BeamMonitor.AlcaBeamMonitor_cff")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 #process.AlcaBeamMonitor.TrackLabel = 'ALCARECOTkAlMinBias'
 #process.AlcaBeamMonitor.BeamFitter.TrackCollection = 'ALCARECOTkAlMinBias'

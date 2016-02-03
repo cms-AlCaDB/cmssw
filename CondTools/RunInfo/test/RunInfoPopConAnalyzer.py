@@ -11,7 +11,7 @@ options.register( 'runNumber'
 options.parseArguments()
 
 process = cms.Process( "RunInfoPopulator" )
-process.load( "CondCore.DBCommon.CondDBCommon_cfi" )
+process.load( "CondCore.CondDB.CondDB_cfi" )
 process.CondDBCommon.connect = 'sqlite_file:dbox_upload.db'
 process.CondDBCommon.DBParameters.authenticationPath = '.'
 process.CondDBCommon.DBParameters.messageLevel=cms.untracked.int32( 3 )

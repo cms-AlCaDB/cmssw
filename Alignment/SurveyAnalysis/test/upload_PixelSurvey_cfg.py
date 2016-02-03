@@ -15,7 +15,7 @@ process.tracker = cms.EDFilter("SurveyInputTrackerFromDB",
 	textFileName = cms.string('../data/FPixBPix_Survey.txt')
 )
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
     CondDBSetup,
     timetype = cms.untracked.string('runnumber'),

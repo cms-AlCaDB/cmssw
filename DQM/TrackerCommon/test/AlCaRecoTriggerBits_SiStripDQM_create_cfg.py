@@ -39,10 +39,10 @@ process.maxEvents = cms.untracked.PSet(
   input = cms.untracked.int32( 1 )
 )
 
-import CondCore.DBCommon.CondDBSetup_cfi
-# CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup.DBParameters.messageLevel = cms.untracked.int32( 3 )
+import CondCore.CondDB.CondDB_cfi
+# CondCore.CondDB.CondDB_cfi.CondDBSetup.DBParameters.messageLevel = cms.untracked.int32( 3 )
 process.PoolDBOutputService = cms.Service( "PoolDBOutputService"
-, CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup
+, CondCore.CondDB.CondDB_cfi.CondDBSetup
 # , logconnect = cms.untracked.string( 'sqlite_file:AlCaRecoTriggerBits_SiStripDQM_create_log.db' )
 , timetype = cms.untracked.string( 'runnumber' )
 , connect  = cms.string( 'sqlite_file:AlCaRecoTriggerBits_SiStripDQM.db' )

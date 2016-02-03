@@ -7,8 +7,8 @@ process.load("Geometry.CMSCommonData.cmsIdealGeometryXML_cfi")
 
 process.load("Geometry.TrackerNumberingBuilder.trackerNumberingGeometry_cfi")
 
-#process.load("CondCore.DBCommon.CondDBSetup_cfi")
-from CondCore.DBCommon.CondDBSetup_cfi import *
+#process.load("CondCore.CondDB.CondDB_cfi")
+from CondCore.CondDB.CondDB_cfi import *
 
 process.source = cms.Source("EmptySource")
 

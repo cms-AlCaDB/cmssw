@@ -55,7 +55,7 @@ if (options.sqlite != "") :
 if (options.cfi > 0) :
     process.load("L1Trigger.Configuration.L1Trigger_FakeConditions_cff")
 
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 
 
 process.load("L1TriggerConfig.GctConfigProducers.l1GctConfigDump_cfi")

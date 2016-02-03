@@ -47,7 +47,7 @@ for payload in payloads:
         label  = cms.untracked.string(payload)
     ))
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.SQLliteInput = cms.ESSource("PoolDBESSource",
     DBParameters = cms.PSet(
         messageLevel = cms.untracked.int32(0)

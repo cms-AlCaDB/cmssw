@@ -63,7 +63,7 @@ process.GlobalTag.globaltag = "GLOBALTAGTEMPLATE"  # take your favourite
  ##
  ## Get Alignment constants
  ##
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDBSetup,
                                         connect = cms.string('ALIGNOBJTEMPLATE'),
                                         timetype = cms.string("runnumber"),

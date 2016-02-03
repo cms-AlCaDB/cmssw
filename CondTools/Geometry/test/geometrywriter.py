@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("GeometryWriter")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load('Configuration.Geometry.GeometryExtended_cff')
 process.load('Geometry.CaloEventSetup.CaloGeometryDBWriter_cfi')
 process.load('Geometry.MuonNumbering.muonNumberingInitialization_cfi')

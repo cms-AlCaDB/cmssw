@@ -47,7 +47,7 @@ process.SiStripCondObjBuilderFromDb = cms.Service("SiStripCondObjBuilderFromDb",
 )
 process.SiStripCondObjBuilderFromDb.UseFEC = True
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:dbfile.db'
 process.CondDBCommon.DBParameters.messageLevel = 4
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb'

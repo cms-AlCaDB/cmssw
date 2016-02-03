@@ -9,7 +9,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string('sqlite_file:testExample2.db')
 #process.CondDBCommon.connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_HCAL')
 #process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/nfshome0/popcondev/conddb')

@@ -8,7 +8,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("ProcessOne")
 #PopCon config
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = cms.string("sqlite_file:CSCChamberTimeCorrections_data_new.db")
 process.CondDBCommon.connect = cms.string("sqlite_file:/afs/cern.ch/user/d/deisher/public/test_anode_offsets_mc.db")
 #process.CondDBCommon.connect = cms.string("oracle://cms_orcoff_prep/CMS_COND_CSC")

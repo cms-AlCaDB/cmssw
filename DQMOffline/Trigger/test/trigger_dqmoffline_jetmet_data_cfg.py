@@ -10,7 +10,7 @@ process.load('Configuration.EventContent.EventContent_cff')
 process.load("DQMServices.Core.DQM_cfg")
 process.load("DQMServices.Components.DQMEnvironment_cfi")
 # DQM Sources
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 # DQMOffline/Trigger
 #process.load("DQMOffline.Trigger.JetMETHLTOfflineSource_cfi")
 process.load("DQMOffline.Trigger.JetMETHLTOfflineAnalyzer_cff")

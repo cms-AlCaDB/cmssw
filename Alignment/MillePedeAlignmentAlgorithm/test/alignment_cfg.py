@@ -47,7 +47,7 @@ process.load("Configuration.Geometry.GeometryRecoDB_cff")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = 'MC_310_V1::All' # take your favourite
 #    # if alignment constants not from global tag, add this
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.trackerAlignment = cms.ESSource(
 #    "PoolDBESSource",
 #    CondDBSetup,
@@ -239,7 +239,7 @@ process.p = cms.Path(process.offlineBeamSpot*process.AlignmentTrackSelector*proc
 #process.AlignmentProducer.saveToDB = True
 #process.AlignmentProducer.saveDeformationsToDB = True
 ##process.AlignmentProducer.saveApeToDB = True # no sense: Millepede does not set it!
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBOutputService = cms.Service(
 #    "PoolDBOutputService",
 #    CondDBSetup,

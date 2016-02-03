@@ -23,7 +23,7 @@ process = cms.Process("dump_db")
 process.source = cms.Source("EmptySource")
 process.maxEvents = cms.untracked.PSet(	input = cms.untracked.int32(1) )
 
-from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+from CondCore.CondDB.CondDB_cfi import CondDBSetup
 process.load = cms.ESSource(
     "PoolDBESSource",
     CondDBSetup,

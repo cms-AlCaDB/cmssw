@@ -38,7 +38,7 @@ process.load("FWCore.MessageService.MessageLogger_cfi")
 
 process.load("Configuration.Geometry.GeometryRecoDB_cff")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.source = cms.Source("EmptySource",
                             firstRun=cms.untracked.uint32(runnumberalignmentIOV),
 )

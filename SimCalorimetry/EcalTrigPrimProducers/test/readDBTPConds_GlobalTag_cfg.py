@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("TPDBAn")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load("Geometry.CaloEventSetup.CaloGeometry_cfi")
 
@@ -17,7 +17,7 @@ process.source = cms.Source("EmptySource",
 #    firstRun = cms.untracked.uint32(135175)
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb'
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.prefer("GlobalTag")

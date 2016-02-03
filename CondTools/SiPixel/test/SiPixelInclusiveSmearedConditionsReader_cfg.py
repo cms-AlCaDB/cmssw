@@ -15,7 +15,7 @@ process.TFileService = cms.Service("TFileService",
                                    fileName = cms.string("histo.root")
                                    )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'oracle://cms_orcoff_int2r/CMS_COND_PIXEL'
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb'
 process.CondDBCommon.DBParameters.messageLevel = 3

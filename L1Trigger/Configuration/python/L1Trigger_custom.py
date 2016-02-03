@@ -116,7 +116,7 @@ def customiseL1Menu(process):
 
     elif l1MenuSource == 'sqlFile' :
         if useSqlFile != '' :
-            from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+            from CondCore.CondDB.CondDB_cfi import CondDBSetup
             process.l1conddb = cms.ESSource("PoolDBESSource",
                                     CondDBSetup,
                                     connect = cms.string('sqlite_file:' + useSqlFile),

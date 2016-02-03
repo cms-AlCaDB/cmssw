@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("CaloGeometryWriter")
-process.load('CondCore.DBCommon.CondDBCommon_cfi')
+process.load('CondCore.CondDB.CondDB_cfi')
 process.load('Configuration.Geometry.GeometryExtended2023_cff')
 process.load('Geometry.CaloEventSetup.CaloGeometry2023DBWriter_cfi')
 process.source = cms.Source("EmptyIOVSource",

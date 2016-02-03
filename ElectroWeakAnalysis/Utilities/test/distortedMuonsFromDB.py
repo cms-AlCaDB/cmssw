@@ -24,7 +24,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 )
 
 # Database for scale shift if process.distortedMuons.UseDBForMomentumScale = True
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.poolDBESSource1 = cms.ESSource("PoolDBESSource",
       BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
       DBParameters = cms.PSet(

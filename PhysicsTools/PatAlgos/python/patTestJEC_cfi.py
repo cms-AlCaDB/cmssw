@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 # Be sure to change the "V5" to whatever is in your payloads. 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 jec = cms.ESSource("PoolDBESSource",CondDBSetup,
                    connect = cms.string("frontier://FrontierPrep/CMS_COND_PHYSICSTOOLS"),
                    toGet =  cms.VPSet(

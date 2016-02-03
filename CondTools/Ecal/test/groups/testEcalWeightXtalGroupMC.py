@@ -21,7 +21,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string('sqlite_file:testEcalWeightXtalGroups.db')
 #process.CondDBCommon.connect = cms.string('oracle://cms_orcon_prod/CMS_COND_31X_ECAL')
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/nfshome0/popcondev/conddb')

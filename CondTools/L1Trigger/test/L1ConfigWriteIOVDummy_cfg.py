@@ -41,7 +41,7 @@ options.register('outputDBAuth',
 options.parseArguments()
 
 # Get L1TriggerKeyList from DB
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # Define CondDB tags
 if options.useO2OTags == 0:

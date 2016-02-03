@@ -1,4 +1,4 @@
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 # loading magnetic field and geometry
 process.load("Configuration.StandardSequences.MagneticField_AutoFromDBCurrent_cff")
@@ -24,7 +24,7 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 10000
 # process.load("Configuration.StandardSequences.MagneticField_38T_cff")
 
 # configure the database file - use survey one for default
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 # ########## Ideal Alignment 
 # process.trackerAlignment = cms.ESSource("PoolDBESSource",
@@ -40,7 +40,7 @@ from CondCore.DBCommon.CondDBSetup_cfi import *
 # process.es_prefer_trackerAlignment = cms.ESPrefer("PoolDBESSource", "trackerAlignment")
 
 # ########## Zero APE
-# from CondCore.DBCommon.CondDBSetup_cfi import *
+# from CondCore.CondDB.CondDB_cfi import *
 # process.ZeroAPE = cms.ESSource("PoolDBESSource",CondDBSetup,
 #                                connect = cms.string('frontier://FrontierProd/CMS_COND_31X_FROM21X'),
 #                                timetype = cms.string("runnumber"),

@@ -12,7 +12,7 @@ process.load('Configuration.StandardSequences.Services_cff')
 process.load('JetMETCorrections.Configuration.DefaultJEC_cff')
 
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.jec = cms.ESSource("PoolDBESSource",CondDBSetup,
                    connect = cms.string("sqlite:JEC_Spring10.db"),
                    toGet =  cms.VPSet(

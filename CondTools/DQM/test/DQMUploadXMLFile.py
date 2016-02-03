@@ -7,7 +7,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                                   destinations=cms.untracked.vstring("cout")
                                   )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string('sqlite_file:testXML.db')
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('')
 process.CondDBCommon.BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')

@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 # Reading from DB
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 PoolDBESSource = cms.ESSource("PoolDBESSource",
     CondDBSetup,
     connect = cms.string('frontier://FrontierProd/CMS_COND_21X_ALIGNMENT'),

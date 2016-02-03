@@ -24,7 +24,7 @@ process.gbrForestWriter = cms.EDAnalyzer("GBRForestWriter",
     )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:btag_CombinedMVAv2_BDT_TMVAv420_GBRForest_74X_v1.db'
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",

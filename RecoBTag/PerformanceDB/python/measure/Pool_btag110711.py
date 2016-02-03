@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from CondCore.DBCommon.CondDBCommon_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 PoolDBESSourcebtag = cms.ESSource("PoolDBESSource",
                               CondDBCommon,

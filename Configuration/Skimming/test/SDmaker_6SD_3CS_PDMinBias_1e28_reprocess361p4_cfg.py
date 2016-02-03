@@ -230,7 +230,7 @@ process.Skim_diMuons = cms.Path(
 
 
 ### Tau skim CS
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("TrackingTools/TransientTrack/TransientTrackBuilder_cfi")
 
 process.load("L1TriggerConfig.L1GtConfigProducers.L1GtTriggerMaskTechTrigConfig_cff")

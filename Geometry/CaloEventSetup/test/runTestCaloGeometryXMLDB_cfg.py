@@ -7,7 +7,7 @@ process.load("GeometryReaders.XMLIdealGeometryESSource.cmsGeometryDB_cff")
 process.load("Geometry.CaloEventSetup.CaloGeometry_cff")
 process.load("Geometry.CaloEventSetup.CaloTopology_cfi")
 process.load("Geometry.CaloEventSetup.EcalTrigTowerConstituents_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 from Configuration.AlCa.autoCond import autoCond
 process.GlobalTag.globaltag = autoCond['mc']

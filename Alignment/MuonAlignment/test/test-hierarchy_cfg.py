@@ -18,7 +18,7 @@ process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
 #process.load("Geometry.CSCGeometry.cscGeometry_cfi")
 #process.load("Alignment.CommonAlignmentProducer.GlobalPosition_Frontier_cff")
 #
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBESSource = cms.ESSource(
 #    "PoolDBESSource",
 #    CondDBSetup,

@@ -26,7 +26,7 @@ process.hltTriggerTypeFilter = cms.EDFilter("HLTTriggerTypeFilter",
 #process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
 process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 ################ Condition ######################
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 ############# DQM Cetral Modules ################
 #process.load("DQMServices.Core.DQM_cfg")

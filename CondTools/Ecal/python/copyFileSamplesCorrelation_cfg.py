@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 process = cms.Process("TEST")
 process.load("EcalSamplesCorrelation_cfi")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:EcalSamplesCorrelationFile.db'
 
 process.MessageLogger = cms.Service("MessageLogger",

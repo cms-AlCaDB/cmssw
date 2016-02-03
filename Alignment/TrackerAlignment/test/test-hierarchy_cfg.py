@@ -13,7 +13,7 @@ process.load("CalibTracker.Configuration.TrackerAlignment.TrackerAlignment_Fake_
 #process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
 #process.load("Alignment.CommonAlignmentProducer.GlobalPosition_Frontier_cff")
 #
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBESSource = cms.ESSource("PoolDBESSource",
 #             CondDBSetup,
 #             #connect = cms.string('frontier://FrontierProd/CMS_COND_21X_ALIGNMENT'),

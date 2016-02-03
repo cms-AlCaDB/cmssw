@@ -215,7 +215,7 @@ process.p = cms.Path(process.HighPuritySelector
                      *process.AlignmentProducer
                      )
 process.AlignmentProducer.saveToDB = True
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.PoolDBOutputService = cms.Service(
         "PoolDBOutputService",
             CondDBSetup,

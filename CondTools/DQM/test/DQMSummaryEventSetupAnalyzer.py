@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("Test")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = 'sqlite_file:DQMSummaryTest.db'
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prep/CMS_COND_30X_DQM_SUMMARY'

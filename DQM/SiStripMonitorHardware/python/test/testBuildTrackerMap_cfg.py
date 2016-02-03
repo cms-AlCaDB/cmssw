@@ -49,7 +49,7 @@ process.MessageLogger = cms.Service(
     )
 
 
-#process.load("CondCore.DBCommon.CondDBSetup_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = "CRAFT0831X_V1::All"
 #process.GlobalTag.globaltag = "GR09_31X_V1P::All"

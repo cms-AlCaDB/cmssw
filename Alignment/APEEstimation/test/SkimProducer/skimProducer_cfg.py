@@ -127,7 +127,7 @@ print "Using global tag "+process.GlobalTag.globaltag._value
 process.load("Configuration.StandardSequences.Services_cff")
 process.load("Configuration.Geometry.GeometryRecoDB_cff")
 process.load("Configuration.StandardSequences.MagneticField_cff")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("RecoVertex.BeamSpotProducer.BeamSpot_cff")
 
 

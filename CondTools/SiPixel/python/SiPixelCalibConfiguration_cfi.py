@@ -6,7 +6,7 @@ import FWCore.ParameterSet.Config as cms
 #
 #  default .cfi file 
 #
-from CondCore.DBCommon.CondDBCommon_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 #include "CondCore/DBCommon/data/CondDBSetup.cfi"
 sipixelcalib_essource = cms.ESSource("PoolDBESSource",
     CondDBCommon,

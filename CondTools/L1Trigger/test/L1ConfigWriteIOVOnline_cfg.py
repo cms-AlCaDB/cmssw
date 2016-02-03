@@ -7,7 +7,7 @@ process.MessageLogger.cout.threshold = cms.untracked.string('DEBUG')
 process.MessageLogger.debugModules = cms.untracked.vstring('*')
 
 # Get L1TriggerKeyList from DB
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 import FWCore.ParameterSet.VarParsing as VarParsing
 options = VarParsing.VarParsing()

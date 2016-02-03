@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 # Magnetic fiuld: force mag field to be 3.8 tesla
 from Configuration.StandardSequences.MagneticField_38T_cff import *

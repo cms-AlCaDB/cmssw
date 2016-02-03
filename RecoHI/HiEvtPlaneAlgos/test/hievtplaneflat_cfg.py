@@ -8,7 +8,7 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 process.load("RecoHI.HiEvtPlaneAlgos.HiEvtPlane_cfi")
 process.load("RecoHI.HiEvtPlaneAlgos.hiEvtPlaneFlat_cfi")
 process.load("RecoHI.HiCentralityAlgos.CentralityBin_cfi")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load('GeneratorInterface.HiGenCommon.HeavyIon_cff')
 
 from Configuration.AlCa.GlobalTag import GlobalTag

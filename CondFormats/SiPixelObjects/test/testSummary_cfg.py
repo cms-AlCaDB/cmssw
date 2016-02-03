@@ -5,8 +5,8 @@ process.source = cms.Source("EmptySource")
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1))
 
 # -- Database configuration
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # -- Conditions
 process.load("Configuration.StandardSequences.MagneticField_38T_cff")

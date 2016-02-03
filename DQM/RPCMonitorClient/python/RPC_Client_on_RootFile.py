@@ -26,7 +26,7 @@ process.load("RecoLocalMuon.RPCRecHit.rpcRecHits_cfi")
 
 #process.load("Configuration.StandardSequences.MagneticField_cff")
 
-#process.load("CondCore.DBCommon.CondDBSetup_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
 
 
 ##### Run as Emptry Source #######

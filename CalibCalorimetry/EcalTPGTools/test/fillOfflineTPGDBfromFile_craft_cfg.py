@@ -19,7 +19,7 @@ process.source = cms.Source("EmptyIOVSource",
 
 process.load("SimCalorimetry.EcalTrigPrimProducers.ecalTrigPrimESProducer_craft_cff")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = 'sqlite_file:DB_craft.db'
 

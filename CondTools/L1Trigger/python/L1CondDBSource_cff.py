@@ -16,7 +16,7 @@ def initCondDBSource( process,
                       use30XTagList = False,
                       applyESPrefer = True ):
     import FWCore.ParameterSet.Config as cms
-    from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+    from CondCore.CondDB.CondDB_cfi import CondDBSetup
     from CondTools.L1Trigger.L1CondEnum_cfi import L1CondEnum
 
     if len( tagBaseVec ) == 0:

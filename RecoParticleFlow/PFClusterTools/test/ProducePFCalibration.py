@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("myprocess")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = 'sqlite_file:PhysicsPerformance.db'
 
@@ -87,7 +87,7 @@ process.mywriter = cms.EDAnalyzer(
 
 process.p = cms.Path(process.mywriter)
 
-from CondCore.DBCommon.CondDBCommon_cfi import CondDBCommon
+from CondCore.CondDB.CondDB_cfi import CondDBCommon
 CondDBCommon.connect = "sqlite_file:PFCalibration.db"
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",

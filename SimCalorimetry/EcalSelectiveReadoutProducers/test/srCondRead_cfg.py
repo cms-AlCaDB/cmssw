@@ -18,7 +18,7 @@ sr_tag = 'EcalSRSettings_beam2012_option1_v00_mc' #optimized weights with 360MeV
 process = cms.Process("ProcessOne")
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
-#process.load("CondCore.DBCommon.CondDBCommon_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = 'sqlite_file:' + tag + '.db'
 #process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb'
 

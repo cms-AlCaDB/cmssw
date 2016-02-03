@@ -30,7 +30,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1))
 process.load("Geometry.MuonCommonData.muonIdealGeometryXML_cfi")
 process.load("Geometry.RPCGeometry.rpcGeometry_cfi")
 process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 process.load("DQMServices.Core.DQM_cfg")

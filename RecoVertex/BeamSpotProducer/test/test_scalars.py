@@ -71,7 +71,7 @@ process.maxEvents = cms.untracked.PSet(
         input = cms.untracked.int32(-1)
 )        
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
  
 process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
                                         process.CondDBSetup,

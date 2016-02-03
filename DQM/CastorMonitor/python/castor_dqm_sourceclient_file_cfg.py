@@ -77,7 +77,7 @@ process.GlobalTag.globaltag = 'GR_R_61_V7::All'
 
 
 #get explicit from db
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.castor_db_producer = cms.ESProducer("CastorDbProducer") 
 
 #process.es_pool = cms.ESSource(

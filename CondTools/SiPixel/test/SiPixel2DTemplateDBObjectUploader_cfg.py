@@ -5,7 +5,7 @@ import FWCore.ParameterSet.Config as cms
 import sys
 
 process = cms.Process("SiPixel2DTemplateDBUpload")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("FWCore.MessageService.MessageLogger_cfi")
 
 process.load("Configuration.StandardSequences.Geometry_cff")

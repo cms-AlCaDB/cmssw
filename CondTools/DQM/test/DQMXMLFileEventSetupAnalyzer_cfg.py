@@ -16,7 +16,7 @@ process.DQMStore.verboseQT = cms.untracked.int32(0)
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
 
 # Input source
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.source = cms.Source("EmptyIOVSource",
                             timetype = cms.string('runnumber'),

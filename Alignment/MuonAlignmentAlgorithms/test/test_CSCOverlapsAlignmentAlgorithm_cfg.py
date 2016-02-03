@@ -179,13 +179,13 @@ process.CSCOverlapsTrackPreparationTrackRefitter = cms.EDProducer("CSCOverlapsTr
 #                                                                    RefitRPCHits = cms.bool(False)))
 process.Path = cms.Path(process.offlineBeamSpot * process.CSCOverlapsTrackPreparationTrackRefitter)
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.inertGlobalPositionRcd = cms.ESSource("PoolDBESSource",
-                                              CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+                                              CondCore.CondDB.CondDB_cfi.CondDBSetup,
                                               connect = cms.string("sqlite_file:inertGlobalPositionRcd.db"),
                                               toGet = cms.VPSet(cms.PSet(record = cms.string("GlobalPositionRcd"), tag = cms.string("inertGlobalPositionRcd"))))
 process.muonAlignment = cms.ESSource("PoolDBESSource",
-                                     CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+                                     CondCore.CondDB.CondDB_cfi.CondDBSetup,
                                      connect = cms.string("sqlite_file:geometry.db"),   # ideal.db, Photogrammetry.db
                                      toGet = cms.VPSet(cms.PSet(record = cms.string("DTAlignmentRcd"),       tag = cms.string("DTAlignmentRcd")),
                                                        cms.PSet(record = cms.string("DTAlignmentErrorExtendedRcd"),  tag = cms.string("DTAlignmentErrorExtendedRcd")),
@@ -195,7 +195,7 @@ process.looper.applyDbAlignment = True
 
 process.looper.saveToDB = True
 process.looper.saveApeToDB = True
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
                                           process.CondDBSetup,
                                           connect = cms.string("sqlite_file:after.db"),

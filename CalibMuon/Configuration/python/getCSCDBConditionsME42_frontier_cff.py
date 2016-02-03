@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 #used for real DB conditions
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 cscConditions = cms.ESSource("PoolDBESSource",
     CondDBSetup,
     timetype = cms.string('runnumber'),

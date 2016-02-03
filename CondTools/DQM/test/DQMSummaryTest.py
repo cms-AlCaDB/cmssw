@@ -9,7 +9,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_30X_DQM_SUMMARY')
 process.CondDBCommon.connect = cms.string('sqlite_file:DQMSummaryTest.db')
 #process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/afs/cern.ch/cms/DB/conddb') #authentication when using ORACLE

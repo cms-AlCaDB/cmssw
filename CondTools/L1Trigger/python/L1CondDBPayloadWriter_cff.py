@@ -12,7 +12,7 @@ def initPayloadWriter( process,
                                     
     process.load('CondTools.L1Trigger.L1CondDBPayloadWriter_cfi')
     
-    from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+    from CondCore.CondDB.CondDB_cfi import CondDBSetup
     initPayloadWriter.outputDB = cms.Service("PoolDBOutputService",
                                              CondDBSetup,
                                              connect = cms.string(outputDBConnect),

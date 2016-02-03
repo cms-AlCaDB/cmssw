@@ -50,7 +50,7 @@ else:
  # process.GlobalTag = GlobaTag(GlobalTag, 'auto:run2_mc', '')
 
 if usePrivateSQlite:
-    from CondCore.DBCommon.CondDBSetup_cfi import *
+    from CondCore.CondDB.CondDB_cfi import *
     import os
     if runOnData:
       era="Summer15_50nsV5_DATA"

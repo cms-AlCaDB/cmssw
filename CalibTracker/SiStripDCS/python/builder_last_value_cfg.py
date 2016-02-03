@@ -115,7 +115,7 @@ process.load("IORawData.SiStripInputSources.EmptySource_cff")
 process.maxEvents.input = 2
 
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string('oracle://cms_omds_nolb/username')
 
 process.SiStripModuleHVBuilder = cms.Service("SiStripModuleHVBuilder",

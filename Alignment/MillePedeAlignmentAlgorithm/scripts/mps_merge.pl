@@ -100,7 +100,7 @@ $replaceBlock = "";
 ## print "alignment.log nn= $nn\n";
 
 # replace "save to DB" directives
-$saveAlignmentConstants = "from CondCore.DBCommon.CondDBSetup_cfi import *\n"
+$saveAlignmentConstants = "from CondCore.CondDB.CondDB_cfi import *\n"
                         . "process.PoolDBOutputService = cms.Service(\"PoolDBOutputService\",\n"
                         . "    CondDBSetup,\n"
                         . "    timetype = cms.untracked.string('runnumber'),\n"

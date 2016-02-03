@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 # To be used on SQLite files.  AFS access not required.
 DTCabling = cms.ESSource("PoolDBESSource",
     CondDBSetup,

@@ -10,7 +10,7 @@ process.load("FWCore.MessageService.MessageLogger_cfi")
 #
 #  DQM SOURCES
 #
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 #process.load("Configuration.GlobalRuns.ForceZeroTeslaField_cff")

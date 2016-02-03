@@ -7,7 +7,7 @@ import FWCore.ParameterSet.Config as cms
 process = cms.Process("GeometryTest")
 
 process.load('Configuration/StandardSequences/GeometryDB_cff')
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
 
 process.GlobalTag.globaltag = 'MC_31X_V8::All'

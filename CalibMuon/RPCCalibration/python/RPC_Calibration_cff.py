@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 #FRONTIER
 RPCCalibPerf = cms.ESSource("PoolDBESSource",
     CondDBSetup,

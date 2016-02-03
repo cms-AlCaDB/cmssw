@@ -13,7 +13,7 @@ process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 
 process.load("CondTools.SiPixel.SiPixelGainCalibrationService_cfi")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load("CalibTracker.SiPixelESProducers.SiPixelFakeGainESSource_cfi")
 

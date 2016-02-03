@@ -38,7 +38,7 @@ PixelPopConCalibAnalyzer = cms.EDAnalyzer('PixelPopConCalibAnalyzer',
                                           )
 
 # Use CondDBCOmmon and PoolDBOutputSource to write the calib configuration object to ORCON
-from CondCore.DBCommon.CondDBCommon_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 # connect string that determines to which database the calb config object will be written
 CondDBCommon.connect = cms.string('sqlite_file:testExample.db')
 # path to the database authentication.xml file

@@ -4,7 +4,7 @@ import FWCore.ParameterSet.Config as cms
 #
 # Take muon alignment corrections from Frontier
 #
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 muonAlignment = cms.ESSource("PoolDBESSource",
     CondDBSetup,
     toGet = cms.VPSet(cms.PSet(

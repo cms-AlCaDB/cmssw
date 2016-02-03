@@ -30,7 +30,7 @@ updateAntiMuonDiscrMVA = True
 updateTauIdDiscrMVA = True
 #--------------------------------------------------------------------------------
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:RecoTauTag_MVAs_%s.db' % today_string
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",

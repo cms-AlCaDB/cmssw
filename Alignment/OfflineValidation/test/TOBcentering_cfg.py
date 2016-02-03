@@ -8,14 +8,14 @@ process.load("Geometry.CMSCommonData.cmsIdealGeometryXML_cfi")
 process.load("Geometry.TrackerNumberingBuilder.trackerNumberingGeometry_cfi")
 process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.MessageLogger = cms.Service("MessageLogger",
 									destinations = cms.untracked.vstring('detailedInfo', 
 																		 'cout')
 )
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDBSetup,
 #								connect = cms.string('frontier://FrontierProd/CMS_COND_31X_FROM21X'),

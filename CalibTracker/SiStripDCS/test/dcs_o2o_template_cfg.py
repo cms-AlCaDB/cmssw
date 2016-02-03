@@ -79,7 +79,7 @@ process.source = cms.Source("EmptySource",
 # -----------------------------------------------------------------------------
 # Database Setup
 # -----------------------------------------------------------------------------
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = cms.string('oracle://cms_omds_tunnel/CMS_TRK_R')
 

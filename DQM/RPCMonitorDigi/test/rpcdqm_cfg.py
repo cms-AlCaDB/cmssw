@@ -31,7 +31,7 @@ process.source = cms.Source("PoolSource",
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(100))
 
 ################ Condition #################
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.load("DQM.Integration.test.FrontierCondition_GT_cfi")
 #process.GlobalTag.RefreshEachRun = cms.untracked.bool(True)
 

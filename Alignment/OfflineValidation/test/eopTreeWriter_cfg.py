@@ -66,7 +66,7 @@ from TrackingTools.TrackAssociator.default_cfi import *
 #process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_noesprefer_cff")
 
 # choose geometry
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDBSetup,
                                         #connect = cms.string("frontier://FrontierArc/CMS_COND_31X_ALIGNMENT_AK25"),
                                         connect = cms.string("frontier://FrontierArc/CMS_COND_31X_ALIGNMENT_BD19"),

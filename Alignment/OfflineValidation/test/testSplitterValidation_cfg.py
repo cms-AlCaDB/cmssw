@@ -50,7 +50,7 @@ process.maxEvents = cms.untracked.PSet(
 
 
 # adding geometries
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 # for craft
 

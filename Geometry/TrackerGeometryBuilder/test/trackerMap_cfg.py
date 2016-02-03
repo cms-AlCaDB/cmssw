@@ -13,7 +13,7 @@ process.load("Geometry.TrackerSimData.trackerSimGeometryXML_cfi")
 process.load("Alignment.CommonAlignmentProducer.FakeAlignmentSource_cfi")
 process.load("Alignment.OfflineValidation.TrackerGeometryCompare_cfi")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)

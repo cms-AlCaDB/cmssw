@@ -10,7 +10,7 @@ process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 process.load("Geometry.DTGeometry.dtGeometry_cfi")
 process.DTGeometryESModule.applyAlignment = False
 process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("DQMServices.Core.DQM_cfg")
 
 process.source = cms.Source("PoolSource",

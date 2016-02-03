@@ -4,7 +4,7 @@ import FWCore.ParameterSet.Config as cms
 # scenarios. In this case it makes changes for Run 2.
 from Configuration.StandardSequences.Eras import eras
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 import EventFilter.CSCTFRawToDigi.csctfunpacker_cfi
 csctfDigis = EventFilter.CSCTFRawToDigi.csctfunpacker_cfi.csctfunpacker.clone()

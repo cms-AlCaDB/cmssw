@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 from Configuration.AlCa.autoCond import autoCond
 
 process = cms.Process("GeometryWriter")
-process.load('CondCore.DBCommon.CondDBCommon_cfi')
+process.load('CondCore.CondDB.CondDB_cfi')
 process.load('Configuration.StandardSequences.GeometryDB_cff')
 process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
 process.GlobalTag.globaltag = autoCond['run1_mc']

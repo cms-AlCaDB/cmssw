@@ -19,9 +19,9 @@ process.maxEvents = cms.untracked.PSet(
   input = cms.untracked.int32( 1 )
 )
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBESSource = cms.ESSource( "PoolDBESSource"
-, CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup
+, CondCore.CondDB.CondDB_cfi.CondDBSetup
 , connect = cms.string( 'sqlite_file:GenericTriggerEventFlag_AlCaRecoTriggerBits.db' )
 , toGet   = cms.VPSet(
     cms.PSet(
@@ -55,7 +55,7 @@ process.AlCaRecoTriggerBitsRcdUpdate = cms.EDAnalyzer( "AlCaRecoTriggerBitsRcdUp
 )
 
 process.PoolDBOutputService = cms.Service( "PoolDBOutputService"
-, CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup
+, CondCore.CondDB.CondDB_cfi.CondDBSetup
 , timetype = cms.untracked.string( 'runnumber' )
 , connect  = cms.string( 'sqlite_file:GenericTriggerEventFlag_AlCaRecoTriggerBits.db' )
 , toPut    = cms.VPSet(

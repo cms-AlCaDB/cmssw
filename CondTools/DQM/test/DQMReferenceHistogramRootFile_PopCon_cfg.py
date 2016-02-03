@@ -7,7 +7,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                                   destinations=cms.untracked.vstring("cout")
                                   )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_31X_DQM_SUMMARY')
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/build/diguida/conddb')
 process.CondDBCommon.BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')

@@ -15,7 +15,7 @@ process.GlobalTag.globaltag = "MC_61_V2::All"
 process.load("Alignment.CommonAlignmentProducer.FakeAlignmentSource_cfi")
 process.preferFakeAlign = cms.ESPrefer("FakeAlignmentSource")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.dummy = cms.ESSource("EmptyESSource",
     recordName = cms.string("CSCIndexerRecord"),

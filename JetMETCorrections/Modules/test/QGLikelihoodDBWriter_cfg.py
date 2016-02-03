@@ -12,7 +12,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 
 qgDatabaseVersion = 'v1'
 
-process.load('CondCore.DBCommon.CondDBCommon_cfi')
+process.load('CondCore.CondDB.CondDB_cfi')
 process.CondDBCommon.connect = 'sqlite_file:QGL_'+qgDatabaseVersion+'.db'
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 process.source = cms.Source('EmptySource')

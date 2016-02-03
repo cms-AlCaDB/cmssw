@@ -36,7 +36,7 @@ process.source = cms.Source("PoolSource",
 #---------------------------------------------------------------------
 # Raw to Digi: TO BE TESTED !!
 #---------------------------------------------------------------------
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # Magnetic fiuld: force mag field to be 3.8 tesla
 process.load("Configuration.StandardSequences.MagneticField_38T_cff")

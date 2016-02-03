@@ -5,7 +5,7 @@ process = cms.Process("TrackerParametersTest")
 process.load('Configuration.Geometry.GeometryExtended2023_cff')
 process.load('Configuration.Geometry.GeometryExtended2023Reco_cff')
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.PoolDBESSourceGeometry = cms.ESSource("PoolDBESSource",
                                process.CondDBSetup,
                                timetype = cms.string('runnumber'),

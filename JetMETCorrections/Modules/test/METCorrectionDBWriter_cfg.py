@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms 
 process = cms.Process('metdb') 
-process.load('CondCore.DBCommon.CondDBCommon_cfi') 
+process.load('CondCore.CondDB.CondDB_cfi') 
 process.CondDBCommon.connect = 'sqlite_file:MET15V0.db' 
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1)) 
 process.source = cms.Source('EmptySource') 

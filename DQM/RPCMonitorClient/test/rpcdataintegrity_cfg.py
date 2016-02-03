@@ -18,7 +18,7 @@ readFiles.extend( ['/store/data/Commissioning10/Cosmics/RAW/v4/000/132/202/0224D
 process.load("Geometry.MuonCommonData.muonIdealGeometryXML_cfi")
 process.load("Geometry.RPCGeometry.rpcGeometry_cfi")
 process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 ################# RPC Unpacker  ######################
 process.rpcunpacker = cms.EDFilter("RPCUnpackingModule",

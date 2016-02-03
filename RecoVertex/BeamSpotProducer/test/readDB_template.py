@@ -5,7 +5,7 @@ process = cms.Process("readDB")
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 

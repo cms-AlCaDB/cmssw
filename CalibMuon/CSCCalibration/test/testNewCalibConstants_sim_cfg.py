@@ -25,7 +25,7 @@ process.GlobalTag.globaltag ='START37_V4::All'
 #'MC_37Y_V4::All'
 #'START38_V3::All'
 
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.myProcess = cms.ESSource("PoolDBESSource",
 #                                  CondDBSetup,
 #                                  connect = cms.string("sqlite_file:mySqliteFile.db"),

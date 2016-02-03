@@ -9,7 +9,7 @@ process = cms.Process('FFTJetCorrectorDBWrite')
 process.source = cms.Source('EmptySource') 
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1)) 
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = database
 
 # Data is tagged in the database by the "tag" parameter specified in the

@@ -9,7 +9,7 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 #process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('./authentication.xml')
 #process.CondDBCommon.connect = cms.string('sqlite_file:CastorPedestals.db')

@@ -10,7 +10,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("ProcessOne")
 #PopCon config
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string("sqlite_file:DBL1TPParameters.db")
 
 process.MessageLogger = cms.Service("MessageLogger",

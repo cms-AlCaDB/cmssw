@@ -33,7 +33,7 @@ process.GlobalTag.globaltag = "GTAG"
 
 
 # and access the calibration information:
-CALIBfrom CondCore.DBCommon.CondDBCommon_cfi import *
+CALIBfrom CondCore.CondDB.CondDB_cfi import *
 #                                              
 CALIBprocess.siPixelCalibGlobalTag =  cms.ESSource("PoolDBESSource",
 CALIB                                              CondDBCommon,

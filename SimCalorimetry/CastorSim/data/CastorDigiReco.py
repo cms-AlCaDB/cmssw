@@ -11,8 +11,8 @@ process.load("RecoLocalCalo.CastorReco.CastorSimpleReconstructor_cfi")
 process.load("Configuration.StandardSequences.GeometryExtended_cff")
 
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 process.castor_db_producer = cms.ESProducer("CastorDbProducer")

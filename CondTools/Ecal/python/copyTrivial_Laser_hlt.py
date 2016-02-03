@@ -4,7 +4,7 @@ process = cms.Process("TEST")
 process.load("CalibCalorimetry.EcalTrivialCondModules.EcalTrivialCondRetriever_cfi")
 process.load("EcalTrivialAlpha_cfi")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_43X_ECAL'
 process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/conddb'
 #process.CondDBCommon.connect = 'sqlite_file:DB.db'

@@ -12,7 +12,7 @@ print "DBout into:", db_file
 print "taggername:", tagger
 
 process = cms.Process("BTagCalibCreator")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:' + db_file
 
 process.maxEvents = cms.untracked.PSet(

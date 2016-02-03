@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("myprocess")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi") 
+process.load("CondCore.CondDB.CondDB_cfi") 
 process.load ("RecoBTag.PerformanceDB.PoolBTagPerformanceDB062012")
 process.load ("RecoBTag.PerformanceDB.BTagPerformanceDB062012")
 

@@ -17,8 +17,8 @@ process.load("SimCalorimetry.CastorSim.castordigi_cfi")
 process.load("RecoLocalCalo.CastorReco.CastorSimpleReconstructor_cfi")
 
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load('RecoLocalCalo.Castor.Castor_cff')
 process.castor_db_producer = cms.ESProducer("CastorDbProducer")

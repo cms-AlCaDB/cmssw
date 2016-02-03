@@ -9,7 +9,7 @@ from Alignment.CommonAlignmentProducer.AlcaSiPixelAliHarvester_cff import *
 from Calibration.TkAlCaRecoProducers.PCLMetadataWriter_cfi import *
 
 # common ingredients
-from CondCore.DBCommon.CondDBCommon_cfi import CondDBCommon
+from CondCore.CondDB.CondDB_cfi import CondDBCommon
 CondDBCommon.connect = "sqlite_file:promptCalibConditions.db"
 
 PoolDBOutputService = cms.Service("PoolDBOutputService",

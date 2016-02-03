@@ -14,8 +14,8 @@ process.MessageLogger=cms.Service("MessageLogger",
                               )
 )
 
-##process.load("CondCore.DBCommon.CondDBSetup_cfi")
-from CondCore.DBCommon.CondDBSetup_cfi import *
+##process.load("CondCore.CondDB.CondDB_cfi")
+from CondCore.CondDB.CondDB_cfi import *
 
 process.source = cms.Source("EmptyIOVSource",
     timetype = cms.string('runnumber'),

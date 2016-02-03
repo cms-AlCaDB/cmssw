@@ -8,7 +8,7 @@ process.GlobalTag.globaltag = 'GR09_31X_V3P::All'
 
 process.load("Configuration.StandardSequences.GeometryIdeal_cff")
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 import CalibTracker.Configuration.Common.PoolDBESSource_cfi
 
@@ -55,7 +55,7 @@ process.MessageLogger.LACalibDebug_Calib =  cms.untracked.PSet(
       DEBUG = cms.untracked.PSet(limit = cms.untracked.int32(0))
  )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.CondDBCommon.connect = 'sqlite_file:DB_LA_TEST_Modules_Calib.db'
 

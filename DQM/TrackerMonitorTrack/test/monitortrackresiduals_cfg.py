@@ -14,8 +14,8 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 100
 ## 
 ## Database configuration
 ##
-#process.load("CondCore.DBCommon.CondDBCommon_cfi")
-#process.load("CondCore.DBCommon.CondDBSetup_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
+#process.load("CondCore.CondDB.CondDB_cfi")
 
 
 ##

@@ -10,7 +10,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("ProcessOne")
 #PopCon config
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.MessageLogger = cms.Service("MessageLogger",
     cout = cms.untracked.PSet(

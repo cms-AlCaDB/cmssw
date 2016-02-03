@@ -48,7 +48,7 @@ process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 #process.GlobalTag.globaltag = 'MC_3XY_V14::All' # take your favourite
 process.GlobalTag.globaltag = 'CRAFT09_R_V10::All' # take your favourite
 #    # if alignment constants not from global tag, add this
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.trackerAlignment = cms.ESSource(
 #    "PoolDBESSource",
 #    CondDBSetup,
@@ -241,7 +241,7 @@ process.p = cms.Path(process.offlineBeamSpot*process.AlignmentTrackSelector*proc
 # For a standalone (non-MPS) run, uncomment also the PoolDBOutputService part.
 #process.AlignmentProducer.saveToDB = True
 ##process.AlignmentProducer.saveApeToDB = True # no sense: Millepede does not set it!
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBOutputService = cms.Service(
 #    "PoolDBOutputService",
 #    CondDBSetup,

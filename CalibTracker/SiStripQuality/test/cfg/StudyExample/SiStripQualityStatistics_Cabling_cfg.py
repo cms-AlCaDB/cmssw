@@ -50,7 +50,7 @@ process.maxEvents = cms.untracked.PSet(
 
 process.load("Configuration.Geometry.GeometryIdeal_cff")   # needed because the GlobalTag is NOT used
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")   # needed because the GlobalTag is NOT used
+process.load("CondCore.CondDB.CondDB_cfi")   # needed because the GlobalTag is NOT used
 process.CondDBCommon.connect='frontier://FrontierProd/CMS_CONDITIONS'
 process.poolDBESSource=cms.ESSource("PoolDBESSource",
                                     process.CondDBCommon,

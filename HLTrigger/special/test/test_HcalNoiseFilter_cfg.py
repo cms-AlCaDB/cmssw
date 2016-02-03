@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("HCALNoiseAnalysis")
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.maxEvents = cms.untracked.PSet(  input = cms.untracked.int32(100) )
 

@@ -8,7 +8,7 @@ process.options = cms.untracked.PSet(
 )
 
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("Configuration.StandardSequences.GeometryRecoDB_cff")
 #
 #  DQM SERVICES

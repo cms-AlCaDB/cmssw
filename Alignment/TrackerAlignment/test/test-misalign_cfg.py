@@ -49,9 +49,9 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 # Database output service
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
-    CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+    CondCore.CondDB.CondDB_cfi.CondDBSetup,
     # Writing to oracle needs the following shell variable setting (in zsh):
     # export CORAL_AUTH_PATH=/afs/cern.ch/cms/DB/conddb
     # connect = cms.string('oracle://cms_orcoff_prep/CMS_COND_ALIGNMENT'),  # preparation/develop. DB

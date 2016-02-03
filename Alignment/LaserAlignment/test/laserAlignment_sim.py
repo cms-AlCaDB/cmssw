@@ -5,7 +5,7 @@ process = cms.Process( "laserAlignment" )
 
 process.load( "Geometry.CMSCommonData.cmsIdealGeometryXML_cfi" )
 process.load( "Geometry.TrackerNumberingBuilder.trackerNumberingGeometry_cfi" )
-#process.load( "CondCore.DBCommon.CondDBSetup_cfi" )
+#process.load( "CondCore.CondDB.CondDB_cfi" )
 
 
 ## message logger
@@ -55,9 +55,9 @@ process.TrackerDigiGeometryESModule.applyAlignment = True
 
 
 # fast standalone reco output: an sql file
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service( "PoolDBOutputService",
-  CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+  CondCore.CondDB.CondDB_cfi.CondDBSetup,
   timetype = cms.untracked.string( 'runnumber' ),
   connect = cms.string( 'sqlite_file:Alignments.db' ),
   toPut = cms.VPSet(

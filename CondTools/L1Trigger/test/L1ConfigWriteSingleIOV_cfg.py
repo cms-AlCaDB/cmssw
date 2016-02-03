@@ -76,7 +76,7 @@ else:
     tagBaseVec = initL1O2OTags.tagBaseVec
 
 # Get L1TriggerKeyList from DB
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.outputDB = cms.ESSource("PoolDBESSource",
     process.CondDBCommon,
     toGet = cms.VPSet(cms.PSet(

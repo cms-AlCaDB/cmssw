@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 import sys
 
 process = cms.Process("SiPixelTemplateDBReaderTest")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("FWCore.MessageService.MessageLogger_cfi")
 process.load("CalibTracker.SiPixelESProducers.SiPixelTemplateDBObjectESProducer_cfi")
 

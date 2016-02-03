@@ -105,7 +105,7 @@ process.MuonAlignmentFromReferenceInputDB.toGet = cms.VPSet(cms.PSet(record = cm
                                                             cms.PSet(record = cms.string("CSCAlignmentRcd"), tag = cms.string("CSCAlignmentRcd")))
 
 if trackerconnect != "":
-    from CondCore.DBCommon.CondDBSetup_cfi import *
+    from CondCore.CondDB.CondDB_cfi import *
     process.TrackerAlignmentInputDB = cms.ESSource("PoolDBESSource",
                                                    CondDBSetup,
                                                    connect = cms.string(trackerconnect),
@@ -113,7 +113,7 @@ if trackerconnect != "":
     process.es_prefer_TrackerAlignmentInputDB = cms.ESPrefer("PoolDBESSource", "TrackerAlignmentInputDB")
 
 if trackerAPEconnect != "":
-    from CondCore.DBCommon.CondDBSetup_cfi import *
+    from CondCore.CondDB.CondDB_cfi import *
     process.TrackerAlignmentErrorInputDB = cms.ESSource("PoolDBESSource",
                                                    CondDBSetup,
                                                    connect = cms.string(trackerAPEconnect),
@@ -121,7 +121,7 @@ if trackerAPEconnect != "":
     process.es_prefer_TrackerAlignmentErrorInputDB = cms.ESPrefer("PoolDBESSource", "TrackerAlignmentErrorInputDB")
 
 if trackerBowsconnect != "":
-    from CondCore.DBCommon.CondDBSetup_cfi import *
+    from CondCore.CondDB.CondDB_cfi import *
     process.TrackerSurfaceDeformationInputDB = cms.ESSource("PoolDBESSource",
                                                    CondDBSetup,
                                                    connect = cms.string(trackerBowsconnect),
@@ -129,7 +129,7 @@ if trackerBowsconnect != "":
     process.es_prefer_TrackerSurfaceDeformationInputDB = cms.ESPrefer("PoolDBESSource", "TrackerSurfaceDeformationInputDB")
 
 if gprcdconnect != "":
-    from CondCore.DBCommon.CondDBSetup_cfi import *
+    from CondCore.CondDB.CondDB_cfi import *
     process.GlobalPositionInputDB = cms.ESSource("PoolDBESSource",
                                                    CondDBSetup,
                                                    connect = cms.string(gprcdconnect),

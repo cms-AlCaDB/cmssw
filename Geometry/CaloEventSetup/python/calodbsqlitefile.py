@@ -7,7 +7,7 @@ idealGeometryRecord = cms.ESSource("EmptyESSource",
                                    firstValid = cms.vuint32(1)
                                    )
 
-from CondCore.DBCommon.CondDBCommon_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 PoolDBESSource = cms.ESSource("PoolDBESSource",
                               CondDBCommon,

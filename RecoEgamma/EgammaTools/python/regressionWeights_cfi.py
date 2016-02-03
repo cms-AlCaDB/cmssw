@@ -1,4 +1,4 @@
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 GBRWrapperRcd  =  cms.ESSource("PoolDBESSource",
     CondDBSetup,

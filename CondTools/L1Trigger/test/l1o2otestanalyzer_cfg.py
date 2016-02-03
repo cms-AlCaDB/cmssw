@@ -58,7 +58,7 @@ initCondDBSource( process,
                   tagBaseVec = initL1O2OTags.tagBaseVec,
                   includeRSTags = options.printRSKeys )
 
-from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+from CondCore.CondDB.CondDB_cfi import CondDBSetup
 outputDB = cms.Service("PoolDBOutputService",
                        CondDBSetup,
                        # BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),

@@ -88,7 +88,7 @@ process.load("Configuration.StandardSequences.MagneticField_cff")
 
 
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.poolDBESSource1 = cms.ESSource("PoolDBESSource",
       BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
       DBParameters = cms.PSet(

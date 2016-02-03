@@ -20,7 +20,7 @@ process.eegeom = cms.ESSource("EmptyESSource",
 # or Get DB parameters 
 # process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
 # process.GlobalTag.globaltag = "GR09_31X_V2H::All"
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_31X_ECAL'
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prep/CMS_COND_ECAL'
 process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/conddb'

@@ -6,7 +6,7 @@ process.EcalTrivialConditionRetriever.laserAPDPNTime1 = cms.untracked.string('0'
 process.EcalTrivialConditionRetriever.laserAPDPNTime2 = cms.untracked.string('1')
 process.EcalTrivialConditionRetriever.laserAPDPNTime3 = cms.untracked.string('2')
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = 'oracle://cms_orcoff_prep/CMS_COND_ECAL'
 process.CondDBCommon.DBParameters.authenticationPath = '/afs/cern.ch/cms/DB/conddb/'
 process.CondDBCommon.connect = 'sqlite_file:DB.db'

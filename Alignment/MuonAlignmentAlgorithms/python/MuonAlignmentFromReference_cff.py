@@ -53,7 +53,7 @@ MuonAlignmentFromReferenceTFileService = cms.Service("TFileService", fileName = 
 
 ### Input geometry database
 looper.applyDbAlignment = cms.untracked.bool(True)
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 MuonAlignmentFromReferenceInputDB = cms.ESSource("PoolDBESSource",
                                                   CondDBSetup,
                                                   connect = cms.string("sqlite_file:MuonAlignmentFromReference_inputdb.db"),
@@ -65,7 +65,7 @@ es_prefer_MuonAlignmentFromReferenceInputDB = cms.ESPrefer("PoolDBESSource", "Mu
 
 ### Output geometry database
 looper.saveToDB = cms.bool(True)
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 PoolDBOutputService = cms.Service("PoolDBOutputService",
                                   CondDBSetup,
                                   connect = cms.string("sqlite_file:MuonAlignmentFromReference_outputdb.db"),

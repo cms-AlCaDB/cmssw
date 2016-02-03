@@ -120,7 +120,7 @@ process.source = cms.Source("EmptySource",
     firstRun = cms.untracked.uint32(1)
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = cms.string('oracle://cms_omds_nolb/username')
 
 process.SiStripModuleHVBuilder = cms.Service("SiStripModuleHVBuilder",

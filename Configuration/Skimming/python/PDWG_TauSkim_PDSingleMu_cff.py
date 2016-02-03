@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 import TrackingTools.TransientTrack.TransientTrackBuilder_cfi
 
 import L1TriggerConfig.L1GtConfigProducers.L1GtTriggerMaskTechTrigConfig_cff

@@ -13,14 +13,14 @@ process.load("Geometry.TrackerNumberingBuilder.trackerNumberingGeometry_cfi")
 process.load("Geometry.TrackerGeometryBuilder.trackerGeometry_cfi")
 
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.MessageLogger = cms.Service("MessageLogger",
 		destinations = cms.untracked.vstring('detailedInfo', 
 			'cout')
 		)
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.ZeroGeom = cms.ESSource("PoolDBESSource",CondDBSetup,
 		connect = cms.string('sqlite_file:/afs/cern.ch/cms/CAF/CMSALCA/ALCA_TRACKERALIGN/MP/MPproduction/mp1260/jobData/jobm2/alignments_MP.db'), 

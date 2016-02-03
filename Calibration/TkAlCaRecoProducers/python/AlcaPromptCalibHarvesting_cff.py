@@ -6,7 +6,7 @@ alcaBeamSpotHarvester.BeamSpotOutputBase = cms.untracked.string("lumibased") # r
 
 # configure the PoolDBOutput service
 
-from CondCore.DBCommon.CondDBCommon_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 CondDBCommon.connect = "sqlite_file:PromptCalibConditions.db"
 PoolDBOutputService = cms.Service("PoolDBOutputService",

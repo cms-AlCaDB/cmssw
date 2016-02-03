@@ -16,7 +16,7 @@ process.eegeom = cms.ESSource("EmptyESSource",
 )
 
 # to read from orcon
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 #process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_ECAL'
 process.CondDBCommon.connect = 'sqlite_file:DB.db'
 process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/xiezhen/conddb'

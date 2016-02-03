@@ -5,7 +5,7 @@ process = cms.Process("CastorProducts")
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 # specify the correct database tags which contain the updated gains and channelquality flags
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CastorDbProducer = cms.ESProducer("CastorDbProducer")
 process.es_pool = cms.ESSource(
    "PoolDBESSource",

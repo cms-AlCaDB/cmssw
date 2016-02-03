@@ -16,7 +16,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 
 process.load("EventFilter.HcalRawToDigi.HcalRawToDigi_cfi")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("L1TriggerConfig.L1GtConfigProducers.L1GtConfig_cff")
 process.load("L1TriggerConfig.L1ScalesProducers.L1MuTriggerScalesConfig_cff")
 process.load("L1TriggerConfig.L1ScalesProducers.L1MuGMTScalesConfig_cff")

@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("PROTPGD")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # ecal mapping
 process.load("Geometry.EcalMapping.EcalMapping_cfi")
@@ -34,7 +34,7 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(10)
 )
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 process.ecalTPConditions = cms.ESSource("PoolDBESSource",

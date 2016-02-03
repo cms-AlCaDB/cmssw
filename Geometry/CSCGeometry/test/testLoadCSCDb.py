@@ -2,7 +2,7 @@
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("CSCGeometryWriter")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load("Geometry.CMSCommonData.cmsIdealGeometryXML_cff")
 

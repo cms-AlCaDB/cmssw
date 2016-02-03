@@ -83,7 +83,7 @@ process.dqmsave_step = cms.Path(process.DQMSaver)
 
 
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 process.CondDBCommon.connect = "sqlite_file:testbs.db"

@@ -5,7 +5,7 @@ process = cms.Process("DQMTest")
 #set DQM enviroment
 process.load("DQMServices.Core.DQM_cfg")
 process.load("DQMServices.Components.MEtoEDMConverter_cff")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("DQMServices.Components.DQMEnvironment_cfi")
 
 #load and setup E/g HLT Offline DQM module

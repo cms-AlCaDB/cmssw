@@ -25,9 +25,9 @@ process.maxEvents = cms.untracked.PSet(
   input = cms.untracked.int32( 1000 )
 )
 
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.dbInput = cms.ESSource( "PoolDBESSource"
-, CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup
+, CondCore.CondDB.CondDB_cfi.CondDBSetup
 , connect = cms.string( 'sqlite_file:AlCaRecoTriggerBits_SiStripDQM.db' )
 , toGet   = cms.VPSet(
     cms.PSet(

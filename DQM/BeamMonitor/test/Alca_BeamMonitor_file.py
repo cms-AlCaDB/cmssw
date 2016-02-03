@@ -34,7 +34,7 @@ process.load("DQMServices.Core.DQM_cfg")
 process.load("DQMServices.Components.DQMEnvironment_cfi")
 
 process.load("DQM.BeamMonitor.AlcaBeamMonitor_cff")
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.BeamSpotDBSource = cms.ESSource("PoolDBESSource",
                                         process.CondDBSetup,

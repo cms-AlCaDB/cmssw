@@ -51,7 +51,7 @@ process.TFileService = cms.Service("TFileService",
 
 # using database file
 
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDBSetup,
 #                                        connect = cms.string("frontier://FrontierProd/CMS_COND_31X_FROM21X"),
 #                                        connect = cms.string("sqlite_file:/afs/cern.ch/cms/CAF/CMSALCA/ALCA_TRACKERALIGN/data/commonValidation/alignmentObjects/kaschube/LAS_CRAFT08_fixDisks19.db"),

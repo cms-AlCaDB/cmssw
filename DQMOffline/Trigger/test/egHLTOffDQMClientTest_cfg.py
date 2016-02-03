@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 process = cms.Process("EDMtoMEConvert")
 process.load("DQMServices.Core.DQM_cfg")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 process.load("DQMServices.Components.DQMEnvironment_cfi")
 process.load("DQMServices.Components.EDMtoMEConverter_cff")

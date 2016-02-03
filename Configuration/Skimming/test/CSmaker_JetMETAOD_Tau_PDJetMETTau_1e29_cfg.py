@@ -45,7 +45,7 @@ process.filterCsDiJetAve_1e29 = cms.Path(process.DiJetAve_1e29)
 
 
 ### Tau skim CS
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("TrackingTools/TransientTrack/TransientTrackBuilder_cfi")
 
 process.load("L1TriggerConfig.L1GtConfigProducers.L1GtTriggerMaskTechTrigConfig_cff")

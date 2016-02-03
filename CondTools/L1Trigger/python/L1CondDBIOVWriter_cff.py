@@ -14,7 +14,7 @@ def initIOVWriter( process,
     process.load('CondTools.L1Trigger.L1CondDBIOVWriter_cfi')
     process.L1CondDBIOVWriter.tscKey = cms.string( tscKey )
 
-    from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+    from CondCore.CondDB.CondDB_cfi import CondDBSetup
     initIOVWriter.outputDB = cms.Service("PoolDBOutputService",
                                          CondDBSetup,
                                          connect = cms.string(outputDBConnect),

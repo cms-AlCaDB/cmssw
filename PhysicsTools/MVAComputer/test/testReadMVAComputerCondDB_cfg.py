@@ -7,7 +7,7 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.source = cms.Source("EmptySource")
 process.maxEvents = cms.untracked.PSet(	input = cms.untracked.int32(1) )
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.BTauGenericMVAJetTagComputerRcd = cms.ESSource("PoolDBESSource",
 	CondDBSetup,

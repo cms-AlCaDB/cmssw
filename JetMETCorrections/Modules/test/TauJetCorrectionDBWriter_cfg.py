@@ -8,7 +8,7 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 
-process.load('CondCore.DBCommon.CondDBCommon_cfi')
+process.load('CondCore.CondDB.CondDB_cfi')
 
 process.CondDBCommon.connect = 'sqlite_file:TauJec11_V1.db'
 

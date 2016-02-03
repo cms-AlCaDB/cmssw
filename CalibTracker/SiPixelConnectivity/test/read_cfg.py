@@ -31,7 +31,7 @@ process.source = cms.Source("EmptySource",
 )
 
 ##### DATABASE CONNECTION INFO ######
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:SiPixelFedCablingMap_v21.db'
 process.CondDBCommon.DBParameters.authenticationPath = '.'
 process.CondDBCommon.DBParameters.messageLevel = 1

@@ -4,7 +4,7 @@ process = cms.Process("TEST")
 
 process.load("EcalTrivialCondRetriever_cfi")
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 # process.CondDBCommon.connect = 'oracle://cms_orcoff_prep/CMS_COND_ECAL'
 process.CondDBCommon.connect = cms.string('oracle://cms_orcon_prod/CMS_COND_31X_ECAL')
 process.CondDBCommon.DBParameters.authenticationPath = cms.untracked.string('/nfshome0/xiezhen/conddb')

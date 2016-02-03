@@ -15,7 +15,7 @@ process.load("CalibCalorimetry.EcalTrivialCondModules.EcalTrivialCondRetriever_c
 process.EcalTrivialConditionRetriever.producedEcalDQMChannelStatus = False
 process.EcalTrivialConditionRetriever.producedEcalDQMTowerStatus = False
 
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.DBParameters.authenticationPath = '/nfshome0/popcondev/conddb'
 #process.CondDBCommon.connect = 'sqlite_file:mask-ECAL.db'
 #process.CondDBCommon.connect = 'oracle://cms_orcon_prod/CMS_COND_34X_ECAL'

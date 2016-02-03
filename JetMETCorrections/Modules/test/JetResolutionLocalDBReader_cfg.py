@@ -5,7 +5,7 @@ process = cms.Process("JERDBLocalReader")
 process.load('Configuration.StandardSequences.Services_cff')
 process.load("JetMETCorrections.Modules.JetResolutionESProducer_cfi")
 
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 

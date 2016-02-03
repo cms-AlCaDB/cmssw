@@ -24,7 +24,7 @@ process.MessageLogger = cms.Service("MessageLogger",
 
 process.load("EventFilter.HcalRawToDigi.HcalRawToDigi_cfi")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.load("L1Trigger.Configuration.L1DummyConfig_cff")
 process.load("EventFilter.L1GlobalTriggerRawToDigi.l1GtUnpack_cfi")
 process.l1GtUnpack.DaqGtInputTag = 'source'

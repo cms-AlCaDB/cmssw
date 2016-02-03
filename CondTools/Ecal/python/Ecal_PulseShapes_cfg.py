@@ -7,7 +7,7 @@ if POPULATE_MC: suffix = "mc"
 else: suffix = "data"
 
 process = cms.Process("ProcessOne")
-process.load("CondCore.DBCommon.CondDBCommon_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.CondDBCommon.connect = 'sqlite_file:ecaltemplates_popcon_'+suffix+'.db'
 process.CondDBCommon.DBParameters.authenticationPath = '.'
 process.CondDBCommon.DBParameters.messageLevel=cms.untracked.int32(1)

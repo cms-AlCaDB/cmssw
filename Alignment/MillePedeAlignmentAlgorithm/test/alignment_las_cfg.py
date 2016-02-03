@@ -67,7 +67,7 @@ process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = 'MC_31X_V3::All' #'IDEAL_V12::All' # 'CRAFT_ALL_V11::All' # 'IDEAL_30X::All'  # take your favourite
 
 # using database file
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 process.trackerAlignment = cms.ESSource("PoolDBESSource",
                                         CondDBSetup,
 #                                        connect = cms.string("sqlite_file:/afs/cern.ch/user/k/kaschube/cms/CMSSW_2_2_10/src/LasReader/TestProducer/alignments_MP.db"),
@@ -316,7 +316,7 @@ process.p = cms.Path(process.offlineBeamSpot
 # For a standalone (non-MPS) run, uncomment also the PoolDBOutputService part.
 #process.AlignmentProducer.saveToDB = True
 ##process.AlignmentProducer.saveApeToDB = True # no sense: Millepede does not set it!
-#from CondCore.DBCommon.CondDBSetup_cfi import *
+#from CondCore.CondDB.CondDB_cfi import *
 #process.PoolDBOutputService = cms.Service(
 #    "PoolDBOutputService",
 #    CondDBSetup,

@@ -18,7 +18,7 @@ process.load("Geometry.CSCGeometry.cscGeometry_cfi")
 # frontier://FrontierProd/CMS_COND_31X_FROM21X     TrackerAlignmentRcd       TrackerIdealGeometry210_mc
 # frontier://FrontierProd/CMS_COND_31X_FROM21X     TrackerAlignmentErrorExtendedRcd  TrackerIdealGeometryErrors210_mc
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 process.ideal31Xfrom21X = cms.ESSource("PoolDBESSource",
                                        process.CondDBSetup,
                                        connect = cms.string("frontier://FrontierProd/CMS_COND_31X_FROM21X"),

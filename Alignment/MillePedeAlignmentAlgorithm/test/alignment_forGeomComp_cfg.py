@@ -48,7 +48,7 @@ process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.globaltag = 'DESIGN42_V12::All' # take your favourite
 
 # if alignment constants not from global tag, add this
-from CondCore.DBCommon.CondDBSetup_cfi import *
+from CondCore.CondDB.CondDB_cfi import *
 # CondDBSetup.DBParameters.authenticationPath = '...' # needed to access cms_orcoff_prod
 process.trackerAlignment = cms.ESSource(
     "PoolDBESSource",

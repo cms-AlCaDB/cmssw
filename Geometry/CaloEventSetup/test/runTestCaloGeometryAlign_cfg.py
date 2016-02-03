@@ -26,7 +26,7 @@ process.cga = cms.EDAnalyzer("CaloGeometryAnalyzer",
 
 process.mfa = cms.EDAnalyzer("testMagneticField")
 
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 
 

@@ -50,7 +50,7 @@ process.siStripQualityESProducer.ListOfRecordToMerge = cms.VPSet(
     cms.PSet( record = cms.string( 'SiStripBadChannelRcd' ), tag = cms.string( '' ) ),
     cms.PSet( record = cms.string( 'SiStripBadModuleRcd'  ), tag = cms.string( '' ) ) 
 )
-process.load( "CondCore.DBCommon.CondDBCommon_cfi" )
+process.load( "CondCore.CondDB.CondDB_cfi" )
 process.CondDBCommon.connect = 'frontier://FrontierProd/CMS_COND_21X_STRIP'
 process.poolDBESSource = cms.ESSource("PoolDBESSource",
    process.CondDBCommon,

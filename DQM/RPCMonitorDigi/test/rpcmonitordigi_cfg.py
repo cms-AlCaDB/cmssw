@@ -25,7 +25,7 @@ process.source = cms.Source("PoolSource",
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(10))
 
 ################ Condition #################
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 ############ Geometry ######################
 process.load("Geometry.MuonNumbering.muonNumberingInitialization_cfi")

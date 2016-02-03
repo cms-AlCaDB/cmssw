@@ -6,7 +6,7 @@ import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("TEST")
 # CondDB
-process.load("CondCore.DBCommon.CondDBSetup_cfi")
+process.load("CondCore.CondDB.CondDB_cfi")
 
 # Geometry
 process.load("Geometry.CMSCommonData.cmsSimIdealGeometryXML_cfi")

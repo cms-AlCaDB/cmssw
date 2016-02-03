@@ -64,10 +64,10 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1) )
 #process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 # process.GlobalTag.globaltag = "DESIGN_3X_V13::All" # may choose non-default tag
 # ...or (recommended since simpler) directly from DB/sqlite
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.dbInput = cms.ESSource(
     "PoolDBESSource",
-    CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+    CondCore.CondDB.CondDB_cfi.CondDBSetup,
 #    connect = cms.string('sqlite_file:AlCaRecoTriggerBits.db'),
     connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
     toGet = cms.VPSet(cms.PSet(
@@ -79,10 +79,10 @@ process.dbInput = cms.ESSource(
     )
 
 # DB output service:
-import CondCore.DBCommon.CondDBSetup_cfi
+import CondCore.CondDB.CondDB_cfi
 process.PoolDBOutputService = cms.Service(
     "PoolDBOutputService",
-    CondCore.DBCommon.CondDBSetup_cfi.CondDBSetup,
+    CondCore.CondDB.CondDB_cfi.CondDBSetup,
     timetype = cms.untracked.string('runnumber'),
     connect = cms.string('sqlite_file:AlCaRecoTriggerBits.db'),
 #    connect = cms.string('sqlite_file:AlCaRecoTriggerBitsUpdate.db'),

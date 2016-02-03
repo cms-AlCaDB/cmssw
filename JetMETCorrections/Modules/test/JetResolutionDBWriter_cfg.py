@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms 
 process = cms.Process('jerdb')
 
-process.load('CondCore.DBCommon.CondDBCommon_cfi')
+process.load('CondCore.CondDB.CondDB_cfi')
 process.CondDBCommon.connect = 'sqlite_file:Summer15_V0_MC_JER.db'
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 process.source = cms.Source('EmptySource')
