@@ -26,7 +26,8 @@ CondDBBeamSpotObjects = CondDB.clone(connect = cms.string('frontier://FrontierPr
 process.dbInput = cms.ESSource("PoolDBESSource",
                               CondDBBeamSpotObjects,
                               toGet = cms.VPSet(cms.PSet(record = cms.string('BeamSpotObjectsRcd'),
-                                                         tag = cms.string('BeamSpotObjects_2016B_v2_LumiBased_TEST_offline') # choose tag you want
+                                                         #tag = cms.string('BeamSpotObjects_2016B_v2_LumiBased_TEST_offline') # choose tag you want
+                                                         tag = cms.string('BeamSpotObjects_2016_LumiBased_v0_offline')
                                                          )
                                                 )
                               )
@@ -35,7 +36,16 @@ process.beamspot = cms.EDAnalyzer("BeamSpotRcdReader",
                                   rawFileName = cms.untracked.string("")
                                   )
 
-process.beamspot.rawFileName = 'beamspot.txt'
+#process.beamspot.rawFileName = 'beamspot_BeamSpotObjects_2016B_v2_LumiBased_TEST_offline.txt'
+process.beamspot.rawFileName = 'beamspot_BeamSpotObjects_2016_LumiBased_v0_offline.txt'
+
+####################################################################
+# Output file
+####################################################################
+process.TFileService = cms.Service("TFileService",
+                                   #fileName=cms.string("BeamSpotObjects_2016B_v2_LumiBased_TEST_offline.root")
+                                   fileName=cms.string("BeamSpotObjects_2016_LumiBased_v0_offline.root")
+                                   ) 
                                   
 # Put module in path:
 process.p = cms.Path(process.beamspot)
