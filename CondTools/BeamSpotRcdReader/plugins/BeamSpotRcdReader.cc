@@ -34,6 +34,9 @@
 #include "CondFormats/DataRecord/interface/BeamSpotObjectsRcd.h"
 #include "CondFormats/BeamSpotObjects/interface/BeamSpotObjects.h"
 
+#include <sstream>
+#include <fstream>
+
 //
 // class declaration
 //
@@ -62,6 +65,7 @@ class BeamSpotRcdReader : public edm::one::EDAnalyzer<edm::one::SharedResources>
       edm::ESWatcher<BeamSpotObjectsRcd> watcher_;
       edm::LuminosityBlockNumber_t firstLumi_;
       edm::LuminosityBlockNumber_t lastLumi_;
+      std::auto_ptr<std::ofstream> output_;
 };
 
 //
@@ -80,7 +84,14 @@ BeamSpotRcdReader::BeamSpotRcdReader(const edm::ParameterSet& iConfig)
 {
    //now do what ever initialization is needed
    usesResource("TFileService");
-
+   std::string fileName(iConfig.getUntrackedParameter<std::string>("rawFileName"));
+   if (fileName.size()) {
+     output_.reset(new std::ofstream(fileName.c_str()));
+     if (!output_->good()) {
+       edm::LogError("IOproblem") << "Could not open output file " << fileName << ".";
+       output_.reset();
+     }
+   }
 }
 
 
@@ -102,16 +113,22 @@ void
 BeamSpotRcdReader::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
    using namespace edm;
-   
-   if (watcher_.check(iSetup)) { // new IOV for this run
+   std::ostringstream output;   
+
+   if (watcher_.check(iSetup)) { // new IOV for this run(LS)
      
-     std::cout << " for runs: " << iEvent.id().run() << " - " << iEvent.id().luminosityBlock() << std::endl;
+     output << " for runs: " << iEvent.id().run() << " - " << iEvent.id().luminosityBlock() << std::endl;
      // Get BeamSpot from EventSetup:
      edm::ESHandle< BeamSpotObjects > beamhandle;
      iSetup.get<BeamSpotObjectsRcd>().get(beamhandle);
      const BeamSpotObjects *mybeamspot = beamhandle.product();
-     std::cout << *mybeamspot << std::endl;
+     //std::cout << *mybeamspot << std::endl;
+     output <<  *mybeamspot << std::endl;
    }
+
+   // Final output - either message logger or output file:
+   if (output_.get()) *output_ << output.str();
+   else edm::LogInfo("") << output.str();
 }
 
 

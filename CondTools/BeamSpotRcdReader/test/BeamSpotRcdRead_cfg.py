@@ -31,7 +31,11 @@ process.dbInput = cms.ESSource("PoolDBESSource",
                                                 )
                               )
 
-process.beamspot = cms.EDAnalyzer("BeamSpotRcdReader")
+process.beamspot = cms.EDAnalyzer("BeamSpotRcdReader",
+                                  rawFileName = cms.untracked.string("")
+                                  )
 
+process.beamspot.rawFileName = 'beamspot.txt'
+                                  
 # Put module in path:
 process.p = cms.Path(process.beamspot)
