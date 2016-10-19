@@ -40,7 +40,7 @@ process.beamspot = cms.EDAnalyzer("BeamSpotRcdReader",
 
 #process.beamspot.rawFileName = 'to_valid_BeamSpotObjects_2016B_v2_LumiBased_TEST_offline.txt'
 #process.beamspot.rawFileName = 'problematic_BeamSpotObjects_2016_LumiBased_v0_offline.txt'
-process.beamspot.rawFileName = 'reference_prompt_BeamSpotObjects_2016_LumiBased_v0_offline.txt'
+process.beamspot.rawFileName = 'reference_prompt_BeamSpotObjects_PCL_byLumi_v0_prompt.txt'
 
 ####################################################################
 # Output file
