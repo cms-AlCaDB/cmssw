@@ -1140,6 +1140,12 @@ steps['TIER0EXP']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:@allForExpr
                           '--customise':'Configuration/DataProcessing/RecoTLR.customiseExpress',
                           },steps['TIER0']])
 
+steps['TIER0_2016']=merge([{ '--conditions':'auto:run2_data_relval','--era':'Run2_2016'},steps['TIER0']])
+steps['TIER0_2016'].pop("--customise",None)
+
+steps['TIER0EXP_2016']=merge([{ '--conditions':'auto:run2_data_relval','--era':'Run2_2016'},steps['TIER0EXP']])
+steps['TIER0EXP_2016'].pop("--customise",None)
+
 steps['TIER0EXPHI']={      '--conditions':'auto:run1_data',
           '-s':'RAW2DIGI,L1Reco,RECO,ALCAPRODUCER:@allForExpressHI,DQM,ENDJOB',
           '--datatier':'ALCARECO,DQMIO',
@@ -1378,6 +1384,9 @@ steps['ALCAEXP']={'-s':'ALCA:SiStripCalZeroBias+TkAlMinBias+DtCalib+Hotline+Lumi
                   '--conditions':'auto:run1_data',
                   '--datatier':'ALCARECO',
                   '--eventcontent':'ALCARECO'}
+
+steps['ALCAEXP_2016']=merge([{ '--conditions':'auto:run2_data_relval','--era':'Run2_2016'},steps['ALCAEXP']])
+
 steps['ALCAEXPHI']=merge([{'-s':'ALCA:PromptCalibProd+PromptCalibProdSiStrip+PromptCalibProdSiStripGains+PromptCalibProdSiStripGainsAfterAbortGap',
                   '--scenario':'HeavyIons'},steps['ALCAEXP']])
 
@@ -1608,6 +1617,8 @@ steps['ALCASPLIT']={'-s':'ALCAOUTPUT:@allForPrompt',
                     '--data':'',
                     '--triggerResultsProcess':'RECO',
                     '--filein':'file:step2_inALCARECO.root'}
+
+steps['ALCASPLIT_2016']=merge([{'--conditions':'auto:run2_data','--era':'Run2_2016'}, steps['ALCASPLIT']])
 
 steps['SKIMD']={'-s':'SKIM:all',
                 '--conditions':'auto:run1_data',
