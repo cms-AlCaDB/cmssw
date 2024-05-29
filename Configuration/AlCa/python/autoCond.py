@@ -36,7 +36,7 @@ autoCond = {
     # GlobalTag for Run3 data relvals (express GT) - 140X_dataRun3_Express_v1 but snapshot at 2024-01-20 12:00:00 (UTC)
     'run3_data_express'            :    '140X_dataRun3_Express_frozen_v1',
     # GlobalTag for Run3 data relvals (prompt GT) - 140X_dataRun3_Prompt_v1 but snapshot at 2024-01-20 12:00:00 (UTC)
-    'run3_data_prompt'             :    '140X_dataRun3_Prompt_frozen_v1',
+    'run3_data_prompt'             :    '140X_dataRun3_Prompt_Candidate_2024_05_29_08_51_00',
     # GlobalTag for Run3 offline data reprocessing - snapshot at 2024-02-07 16:38:59 (UTC)
     'run3_data'                    :    '140X_dataRun3_v3',
     # GlobalTag for Run3 offline data reprocessing with Prompt GT, currenlty for 2022FG - snapshot at 2024-02-12 12:00:00 (UTC)
