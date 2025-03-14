@@ -265,9 +265,11 @@ CondDBESSource::CondDBESSource(const edm::ParameterSet& iConfig)
         cond::ProductResolverFactory::get()->tryToCreate(buildName(it->second.recordName()))};
 
     if (resolverWrappers[ind].get()) {
-      resolverWrappers[ind]->setPrintDebug(std::find(m_recordsToDebug.begin(),
-                                                     m_recordsToDebug.end(),
-                                                     it->second.recordName()) != m_recordsToDebug.end());
+      // Enable debug if the record name is in m_recordsToDebug or if "*" is present, meaning debug for all records.
+      bool printDebug = std::find(m_recordsToDebug.begin(), m_recordsToDebug.end(), "*") != m_recordsToDebug.end() ||
+                        std::find(m_recordsToDebug.begin(), m_recordsToDebug.end(), it->second.recordName()) != m_recordsToDebug.end();
+        
+        resolverWrappers[ind]->setPrintDebug(printDebug);
     } else {
       edm::LogWarning("CondDBESSource") << "Plugin for Record " << it->second.recordName() << " has not been found.";
     }
