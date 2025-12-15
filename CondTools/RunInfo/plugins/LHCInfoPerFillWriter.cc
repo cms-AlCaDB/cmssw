@@ -70,6 +70,11 @@ void LHCInfoPerFillWriter::analyze(const edm::Event& iEvent, const edm::EventSet
   // Create lumiPerBX with the given size
   // -------------------------------------
   std::vector<float> lumiPerBX(_sizeLumiPerBX, 0.0);
+  // Fill with random values
+  for (size_t i = 0; i < _sizeLumiPerBX; ++i) {
+    //random value from -1000000 to 1000000
+    lumiPerBX[i] = static_cast<float>(-1000000. + static_cast<double>(rand()) / RAND_MAX * 2000000.);
+  }
   lhcInfoPerFill.setLumiPerBX(lumiPerBX);
 
   lhcInfoPerFill.setLhcState("some lhcState");
