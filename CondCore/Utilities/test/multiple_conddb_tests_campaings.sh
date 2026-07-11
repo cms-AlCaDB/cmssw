@@ -1,0 +1,6 @@
+#./test_query_logging.sh --create-payloads --payload-size 1 --payload-number 1 --executions 10 --dest-db oracle://CMS_CONDITIONS_TEST@cmsintr_lb  --cmssw-path ${CMSSW_BASE}/src --campaign conddb_copy_2_single  
+#./test_query_logging.sh --create-payloads --payload-size 100 --payload-number 1 --executions 10 --dest-db oracle://CMS_CONDITIONS_TEST@cmsintr_lb  --cmssw-path ${CMSSW_BASE}/src --campaign conddb_copy_2_single  
+./test_query_logging.sh --create-payloads --payload-size 1000 --payload-number 1 --executions 10 --dest-db oracle://CMS_CONDITIONS_TEST@cmsintr_lb  --cmssw-path ${CMSSW_BASE}/src --campaign conddb_copy_2_single  
+./test_query_logging.sh --create-payloads --payload-size 1000000 --payload-number 1 --executions 10 --dest-db oracle://CMS_CONDITIONS_TEST@cmsintr_lb  --cmssw-path ${CMSSW_BASE}/src --campaign conddb_copy_2_single  
+#./test_query_logging.sh --create-payloads --payload-size 100000000 --payload-number 1 --executions 10 --dest-db oracle://CMS_CONDITIONS_TEST@cmsintr_lb  --cmssw-path ${CMSSW_BASE}/src --campaign conddb_copy_2_single  
+./test_query_logging.sh --create-payloads --payload-size 999000000 --payload-number 1 --executions 10 --dest-db oracle://CMS_CONDITIONS_TEST@cmsintr_lb  --cmssw-path ${CMSSW_BASE}/src --campaign conddb_copy_2_single  
