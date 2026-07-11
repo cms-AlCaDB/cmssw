@@ -11,7 +11,7 @@ BASE_TESTSDIR="${CMSSW_PATH}/CondCore/Utilities/test/conddb_query_tests"
 PARSER="${BASE_TESTSDIR}/parser_query_logging.py"
 PAYLOADSIMFILE="${CMSSW_PATH}/CondTools/RunInfo/test/LHCInfoPerFillWriter_cfg.py"
 
-CAMPAIGN="sipixel_query_logging"
+CAMPAIGN="ConddbCopy_1"
 
 CREATE_PAYLOADS="false"
 
@@ -130,7 +130,7 @@ while [[ $# -gt 0 ]]; do
             CMSSW_PATH="$2"
             BASE_TESTSDIR="${CMSSW_PATH}/CondCore/Utilities/test/conddb_query_tests"
             PARSER="${BASE_TESTSDIR}/parser_query_logging.py"
-            PAYLOADSIMFILE="${CMSSW_PATH}/CondCore/RunInfo/test/LHCInfoPerFillWriter_cfg.py"
+            PAYLOADSIMFILE="${CMSSW_PATH}/CondTools/RunInfo/test/LHCInfoPerFillWriter_cfg.py"
             shift 2
             ;;
         --keep-fake-dbs)
@@ -270,6 +270,7 @@ for execution in $(seq 1 "$TEST_EXECUTIONS"); do
         # TODO: Add payload number
         cmsRun "$PAYLOADSIMFILE" \
             size="$PAYLOAD_SIZE" \
+	    number="$PAYLOAD_NUMBER" \
             db="sqlite_file:${FAKE_DB_FILE}" 
 
         RUN_SOURCE_DB="sqlite:${FAKE_DB_FILE}"
@@ -308,7 +309,7 @@ for execution in $(seq 1 "$TEST_EXECUTIONS"); do
         {
             time conddb -v -a ~/ --yes --force \
                 --db "$RUN_SOURCE_DB" \
-                copy "LHCInfoPerFillFake" "mocktest" \
+                copy "LHCInfoPerFillFake" "PerfTest_${CAMPAIGN}_size_${PAYLOAD_SIZE}" \
                 --note "Mock test Query time DB" \
                 --destdb "$RUN_DEST_DB"
         } 2>&1 | tee -a "$LOGFILE"
