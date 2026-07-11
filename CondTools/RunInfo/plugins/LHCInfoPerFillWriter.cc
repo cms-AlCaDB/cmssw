@@ -16,6 +16,7 @@
 #include <memory>
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 class LHCInfoPerFillWriter : public edm::one::EDAnalyzer<> {
 public:
@@ -32,7 +33,12 @@ private:
 };
 
 LHCInfoPerFillWriter::LHCInfoPerFillWriter(const edm::ParameterSet& iConfig)
-    : _sizeLumiPerBX(iConfig.getUntrackedParameter<int>("size", 0)) {}
+    : _sizeLumiPerBX(iConfig.getUntrackedParameter<int>("size", 0)) {
+        int seed = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
+  std::cout << "Using seed: " << seed << std::endl;
+
+  srand(seed);
+    }
 
 void LHCInfoPerFillWriter::fillDescriptions(edm::ConfigurationDescriptions& descriptions) {
   edm::ParameterSetDescription desc;
@@ -71,7 +77,6 @@ void LHCInfoPerFillWriter::analyze(const edm::Event& iEvent, const edm::EventSet
   // -------------------------------------
   std::vector<float> lumiPerBX(_sizeLumiPerBX, 0.0);
   // Fill with random values
-  srand(static_cast<unsigned int>(time(nullptr)));
   for (size_t i = 0; i < _sizeLumiPerBX; ++i) {
     //random value from -1000000 to 1000000
     lumiPerBX[i] = static_cast<float>(-1000000. + static_cast<double>(rand()) / RAND_MAX * 2000000.);

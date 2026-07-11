@@ -17,6 +17,13 @@ options.register(
     VarParsing.varType.string,
     "Database connection string"
 )
+options.register(
+    'number',
+    1,
+    VarParsing.multiplicity.singleton,
+    VarParsing.varType.int,
+    "Number of payloads to write"
+)
 options.parseArguments()
 
 # ----- Process -----
@@ -25,7 +32,7 @@ process = cms.Process('test')
 process.source = cms.Source('EmptyIOVSource',
     timetype = cms.string('runnumber'),
     firstValue = cms.uint64(1),
-    lastValue = cms.uint64(1),
+    lastValue = cms.uint64(options.number),
     interval = cms.uint64(1)
 )
 
