@@ -18,8 +18,10 @@ import sqlalchemy.ext.declarative
 import enum
 from sqlalchemy import Enum
 
-schema_name = 'cms_conditions_test'
-dbuser_name = 'cms_conditions_test'
+schema_name = os.getenv("TEST_CONDDB_COMM_SCHEMA", "cms_conditions")
+dbuser_name = os.getenv("TEST_CONDDB_COMM_SCHEMA", "cms_conditions")
+#schema_name = 'cms_conditions_test'
+#dbuser_name = 'cms_conditions_test'
 #schema_name = 'cms_conditions'
 #dbuser_name = 'cms_conditions'
 dbreader_user_name = 'cms_cond_general_r'

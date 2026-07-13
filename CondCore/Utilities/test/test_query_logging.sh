@@ -5,6 +5,8 @@ set -euo pipefail
 # DEFAULT CONFIGURATION
 # ----------------------------
 
+#
+
 CMSSW_PATH="/data/upload_test/alejandro/15_1_0_patch2_conddb_copy_logging_test/src"
 
 BASE_TESTSDIR="${CMSSW_PATH}/CondCore/Utilities/test/conddb_query_tests"
@@ -18,6 +20,8 @@ CREATE_PAYLOADS="false"
 SOURCE_DB=""
 DEST_DB=""
 TAG=""
+
+export TEST_CONDDB_COMM_SCHEMA=cms_conditions_test
 
 PAYLOAD_SIZE="10"
 PAYLOAD_NUMBER="1"
@@ -266,12 +270,9 @@ for execution in $(seq 1 "$TEST_EXECUTIONS"); do
         FAKE_DBS_TO_REMOVE+=("$FAKE_DB_FILE")
 
         rm -f "$FAKE_DB_FILE"
-
-        # TODO: Add payload number
-        cmsRun "$PAYLOADSIMFILE" \
-            size="$PAYLOAD_SIZE" \
-	    number="$PAYLOAD_NUMBER" \
-            db="sqlite_file:${FAKE_DB_FILE}" 
+        
+	#cmsRun "$PAYLOADSIMFILE" 
+	/data/upload_test/runWriter.sh size="$PAYLOAD_SIZE" number="$PAYLOAD_NUMBER" db="sqlite_file:${FAKE_DB_FILE}" 
 
         RUN_SOURCE_DB="sqlite:${FAKE_DB_FILE}"
 
@@ -317,7 +318,7 @@ for execution in $(seq 1 "$TEST_EXECUTIONS"); do
         {
             time conddb -v -a ~/ --yes \
                 --db "$RUN_SOURCE_DB" \
-                copy "$TAG" \
+                copy "$TAG" "PerfTest_${CAMPAIGN}" \
                 --destdb "$RUN_DEST_DB"
         } 2>&1 | tee -a "$LOGFILE"
     fi
@@ -328,24 +329,24 @@ for execution in $(seq 1 "$TEST_EXECUTIONS"); do
     run_parser "$PARSER_SOURCE_DB" "$PARSER_DEST_DB"
 
     echo "Updated CSV file: $CSVFILE"
+
+
+	# ----------------------------
+	# CLEANUP FAKE DBS
+	# ----------------------------
+
+	if [ "$CREATE_PAYLOADS" = "true" ] && [ "$REMOVE_FAKE_DBS" = "true" ]; then
+	    echo
+	    echo "Removing fake source DBs..."
+	
+	    for fake_db in "${FAKE_DBS_TO_REMOVE[@]}"; do
+	        if [ -f "$fake_db" ]; then
+	            rm -f "$fake_db"
+	            echo "Removed $fake_db"
+	        fi
+	    done
+	fi
 done
-
-# ----------------------------
-# CLEANUP FAKE DBS
-# ----------------------------
-
-if [ "$CREATE_PAYLOADS" = "true" ] && [ "$REMOVE_FAKE_DBS" = "true" ]; then
-    echo
-    echo "Removing fake source DBs..."
-
-    for fake_db in "${FAKE_DBS_TO_REMOVE[@]}"; do
-        if [ -f "$fake_db" ]; then
-            rm -f "$fake_db"
-            echo "Removed $fake_db"
-        fi
-    done
-fi
-
 # ----------------------------
 # FINAL OUTPUT
 # ----------------------------
